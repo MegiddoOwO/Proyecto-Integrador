@@ -1,0 +1,1837 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{campbellstanley1963}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e591c1032077013e1f6a4843cc893136}{%
+           family={Campbell},
+           familyi={C\bibinitperiod},
+           given={D.\bibnamedelimi T.},
+           giveni={D\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=60e1e9bb3f3cf12e64f90c4f4302a038}{%
+           family={Stanley},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Rand McNally}%
+      }
+      \strng{namehash}{2b411fa58bba7a43f229e8f137e57788}
+      \strng{fullhash}{2b411fa58bba7a43f229e8f137e57788}
+      \strng{fullhashraw}{2b411fa58bba7a43f229e8f137e57788}
+      \strng{bibnamehash}{2b411fa58bba7a43f229e8f137e57788}
+      \strng{authorbibnamehash}{2b411fa58bba7a43f229e8f137e57788}
+      \strng{authornamehash}{2b411fa58bba7a43f229e8f137e57788}
+      \strng{authorfullhash}{2b411fa58bba7a43f229e8f137e57788}
+      \strng{authorfullhashraw}{2b411fa58bba7a43f229e8f137e57788}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Experimental and Quasi-Experimental Designs for Research}
+      \field{year}{1963}
+      \field{dateera}{ce}
+    \endentry
+    \entry{cano2026sistema}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=8edff386e2973c2b7332fb7efe07bda2}{%
+           family={Cano\bibnamedelima Perfecto},
+           familyi={C\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Jesús\bibnamedelima Emmanuel},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=166ffd6c31dc6f079712db3e7c68e2b3}{%
+           family={Ramírez\bibnamedelima Ruiz},
+           familyi={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Sergio\bibnamedelima Yair},
+           giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c69f7547c25a67e2084e86e0d2046e6d}{%
+           family={Gallegos\bibnamedelima Olvera},
+           familyi={G\bibinitperiod\bibinitdelim O\bibinitperiod},
+           given={Pedro\bibnamedelima Augusto},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=70dc548fc492016d5fbbf3f59ceddaf1}{%
+           family={Varela\bibnamedelima Leija},
+           familyi={V\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Noemi\bibnamedelima Guadalupe},
+           giveni={N\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2460e714ed0021d83aed4b72f629199d}{%
+           family={Hernández-Sierra},
+           familyi={H\bibinithyphendelim S\bibinitperiod},
+           given={María\bibnamedelima Guadalupe},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5bf4b2a34f066481dd5f7fe3caec5f12}
+      \strng{fullhash}{7cab8ca08b7360f72d513f0b0546f63d}
+      \strng{fullhashraw}{7cab8ca08b7360f72d513f0b0546f63d}
+      \strng{bibnamehash}{7cab8ca08b7360f72d513f0b0546f63d}
+      \strng{authorbibnamehash}{7cab8ca08b7360f72d513f0b0546f63d}
+      \strng{authornamehash}{5bf4b2a34f066481dd5f7fe3caec5f12}
+      \strng{authorfullhash}{7cab8ca08b7360f72d513f0b0546f63d}
+      \strng{authorfullhashraw}{7cab8ca08b7360f72d513f0b0546f63d}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ciencia Latina Revista Científica Multidisciplinar}
+      \field{number}{1}
+      \field{title}{Sistema de toma de asistencia estudiantil con código {QR}, biometría y geolocalización en tiempo real}
+      \field{volume}{10}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{pages}{5115\bibrangedash 5136}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.37811/cl_rcm.v10i1.22615
+      \endverb
+    \endentry
+    \entry{chaabani2023labqr}{article}{}{}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=9c48541967da62790d3943e808d11723}{%
+           family={Chaabani},
+           familyi={C\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=57f9c0994f3a941c262a45d16b3bf964}{%
+           family={Almuhaidib},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a7495eff34c65c57b4fa337d57e0fe13}{%
+           family={Alsalem},
+           familyi={A\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f0caface3fe18f0ff6f0aab47f3ef2d3}{%
+           family={Alotaibi},
+           familyi={A\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c6a7e598e56c69b66db2bd756c33056}{%
+           family={Bamardouf},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ebc8059b9d0ddf5dd2c5a96c3efa1924}{%
+           family={Abukhamseen},
+           familyi={A\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f8e138a9e3de760f3bdd866b9c23e78b}{%
+           family={AlGallaf},
+           familyi={A\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=39101e4916d884cceea850903ebe89dc}{%
+           family={Aljwaid},
+           familyi={A\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cf96125bb332a2c3f3803b194f37af24}{%
+           family={Alharby},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e122b9c583dd2fc4bd1870424ce75731}{%
+           family={Alattas},
+           familyi={A\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f375431ab3636e7d1e8fec4caa652654}
+      \strng{fullhash}{dab5fdd446b7cacf5740c4eea364f028}
+      \strng{fullhashraw}{dab5fdd446b7cacf5740c4eea364f028}
+      \strng{bibnamehash}{dab5fdd446b7cacf5740c4eea364f028}
+      \strng{authorbibnamehash}{dab5fdd446b7cacf5740c4eea364f028}
+      \strng{authornamehash}{f375431ab3636e7d1e8fec4caa652654}
+      \strng{authorfullhash}{dab5fdd446b7cacf5740c4eea364f028}
+      \strng{authorfullhashraw}{dab5fdd446b7cacf5740c4eea364f028}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal on Cybernetics \& Informatics}
+      \field{number}{5}
+      \field{title}{Laboratory Access Implementing {QR} Code Authentication Using {OTP}}
+      \field{volume}{12}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{pages}{121\bibrangedash 141}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.5121/ijci.2023.120511
+      \endverb
+    \endentry
+    \entry{lgpdppso2025}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=09230428f8d3080e40f5a42ba911fe82}{%
+           family={{Congreso de la Unión}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{09230428f8d3080e40f5a42ba911fe82}
+      \strng{fullhash}{09230428f8d3080e40f5a42ba911fe82}
+      \strng{fullhashraw}{09230428f8d3080e40f5a42ba911fe82}
+      \strng{bibnamehash}{09230428f8d3080e40f5a42ba911fe82}
+      \strng{authorbibnamehash}{09230428f8d3080e40f5a42ba911fe82}
+      \strng{authornamehash}{09230428f8d3080e40f5a42ba911fe82}
+      \strng{authorfullhash}{09230428f8d3080e40f5a42ba911fe82}
+      \strng{authorfullhashraw}{09230428f8d3080e40f5a42ba911fe82}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{20}
+      \field{month}{3}
+      \field{note}{Diario Oficial de la Federación. Última reforma publicada el 14 de noviembre de 2025}
+      \field{title}{Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.diputados.gob.mx/LeyesBiblio/ref/lgpdppso.htm
+      \endverb
+      \verb{url}
+      \verb https://www.diputados.gob.mx/LeyesBiblio/ref/lgpdppso.htm
+      \endverb
+    \endentry
+    \entry{cranmer2017pretestposttest}{inbook}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f44abcb15960f4512d7e06d2ceb041c3}{%
+           family={Cranmer},
+           familyi={C\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=c90b63bacbb886e6b6a1fc3b71bc70b7}{%
+           family={Allen},
+           familyi={A\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications}%
+      }
+      \strng{namehash}{f44abcb15960f4512d7e06d2ceb041c3}
+      \strng{fullhash}{f44abcb15960f4512d7e06d2ceb041c3}
+      \strng{fullhashraw}{f44abcb15960f4512d7e06d2ceb041c3}
+      \strng{bibnamehash}{f44abcb15960f4512d7e06d2ceb041c3}
+      \strng{authorbibnamehash}{f44abcb15960f4512d7e06d2ceb041c3}
+      \strng{authornamehash}{f44abcb15960f4512d7e06d2ceb041c3}
+      \strng{authorfullhash}{f44abcb15960f4512d7e06d2ceb041c3}
+      \strng{authorfullhashraw}{f44abcb15960f4512d7e06d2ceb041c3}
+      \strng{editorbibnamehash}{c90b63bacbb886e6b6a1fc3b71bc70b7}
+      \strng{editornamehash}{c90b63bacbb886e6b6a1fc3b71bc70b7}
+      \strng{editorfullhash}{c90b63bacbb886e6b6a1fc3b71bc70b7}
+      \strng{editorfullhashraw}{c90b63bacbb886e6b6a1fc3b71bc70b7}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The {SAGE} Encyclopedia of Communication Research Methods}
+      \field{title}{One-Group Pretest-Posttest Design}
+      \field{volume}{4}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{pages}{1125\bibrangedash 1126}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.4135/9781483381411.n388
+      \endverb
+    \endentry
+    \entry{harnaningrum2024comparison}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6c61f996f017ad215e424e04e05af1dd}{%
+           family={Harnaningrum},
+           familyi={H\bibinitperiod},
+           given={Lucia\bibnamedelima Nugraheni},
+           giveni={L\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d00197bed729091cbcae4cc38114e559}{%
+           family={Mahardhian},
+           familyi={M\bibinitperiod},
+           given={Kristoforus\bibnamedelima Nanda},
+           giveni={K\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7ce7d6ab89f8446f110a43d6223fd698}
+      \strng{fullhash}{7ce7d6ab89f8446f110a43d6223fd698}
+      \strng{fullhashraw}{7ce7d6ab89f8446f110a43d6223fd698}
+      \strng{bibnamehash}{7ce7d6ab89f8446f110a43d6223fd698}
+      \strng{authorbibnamehash}{7ce7d6ab89f8446f110a43d6223fd698}
+      \strng{authornamehash}{7ce7d6ab89f8446f110a43d6223fd698}
+      \strng{authorfullhash}{7ce7d6ab89f8446f110a43d6223fd698}
+      \strng{authorfullhashraw}{7ce7d6ab89f8446f110a43d6223fd698}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Jurnal Nasional Teknik Elektro dan Teknologi Informasi}
+      \field{number}{4}
+      \field{title}{Comparison of mobile transaction security using {NFC} and {QR} codes}
+      \field{volume}{13}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{pages}{265\bibrangedash 271}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.22146/jnteti.v13i4.12867
+      \endverb
+    \endentry
+    \entry{hernandezsampieri2014metodologia}{book}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=8458e218c93050e7ce8684d62bcd30e2}{%
+           family={Hernández-Sampieri},
+           familyi={H\bibinithyphendelim S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fba4400760e279b4d3f23ec0fa2b6e6d}{%
+           family={Fernández-Collado},
+           familyi={F\bibinithyphendelim C\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4debe37017c365d200bb5ca0a5e8f7f6}{%
+           family={Baptista-Lucio},
+           familyi={B\bibinithyphendelim L\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {México, D.F.}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill/Interamericana Editores, S.A. de C.V.}%
+      }
+      \strng{namehash}{af2a152b8ebc8e49f7444b124a916f7e}
+      \strng{fullhash}{ab23ac812e2a5bea0fed6dae0e28bca8}
+      \strng{fullhashraw}{ab23ac812e2a5bea0fed6dae0e28bca8}
+      \strng{bibnamehash}{ab23ac812e2a5bea0fed6dae0e28bca8}
+      \strng{authorbibnamehash}{ab23ac812e2a5bea0fed6dae0e28bca8}
+      \strng{authornamehash}{af2a152b8ebc8e49f7444b124a916f7e}
+      \strng{authorfullhash}{ab23ac812e2a5bea0fed6dae0e28bca8}
+      \strng{authorfullhashraw}{ab23ac812e2a5bea0fed6dae0e28bca8}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{6}
+      \field{isbn}{978-1-4562-2396-0}
+      \field{title}{Metodología de la investigación}
+      \field{year}{2014}
+      \field{dateera}{ce}
+    \endentry
+    \entry{kao2011physical}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=8b250cd045659d778d7978b041d5efb2}{%
+           family={Kao},
+           familyi={K\bibinitperiod},
+           given={Yung-Wei},
+           giveni={Y\bibinithyphendelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d2e627196d15a24b13cb7c0a63a54bfe}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Guo-Heng},
+           giveni={G\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e2184094a5d035b3316c134af7e0d89}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Hsien-Tang},
+           giveni={H\bibinithyphendelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8036135ecc79d7f23bc904a0e2f0c067}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Yu-Kai},
+           giveni={Y\bibinithyphendelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9972c86329bc148d3293eb053b7dd794}{%
+           family={Yuan},
+           familyi={Y\bibinitperiod},
+           given={Shyan-Ming},
+           giveni={S\bibinithyphendelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{7866ba64eb759a2e71d2dcfc0363dcfb}
+      \strng{fullhash}{2073c4eccf74897ab7642af8b6a47b9d}
+      \strng{fullhashraw}{2073c4eccf74897ab7642af8b6a47b9d}
+      \strng{bibnamehash}{2073c4eccf74897ab7642af8b6a47b9d}
+      \strng{authorbibnamehash}{2073c4eccf74897ab7642af8b6a47b9d}
+      \strng{authornamehash}{7866ba64eb759a2e71d2dcfc0363dcfb}
+      \strng{authorfullhash}{2073c4eccf74897ab7642af8b6a47b9d}
+      \strng{authorfullhashraw}{2073c4eccf74897ab7642af8b6a47b9d}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2011 International Conference on Cyber-Enabled Distributed Computing and Knowledge Discovery}
+      \field{title}{Physical access control based on {QR} code}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{pages}{285\bibrangedash 288}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/CyberC.2011.55
+      \endverb
+    \endentry
+    \entry{edomex2017datos}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bbb948b4505ea3be65af7445982c07e0}{%
+           family={{Legislatura del Estado de México}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{bbb948b4505ea3be65af7445982c07e0}
+      \strng{fullhash}{bbb948b4505ea3be65af7445982c07e0}
+      \strng{fullhashraw}{bbb948b4505ea3be65af7445982c07e0}
+      \strng{bibnamehash}{bbb948b4505ea3be65af7445982c07e0}
+      \strng{authorbibnamehash}{bbb948b4505ea3be65af7445982c07e0}
+      \strng{authornamehash}{bbb948b4505ea3be65af7445982c07e0}
+      \strng{authorfullhash}{bbb948b4505ea3be65af7445982c07e0}
+      \strng{authorfullhashraw}{bbb948b4505ea3be65af7445982c07e0}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{30}
+      \field{month}{5}
+      \field{note}{Gaceta del Gobierno del Estado de México}
+      \field{title}{Ley de Protección de Datos Personales en Posesión de Sujetos Obligados del Estado de México y Municipios}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://legislacion.edomex.gob.mx/node/22343
+      \endverb
+      \verb{url}
+      \verb https://legislacion.edomex.gob.mx/node/22343
+      \endverb
+    \endentry
+    \entry{nowroz2025esp32cam}{online}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=8ccd904da849ccaeffda50406639e27b}{%
+           family={Nowroz},
+           familyi={N\bibinitperiod},
+           given={S.\bibnamedelimi T.},
+           giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=39eda12f4eff5ec23aed736f4b3f4e08}{%
+           family={Saleh},
+           familyi={S\bibinitperiod},
+           given={N.\bibnamedelimi M.},
+           giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=abafe824dcaa256718ccf60224926052}{%
+           family={Shakur},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=09d1321342daf40c074c5deb7695d8ae}{%
+           family={Banerjee},
+           familyi={B\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a9bbb20e179fb46254793d25db6feac5}{%
+           family={Amsaad},
+           familyi={A\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8da51509188d96b8c6e0afcbf590c9d6}
+      \strng{fullhash}{fc5440a04953c6a033cd61c068dd8fdb}
+      \strng{fullhashraw}{fc5440a04953c6a033cd61c068dd8fdb}
+      \strng{bibnamehash}{fc5440a04953c6a033cd61c068dd8fdb}
+      \strng{authorbibnamehash}{fc5440a04953c6a033cd61c068dd8fdb}
+      \strng{authornamehash}{8da51509188d96b8c6e0afcbf590c9d6}
+      \strng{authorfullhash}{fc5440a04953c6a033cd61c068dd8fdb}
+      \strng{authorfullhashraw}{fc5440a04953c6a033cd61c068dd8fdb}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Preprint, arXiv:2505.24081}
+      \field{title}{A Benchmark Reference for {ESP32-CAM} Module}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2505.24081
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2505.24081
+      \endverb
+    \endentry
+    \entry{nwabuwe2023dynamicqr}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=8359d6264ad26329f0ae1bb892660d59}{%
+           family={Nwabuwe},
+           familyi={N\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b073259d49811c705166bd1fbea2cf74}{%
+           family={Sanghera},
+           familyi={S\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95efdfe4d779543783b7da4115752957}{%
+           family={Alade},
+           familyi={A\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=84d0d9a56c2c8433fceafd643254adf8}{%
+           family={Olajide},
+           familyi={O\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7955693a792171543d91a8dd97f33eb5}
+      \strng{fullhash}{0f145309593ebdd6bf798ba171556632}
+      \strng{fullhashraw}{0f145309593ebdd6bf798ba171556632}
+      \strng{bibnamehash}{0f145309593ebdd6bf798ba171556632}
+      \strng{authorbibnamehash}{0f145309593ebdd6bf798ba171556632}
+      \strng{authornamehash}{7955693a792171543d91a8dd97f33eb5}
+      \strng{authorfullhash}{0f145309593ebdd6bf798ba171556632}
+      \strng{authorfullhashraw}{0f145309593ebdd6bf798ba171556632}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Advanced Computer Science and Applications}
+      \field{number}{4}
+      \field{title}{Fraud Mitigation in Attendance Monitoring Systems Using Dynamic {QR} Code, Geofencing and {IMEI} Technologies}
+      \field{volume}{14}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{pages}{938\bibrangedash 945}
+      \range{pages}{8}
+      \verb{urlraw}
+      \verb https://thesai.org/Publications/ViewPaper?Volume=14&Issue=4&Code=IJACSA&SerialNo=104
+      \endverb
+      \verb{url}
+      \verb https://thesai.org/Publications/ViewPaper?Volume=14&Issue=4&Code=IJACSA&SerialNo=104
+      \endverb
+    \endentry
+    \entry{oecd2015frascati}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bdbed435a416a918aa494017fda4c7fb}{%
+           family={{OECD}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Paris}%
+      }
+      \strng{namehash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{fullhash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{fullhashraw}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{bibnamehash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{authorbibnamehash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{authornamehash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{authorfullhash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{authorfullhashraw}{bdbed435a416a918aa494017fda4c7fb}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Frascati Manual 2015: Guidelines for Collecting and Reporting Data on Research and Experimental Development}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1787/9789264239012-en
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1787/9789264239012-en
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1787/9789264239012-en
+      \endverb
+    \endentry
+    \entry{ortiz2026qrpilot}{article}{}{}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=e3fa00b45b8e01a94f2b74f74c559204}{%
+           family={Ortiz},
+           familyi={O\bibinitperiod},
+           given={Y.\bibnamedelimi J.-I.},
+           giveni={Y\bibinitperiod\bibinitdelim J\bibinithyphendelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=30298539d3c1f19ea4f24db113449f67}{%
+           family={Vico},
+           familyi={V\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=343a763df01e2ca5957df58fb2f392a0}{%
+           family={Pérez-Stachowski},
+           familyi={P\bibinithyphendelim S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5c668b52340020563c075d8c692067b3}{%
+           family={Abilés},
+           familyi={A\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=143e75137b1e33e5a94b12660f897528}{%
+           family={Alarcón},
+           familyi={A\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=64a3ed82f063a70e8428f03bbd5282ec}{%
+           family={Arenas-Villafranca},
+           familyi={A\bibinithyphendelim V\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c02e8ab129f07768915b7025a6e252f0}{%
+           family={Rivas-Ruiz},
+           familyi={R\bibinithyphendelim R\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d50304055247c83196c143571e8a9d3a}{%
+           family={Del\bibnamedelima Arco},
+           familyi={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c57c91bc0cad05b3306ba4af44390c2}{%
+           family={Martín-Escalante},
+           familyi={M\bibinithyphendelim E\bibinitperiod},
+           given={M.\bibnamedelimi D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bc7c9474b15b9bb0ee16d5cdf995ca7c}{%
+           family={Olalla},
+           familyi={O\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a5d4ecc3ae5095658992c50785136396}
+      \strng{fullhash}{f54bfca6a1e415b8a394b1b1c23142bf}
+      \strng{fullhashraw}{f54bfca6a1e415b8a394b1b1c23142bf}
+      \strng{bibnamehash}{f54bfca6a1e415b8a394b1b1c23142bf}
+      \strng{authorbibnamehash}{f54bfca6a1e415b8a394b1b1c23142bf}
+      \strng{authornamehash}{a5d4ecc3ae5095658992c50785136396}
+      \strng{authorfullhash}{f54bfca6a1e415b8a394b1b1c23142bf}
+      \strng{authorfullhashraw}{f54bfca6a1e415b8a394b1b1c23142bf}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eid}{e93633}
+      \field{journaltitle}{Journal of Medical Internet Research}
+      \field{number}{1}
+      \field{title}{{QR} Code--Enabled Self-Access Lifestyle Education in Older People Living With {HIV}: Pragmatic Pilot Quasi-Experimental Pretest-Posttest Implementation Study}
+      \field{volume}{28}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.2196/93633
+      \endverb
+    \endentry
+    \entry{rukhiran2023user}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=bc6c09b598be3bd08ec3eddef7106916}{%
+           family={Rukhiran},
+           familyi={R\bibinitperiod},
+           given={Meennapa},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5a54aca7ca158036b83997f5da6af772}{%
+           family={Wong-In},
+           familyi={W\bibinithyphendelim I\bibinitperiod},
+           given={Sethapong},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c6f223e81c631c49d2542d1462b4b691}{%
+           family={Netinant},
+           familyi={N\bibinitperiod},
+           given={Paniti},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b4a727b43280d81b2453ab0b5f7e2e08}
+      \strng{fullhash}{f2ca1ccc36981bb2e73fabdedc89af3d}
+      \strng{fullhashraw}{f2ca1ccc36981bb2e73fabdedc89af3d}
+      \strng{bibnamehash}{f2ca1ccc36981bb2e73fabdedc89af3d}
+      \strng{authorbibnamehash}{f2ca1ccc36981bb2e73fabdedc89af3d}
+      \strng{authornamehash}{b4a727b43280d81b2453ab0b5f7e2e08}
+      \strng{authorfullhash}{f2ca1ccc36981bb2e73fabdedc89af3d}
+      \strng{authorfullhashraw}{f2ca1ccc36981bb2e73fabdedc89af3d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eid}{3092}
+      \field{journaltitle}{Sustainability}
+      \field{number}{4}
+      \field{title}{User acceptance factors related to biometric recognition technologies of examination attendance in higher education: {TAM} model}
+      \field{volume}{15}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.3390/su15043092
+      \endverb
+    \endentry
+    \entry{subpratatsavee2015hmac}{inbook}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=30a1f25feccc1c191bdab27c534e09b7}{%
+           family={Subpratatsavee},
+           familyi={S\bibinitperiod},
+           given={Puchong},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=de9c678f8c50237f804df6f0570f6c51}{%
+           family={Kuacharoen},
+           familyi={K\bibinitperiod},
+           given={Pramote},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{1f44a942c196c0448e76f4ac3bba5c36}
+      \strng{fullhash}{1f44a942c196c0448e76f4ac3bba5c36}
+      \strng{fullhashraw}{1f44a942c196c0448e76f4ac3bba5c36}
+      \strng{bibnamehash}{1f44a942c196c0448e76f4ac3bba5c36}
+      \strng{authorbibnamehash}{1f44a942c196c0448e76f4ac3bba5c36}
+      \strng{authornamehash}{1f44a942c196c0448e76f4ac3bba5c36}
+      \strng{authorfullhash}{1f44a942c196c0448e76f4ac3bba5c36}
+      \strng{authorfullhashraw}{1f44a942c196c0448e76f4ac3bba5c36}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Computer Science and its Applications}
+      \field{series}{Lecture Notes in Electrical Engineering}
+      \field{title}{Transaction authentication using {HMAC}-based one-time password and {QR} code}
+      \field{volume}{330}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{pages}{93\bibrangedash 98}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1007/978-3-662-45402-2_14
+      \endverb
+    \endentry
+    \entry{talavera2025espera}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=939096dc963e098cfc5bebbf009dc2fc}{%
+           family={Talavera\bibnamedelima López},
+           familyi={T\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Cinthya},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Tecnológico de Estudios Superiores de Tianguistenco}%
+      }
+      \strng{namehash}{939096dc963e098cfc5bebbf009dc2fc}
+      \strng{fullhash}{939096dc963e098cfc5bebbf009dc2fc}
+      \strng{fullhashraw}{939096dc963e098cfc5bebbf009dc2fc}
+      \strng{bibnamehash}{939096dc963e098cfc5bebbf009dc2fc}
+      \strng{authorbibnamehash}{939096dc963e098cfc5bebbf009dc2fc}
+      \strng{authornamehash}{939096dc963e098cfc5bebbf009dc2fc}
+      \strng{authorfullhash}{939096dc963e098cfc5bebbf009dc2fc}
+      \strng{authorfullhashraw}{939096dc963e098cfc5bebbf009dc2fc}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Optimización del tiempo de espera y llegadas de los estudiantes en el área de control escolar en una empresa de servicios educativos}
+      \field{type}{Tesis de licenciatura}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://rinacional.tecnm.mx/jspui/handle/TecNM/9739
+      \endverb
+      \verb{url}
+      \verb https://rinacional.tecnm.mx/jspui/handle/TecNM/9739
+      \endverb
+    \endentry
+    \entry{torres2019qr}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f5bb7e6ab663e705eca5b39607ccdea4}{%
+           family={Torres\bibnamedelima Ramírez},
+           familyi={T\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Edson\bibnamedelima Emerson},
+           giveni={E\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Universidad Católica Los Ángeles de Chimbote}%
+      }
+      \strng{namehash}{f5bb7e6ab663e705eca5b39607ccdea4}
+      \strng{fullhash}{f5bb7e6ab663e705eca5b39607ccdea4}
+      \strng{fullhashraw}{f5bb7e6ab663e705eca5b39607ccdea4}
+      \strng{bibnamehash}{f5bb7e6ab663e705eca5b39607ccdea4}
+      \strng{authorbibnamehash}{f5bb7e6ab663e705eca5b39607ccdea4}
+      \strng{authornamehash}{f5bb7e6ab663e705eca5b39607ccdea4}
+      \strng{authorfullhash}{f5bb7e6ab663e705eca5b39607ccdea4}
+      \strng{authorfullhashraw}{f5bb7e6ab663e705eca5b39607ccdea4}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Implementación de un sistema de control de asistencia con código {QR} para la institución educativa {Ricardo Palma}, {Carhuaz}; 2019}
+      \field{type}{Tesis de licenciatura}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://hdl.handle.net/20.500.13032/14434
+      \endverb
+      \verb{url}
+      \verb https://hdl.handle.net/20.500.13032/14434
+      \endverb
+    \endentry
+    \entry{vargascordero2009aplicada}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5c7e18b887142de4965cd86f88060830}{%
+           family={Vargas-Cordero},
+           familyi={V\bibinithyphendelim C\bibinitperiod},
+           given={Z.\bibnamedelimi R.},
+           giveni={Z\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5c7e18b887142de4965cd86f88060830}
+      \strng{fullhash}{5c7e18b887142de4965cd86f88060830}
+      \strng{fullhashraw}{5c7e18b887142de4965cd86f88060830}
+      \strng{bibnamehash}{5c7e18b887142de4965cd86f88060830}
+      \strng{authorbibnamehash}{5c7e18b887142de4965cd86f88060830}
+      \strng{authornamehash}{5c7e18b887142de4965cd86f88060830}
+      \strng{authorfullhash}{5c7e18b887142de4965cd86f88060830}
+      \strng{authorfullhashraw}{5c7e18b887142de4965cd86f88060830}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0379-7082}
+      \field{journaltitle}{Educación}
+      \field{number}{1}
+      \field{title}{La investigación aplicada: Una forma de conocer las realidades con evidencia científica}
+      \field{volume}{33}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{pages}{155\bibrangedash 165}
+      \range{pages}{11}
+      \verb{urlraw}
+      \verb https://revistas.ucr.ac.cr/index.php/educacion/article/view/538
+      \endverb
+      \verb{url}
+      \verb https://revistas.ucr.ac.cr/index.php/educacion/article/view/538
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{campbellstanley1963}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e591c1032077013e1f6a4843cc893136}{%
+           family={Campbell},
+           familyi={C\bibinitperiod},
+           given={D.\bibnamedelimi T.},
+           giveni={D\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=60e1e9bb3f3cf12e64f90c4f4302a038}{%
+           family={Stanley},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Rand McNally}%
+      }
+      \strng{namehash}{2b411fa58bba7a43f229e8f137e57788}
+      \strng{fullhash}{2b411fa58bba7a43f229e8f137e57788}
+      \strng{fullhashraw}{2b411fa58bba7a43f229e8f137e57788}
+      \strng{bibnamehash}{2b411fa58bba7a43f229e8f137e57788}
+      \strng{authorbibnamehash}{2b411fa58bba7a43f229e8f137e57788}
+      \strng{authornamehash}{2b411fa58bba7a43f229e8f137e57788}
+      \strng{authorfullhash}{2b411fa58bba7a43f229e8f137e57788}
+      \strng{authorfullhashraw}{2b411fa58bba7a43f229e8f137e57788}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Experimental and Quasi-Experimental Designs for Research}
+      \field{year}{1963}
+      \field{dateera}{ce}
+    \endentry
+    \entry{cano2026sistema}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=8edff386e2973c2b7332fb7efe07bda2}{%
+           family={Cano\bibnamedelima Perfecto},
+           familyi={C\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Jesús\bibnamedelima Emmanuel},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=166ffd6c31dc6f079712db3e7c68e2b3}{%
+           family={Ramírez\bibnamedelima Ruiz},
+           familyi={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Sergio\bibnamedelima Yair},
+           giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c69f7547c25a67e2084e86e0d2046e6d}{%
+           family={Gallegos\bibnamedelima Olvera},
+           familyi={G\bibinitperiod\bibinitdelim O\bibinitperiod},
+           given={Pedro\bibnamedelima Augusto},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=70dc548fc492016d5fbbf3f59ceddaf1}{%
+           family={Varela\bibnamedelima Leija},
+           familyi={V\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Noemi\bibnamedelima Guadalupe},
+           giveni={N\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2460e714ed0021d83aed4b72f629199d}{%
+           family={Hernández-Sierra},
+           familyi={H\bibinithyphendelim S\bibinitperiod},
+           given={María\bibnamedelima Guadalupe},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5bf4b2a34f066481dd5f7fe3caec5f12}
+      \strng{fullhash}{7cab8ca08b7360f72d513f0b0546f63d}
+      \strng{fullhashraw}{7cab8ca08b7360f72d513f0b0546f63d}
+      \strng{bibnamehash}{7cab8ca08b7360f72d513f0b0546f63d}
+      \strng{authorbibnamehash}{7cab8ca08b7360f72d513f0b0546f63d}
+      \strng{authornamehash}{5bf4b2a34f066481dd5f7fe3caec5f12}
+      \strng{authorfullhash}{7cab8ca08b7360f72d513f0b0546f63d}
+      \strng{authorfullhashraw}{7cab8ca08b7360f72d513f0b0546f63d}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ciencia Latina Revista Científica Multidisciplinar}
+      \field{number}{1}
+      \field{title}{Sistema de toma de asistencia estudiantil con código {QR}, biometría y geolocalización en tiempo real}
+      \field{volume}{10}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{pages}{5115\bibrangedash 5136}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.37811/cl_rcm.v10i1.22615
+      \endverb
+    \endentry
+    \entry{chaabani2023labqr}{article}{}{}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=9c48541967da62790d3943e808d11723}{%
+           family={Chaabani},
+           familyi={C\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=57f9c0994f3a941c262a45d16b3bf964}{%
+           family={Almuhaidib},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a7495eff34c65c57b4fa337d57e0fe13}{%
+           family={Alsalem},
+           familyi={A\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f0caface3fe18f0ff6f0aab47f3ef2d3}{%
+           family={Alotaibi},
+           familyi={A\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c6a7e598e56c69b66db2bd756c33056}{%
+           family={Bamardouf},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ebc8059b9d0ddf5dd2c5a96c3efa1924}{%
+           family={Abukhamseen},
+           familyi={A\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f8e138a9e3de760f3bdd866b9c23e78b}{%
+           family={AlGallaf},
+           familyi={A\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=39101e4916d884cceea850903ebe89dc}{%
+           family={Aljwaid},
+           familyi={A\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cf96125bb332a2c3f3803b194f37af24}{%
+           family={Alharby},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e122b9c583dd2fc4bd1870424ce75731}{%
+           family={Alattas},
+           familyi={A\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f375431ab3636e7d1e8fec4caa652654}
+      \strng{fullhash}{dab5fdd446b7cacf5740c4eea364f028}
+      \strng{fullhashraw}{dab5fdd446b7cacf5740c4eea364f028}
+      \strng{bibnamehash}{dab5fdd446b7cacf5740c4eea364f028}
+      \strng{authorbibnamehash}{dab5fdd446b7cacf5740c4eea364f028}
+      \strng{authornamehash}{f375431ab3636e7d1e8fec4caa652654}
+      \strng{authorfullhash}{dab5fdd446b7cacf5740c4eea364f028}
+      \strng{authorfullhashraw}{dab5fdd446b7cacf5740c4eea364f028}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal on Cybernetics \& Informatics}
+      \field{number}{5}
+      \field{title}{Laboratory Access Implementing {QR} Code Authentication Using {OTP}}
+      \field{volume}{12}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{pages}{121\bibrangedash 141}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.5121/ijci.2023.120511
+      \endverb
+    \endentry
+    \entry{lgpdppso2025}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=09230428f8d3080e40f5a42ba911fe82}{%
+           family={{Congreso de la Unión}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{09230428f8d3080e40f5a42ba911fe82}
+      \strng{fullhash}{09230428f8d3080e40f5a42ba911fe82}
+      \strng{fullhashraw}{09230428f8d3080e40f5a42ba911fe82}
+      \strng{bibnamehash}{09230428f8d3080e40f5a42ba911fe82}
+      \strng{authorbibnamehash}{09230428f8d3080e40f5a42ba911fe82}
+      \strng{authornamehash}{09230428f8d3080e40f5a42ba911fe82}
+      \strng{authorfullhash}{09230428f8d3080e40f5a42ba911fe82}
+      \strng{authorfullhashraw}{09230428f8d3080e40f5a42ba911fe82}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{20}
+      \field{month}{3}
+      \field{note}{Diario Oficial de la Federación. Última reforma publicada el 14 de noviembre de 2025}
+      \field{title}{Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.diputados.gob.mx/LeyesBiblio/ref/lgpdppso.htm
+      \endverb
+      \verb{url}
+      \verb https://www.diputados.gob.mx/LeyesBiblio/ref/lgpdppso.htm
+      \endverb
+    \endentry
+    \entry{cranmer2017pretestposttest}{inbook}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f44abcb15960f4512d7e06d2ceb041c3}{%
+           family={Cranmer},
+           familyi={C\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=c90b63bacbb886e6b6a1fc3b71bc70b7}{%
+           family={Allen},
+           familyi={A\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications}%
+      }
+      \strng{namehash}{f44abcb15960f4512d7e06d2ceb041c3}
+      \strng{fullhash}{f44abcb15960f4512d7e06d2ceb041c3}
+      \strng{fullhashraw}{f44abcb15960f4512d7e06d2ceb041c3}
+      \strng{bibnamehash}{f44abcb15960f4512d7e06d2ceb041c3}
+      \strng{authorbibnamehash}{f44abcb15960f4512d7e06d2ceb041c3}
+      \strng{authornamehash}{f44abcb15960f4512d7e06d2ceb041c3}
+      \strng{authorfullhash}{f44abcb15960f4512d7e06d2ceb041c3}
+      \strng{authorfullhashraw}{f44abcb15960f4512d7e06d2ceb041c3}
+      \strng{editorbibnamehash}{c90b63bacbb886e6b6a1fc3b71bc70b7}
+      \strng{editornamehash}{c90b63bacbb886e6b6a1fc3b71bc70b7}
+      \strng{editorfullhash}{c90b63bacbb886e6b6a1fc3b71bc70b7}
+      \strng{editorfullhashraw}{c90b63bacbb886e6b6a1fc3b71bc70b7}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The {SAGE} Encyclopedia of Communication Research Methods}
+      \field{title}{One-Group Pretest-Posttest Design}
+      \field{volume}{4}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{pages}{1125\bibrangedash 1126}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.4135/9781483381411.n388
+      \endverb
+    \endentry
+    \entry{harnaningrum2024comparison}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6c61f996f017ad215e424e04e05af1dd}{%
+           family={Harnaningrum},
+           familyi={H\bibinitperiod},
+           given={Lucia\bibnamedelima Nugraheni},
+           giveni={L\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d00197bed729091cbcae4cc38114e559}{%
+           family={Mahardhian},
+           familyi={M\bibinitperiod},
+           given={Kristoforus\bibnamedelima Nanda},
+           giveni={K\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7ce7d6ab89f8446f110a43d6223fd698}
+      \strng{fullhash}{7ce7d6ab89f8446f110a43d6223fd698}
+      \strng{fullhashraw}{7ce7d6ab89f8446f110a43d6223fd698}
+      \strng{bibnamehash}{7ce7d6ab89f8446f110a43d6223fd698}
+      \strng{authorbibnamehash}{7ce7d6ab89f8446f110a43d6223fd698}
+      \strng{authornamehash}{7ce7d6ab89f8446f110a43d6223fd698}
+      \strng{authorfullhash}{7ce7d6ab89f8446f110a43d6223fd698}
+      \strng{authorfullhashraw}{7ce7d6ab89f8446f110a43d6223fd698}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Jurnal Nasional Teknik Elektro dan Teknologi Informasi}
+      \field{number}{4}
+      \field{title}{Comparison of mobile transaction security using {NFC} and {QR} codes}
+      \field{volume}{13}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{pages}{265\bibrangedash 271}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.22146/jnteti.v13i4.12867
+      \endverb
+    \endentry
+    \entry{hernandezsampieri2014metodologia}{book}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=8458e218c93050e7ce8684d62bcd30e2}{%
+           family={Hernández-Sampieri},
+           familyi={H\bibinithyphendelim S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fba4400760e279b4d3f23ec0fa2b6e6d}{%
+           family={Fernández-Collado},
+           familyi={F\bibinithyphendelim C\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4debe37017c365d200bb5ca0a5e8f7f6}{%
+           family={Baptista-Lucio},
+           familyi={B\bibinithyphendelim L\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {México, D.F.}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill/Interamericana Editores, S.A. de C.V.}%
+      }
+      \strng{namehash}{af2a152b8ebc8e49f7444b124a916f7e}
+      \strng{fullhash}{ab23ac812e2a5bea0fed6dae0e28bca8}
+      \strng{fullhashraw}{ab23ac812e2a5bea0fed6dae0e28bca8}
+      \strng{bibnamehash}{ab23ac812e2a5bea0fed6dae0e28bca8}
+      \strng{authorbibnamehash}{ab23ac812e2a5bea0fed6dae0e28bca8}
+      \strng{authornamehash}{af2a152b8ebc8e49f7444b124a916f7e}
+      \strng{authorfullhash}{ab23ac812e2a5bea0fed6dae0e28bca8}
+      \strng{authorfullhashraw}{ab23ac812e2a5bea0fed6dae0e28bca8}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{6}
+      \field{isbn}{978-1-4562-2396-0}
+      \field{title}{Metodología de la investigación}
+      \field{year}{2014}
+      \field{dateera}{ce}
+    \endentry
+    \entry{kao2011physical}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=8b250cd045659d778d7978b041d5efb2}{%
+           family={Kao},
+           familyi={K\bibinitperiod},
+           given={Yung-Wei},
+           giveni={Y\bibinithyphendelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d2e627196d15a24b13cb7c0a63a54bfe}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Guo-Heng},
+           giveni={G\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e2184094a5d035b3316c134af7e0d89}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Hsien-Tang},
+           giveni={H\bibinithyphendelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8036135ecc79d7f23bc904a0e2f0c067}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Yu-Kai},
+           giveni={Y\bibinithyphendelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9972c86329bc148d3293eb053b7dd794}{%
+           family={Yuan},
+           familyi={Y\bibinitperiod},
+           given={Shyan-Ming},
+           giveni={S\bibinithyphendelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{7866ba64eb759a2e71d2dcfc0363dcfb}
+      \strng{fullhash}{2073c4eccf74897ab7642af8b6a47b9d}
+      \strng{fullhashraw}{2073c4eccf74897ab7642af8b6a47b9d}
+      \strng{bibnamehash}{2073c4eccf74897ab7642af8b6a47b9d}
+      \strng{authorbibnamehash}{2073c4eccf74897ab7642af8b6a47b9d}
+      \strng{authornamehash}{7866ba64eb759a2e71d2dcfc0363dcfb}
+      \strng{authorfullhash}{2073c4eccf74897ab7642af8b6a47b9d}
+      \strng{authorfullhashraw}{2073c4eccf74897ab7642af8b6a47b9d}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2011 International Conference on Cyber-Enabled Distributed Computing and Knowledge Discovery}
+      \field{title}{Physical access control based on {QR} code}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{pages}{285\bibrangedash 288}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/CyberC.2011.55
+      \endverb
+    \endentry
+    \entry{edomex2017datos}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bbb948b4505ea3be65af7445982c07e0}{%
+           family={{Legislatura del Estado de México}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{bbb948b4505ea3be65af7445982c07e0}
+      \strng{fullhash}{bbb948b4505ea3be65af7445982c07e0}
+      \strng{fullhashraw}{bbb948b4505ea3be65af7445982c07e0}
+      \strng{bibnamehash}{bbb948b4505ea3be65af7445982c07e0}
+      \strng{authorbibnamehash}{bbb948b4505ea3be65af7445982c07e0}
+      \strng{authornamehash}{bbb948b4505ea3be65af7445982c07e0}
+      \strng{authorfullhash}{bbb948b4505ea3be65af7445982c07e0}
+      \strng{authorfullhashraw}{bbb948b4505ea3be65af7445982c07e0}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{30}
+      \field{month}{5}
+      \field{note}{Gaceta del Gobierno del Estado de México}
+      \field{title}{Ley de Protección de Datos Personales en Posesión de Sujetos Obligados del Estado de México y Municipios}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://legislacion.edomex.gob.mx/node/22343
+      \endverb
+      \verb{url}
+      \verb https://legislacion.edomex.gob.mx/node/22343
+      \endverb
+    \endentry
+    \entry{nowroz2025esp32cam}{online}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=8ccd904da849ccaeffda50406639e27b}{%
+           family={Nowroz},
+           familyi={N\bibinitperiod},
+           given={S.\bibnamedelimi T.},
+           giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=39eda12f4eff5ec23aed736f4b3f4e08}{%
+           family={Saleh},
+           familyi={S\bibinitperiod},
+           given={N.\bibnamedelimi M.},
+           giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=abafe824dcaa256718ccf60224926052}{%
+           family={Shakur},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=09d1321342daf40c074c5deb7695d8ae}{%
+           family={Banerjee},
+           familyi={B\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a9bbb20e179fb46254793d25db6feac5}{%
+           family={Amsaad},
+           familyi={A\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8da51509188d96b8c6e0afcbf590c9d6}
+      \strng{fullhash}{fc5440a04953c6a033cd61c068dd8fdb}
+      \strng{fullhashraw}{fc5440a04953c6a033cd61c068dd8fdb}
+      \strng{bibnamehash}{fc5440a04953c6a033cd61c068dd8fdb}
+      \strng{authorbibnamehash}{fc5440a04953c6a033cd61c068dd8fdb}
+      \strng{authornamehash}{8da51509188d96b8c6e0afcbf590c9d6}
+      \strng{authorfullhash}{fc5440a04953c6a033cd61c068dd8fdb}
+      \strng{authorfullhashraw}{fc5440a04953c6a033cd61c068dd8fdb}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Preprint, arXiv:2505.24081}
+      \field{title}{A Benchmark Reference for {ESP32-CAM} Module}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2505.24081
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2505.24081
+      \endverb
+    \endentry
+    \entry{nwabuwe2023dynamicqr}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=8359d6264ad26329f0ae1bb892660d59}{%
+           family={Nwabuwe},
+           familyi={N\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b073259d49811c705166bd1fbea2cf74}{%
+           family={Sanghera},
+           familyi={S\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95efdfe4d779543783b7da4115752957}{%
+           family={Alade},
+           familyi={A\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=84d0d9a56c2c8433fceafd643254adf8}{%
+           family={Olajide},
+           familyi={O\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7955693a792171543d91a8dd97f33eb5}
+      \strng{fullhash}{0f145309593ebdd6bf798ba171556632}
+      \strng{fullhashraw}{0f145309593ebdd6bf798ba171556632}
+      \strng{bibnamehash}{0f145309593ebdd6bf798ba171556632}
+      \strng{authorbibnamehash}{0f145309593ebdd6bf798ba171556632}
+      \strng{authornamehash}{7955693a792171543d91a8dd97f33eb5}
+      \strng{authorfullhash}{0f145309593ebdd6bf798ba171556632}
+      \strng{authorfullhashraw}{0f145309593ebdd6bf798ba171556632}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Advanced Computer Science and Applications}
+      \field{number}{4}
+      \field{title}{Fraud Mitigation in Attendance Monitoring Systems Using Dynamic {QR} Code, Geofencing and {IMEI} Technologies}
+      \field{volume}{14}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{pages}{938\bibrangedash 945}
+      \range{pages}{8}
+      \verb{urlraw}
+      \verb https://thesai.org/Publications/ViewPaper?Volume=14&Issue=4&Code=IJACSA&SerialNo=104
+      \endverb
+      \verb{url}
+      \verb https://thesai.org/Publications/ViewPaper?Volume=14&Issue=4&Code=IJACSA&SerialNo=104
+      \endverb
+    \endentry
+    \entry{oecd2015frascati}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bdbed435a416a918aa494017fda4c7fb}{%
+           family={{OECD}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Paris}%
+      }
+      \strng{namehash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{fullhash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{fullhashraw}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{bibnamehash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{authorbibnamehash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{authornamehash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{authorfullhash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{authorfullhashraw}{bdbed435a416a918aa494017fda4c7fb}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Frascati Manual 2015: Guidelines for Collecting and Reporting Data on Research and Experimental Development}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1787/9789264239012-en
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1787/9789264239012-en
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1787/9789264239012-en
+      \endverb
+    \endentry
+    \entry{ortiz2026qrpilot}{article}{}{}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=e3fa00b45b8e01a94f2b74f74c559204}{%
+           family={Ortiz},
+           familyi={O\bibinitperiod},
+           given={Y.\bibnamedelimi J.-I.},
+           giveni={Y\bibinitperiod\bibinitdelim J\bibinithyphendelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=30298539d3c1f19ea4f24db113449f67}{%
+           family={Vico},
+           familyi={V\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=343a763df01e2ca5957df58fb2f392a0}{%
+           family={Pérez-Stachowski},
+           familyi={P\bibinithyphendelim S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5c668b52340020563c075d8c692067b3}{%
+           family={Abilés},
+           familyi={A\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=143e75137b1e33e5a94b12660f897528}{%
+           family={Alarcón},
+           familyi={A\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=64a3ed82f063a70e8428f03bbd5282ec}{%
+           family={Arenas-Villafranca},
+           familyi={A\bibinithyphendelim V\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c02e8ab129f07768915b7025a6e252f0}{%
+           family={Rivas-Ruiz},
+           familyi={R\bibinithyphendelim R\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d50304055247c83196c143571e8a9d3a}{%
+           family={Del\bibnamedelima Arco},
+           familyi={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c57c91bc0cad05b3306ba4af44390c2}{%
+           family={Martín-Escalante},
+           familyi={M\bibinithyphendelim E\bibinitperiod},
+           given={M.\bibnamedelimi D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bc7c9474b15b9bb0ee16d5cdf995ca7c}{%
+           family={Olalla},
+           familyi={O\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a5d4ecc3ae5095658992c50785136396}
+      \strng{fullhash}{f54bfca6a1e415b8a394b1b1c23142bf}
+      \strng{fullhashraw}{f54bfca6a1e415b8a394b1b1c23142bf}
+      \strng{bibnamehash}{f54bfca6a1e415b8a394b1b1c23142bf}
+      \strng{authorbibnamehash}{f54bfca6a1e415b8a394b1b1c23142bf}
+      \strng{authornamehash}{a5d4ecc3ae5095658992c50785136396}
+      \strng{authorfullhash}{f54bfca6a1e415b8a394b1b1c23142bf}
+      \strng{authorfullhashraw}{f54bfca6a1e415b8a394b1b1c23142bf}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eid}{e93633}
+      \field{journaltitle}{Journal of Medical Internet Research}
+      \field{number}{1}
+      \field{title}{{QR} Code--Enabled Self-Access Lifestyle Education in Older People Living With {HIV}: Pragmatic Pilot Quasi-Experimental Pretest-Posttest Implementation Study}
+      \field{volume}{28}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.2196/93633
+      \endverb
+    \endentry
+    \entry{rukhiran2023user}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=bc6c09b598be3bd08ec3eddef7106916}{%
+           family={Rukhiran},
+           familyi={R\bibinitperiod},
+           given={Meennapa},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5a54aca7ca158036b83997f5da6af772}{%
+           family={Wong-In},
+           familyi={W\bibinithyphendelim I\bibinitperiod},
+           given={Sethapong},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c6f223e81c631c49d2542d1462b4b691}{%
+           family={Netinant},
+           familyi={N\bibinitperiod},
+           given={Paniti},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b4a727b43280d81b2453ab0b5f7e2e08}
+      \strng{fullhash}{f2ca1ccc36981bb2e73fabdedc89af3d}
+      \strng{fullhashraw}{f2ca1ccc36981bb2e73fabdedc89af3d}
+      \strng{bibnamehash}{f2ca1ccc36981bb2e73fabdedc89af3d}
+      \strng{authorbibnamehash}{f2ca1ccc36981bb2e73fabdedc89af3d}
+      \strng{authornamehash}{b4a727b43280d81b2453ab0b5f7e2e08}
+      \strng{authorfullhash}{f2ca1ccc36981bb2e73fabdedc89af3d}
+      \strng{authorfullhashraw}{f2ca1ccc36981bb2e73fabdedc89af3d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eid}{3092}
+      \field{journaltitle}{Sustainability}
+      \field{number}{4}
+      \field{title}{User acceptance factors related to biometric recognition technologies of examination attendance in higher education: {TAM} model}
+      \field{volume}{15}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.3390/su15043092
+      \endverb
+    \endentry
+    \entry{subpratatsavee2015hmac}{inbook}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=30a1f25feccc1c191bdab27c534e09b7}{%
+           family={Subpratatsavee},
+           familyi={S\bibinitperiod},
+           given={Puchong},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=de9c678f8c50237f804df6f0570f6c51}{%
+           family={Kuacharoen},
+           familyi={K\bibinitperiod},
+           given={Pramote},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{1f44a942c196c0448e76f4ac3bba5c36}
+      \strng{fullhash}{1f44a942c196c0448e76f4ac3bba5c36}
+      \strng{fullhashraw}{1f44a942c196c0448e76f4ac3bba5c36}
+      \strng{bibnamehash}{1f44a942c196c0448e76f4ac3bba5c36}
+      \strng{authorbibnamehash}{1f44a942c196c0448e76f4ac3bba5c36}
+      \strng{authornamehash}{1f44a942c196c0448e76f4ac3bba5c36}
+      \strng{authorfullhash}{1f44a942c196c0448e76f4ac3bba5c36}
+      \strng{authorfullhashraw}{1f44a942c196c0448e76f4ac3bba5c36}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Computer Science and its Applications}
+      \field{series}{Lecture Notes in Electrical Engineering}
+      \field{title}{Transaction authentication using {HMAC}-based one-time password and {QR} code}
+      \field{volume}{330}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{pages}{93\bibrangedash 98}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1007/978-3-662-45402-2_14
+      \endverb
+    \endentry
+    \entry{talavera2025espera}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=939096dc963e098cfc5bebbf009dc2fc}{%
+           family={Talavera\bibnamedelima López},
+           familyi={T\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Cinthya},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Tecnológico de Estudios Superiores de Tianguistenco}%
+      }
+      \strng{namehash}{939096dc963e098cfc5bebbf009dc2fc}
+      \strng{fullhash}{939096dc963e098cfc5bebbf009dc2fc}
+      \strng{fullhashraw}{939096dc963e098cfc5bebbf009dc2fc}
+      \strng{bibnamehash}{939096dc963e098cfc5bebbf009dc2fc}
+      \strng{authorbibnamehash}{939096dc963e098cfc5bebbf009dc2fc}
+      \strng{authornamehash}{939096dc963e098cfc5bebbf009dc2fc}
+      \strng{authorfullhash}{939096dc963e098cfc5bebbf009dc2fc}
+      \strng{authorfullhashraw}{939096dc963e098cfc5bebbf009dc2fc}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Optimización del tiempo de espera y llegadas de los estudiantes en el área de control escolar en una empresa de servicios educativos}
+      \field{type}{Tesis de licenciatura}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://rinacional.tecnm.mx/jspui/handle/TecNM/9739
+      \endverb
+      \verb{url}
+      \verb https://rinacional.tecnm.mx/jspui/handle/TecNM/9739
+      \endverb
+    \endentry
+    \entry{torres2019qr}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f5bb7e6ab663e705eca5b39607ccdea4}{%
+           family={Torres\bibnamedelima Ramírez},
+           familyi={T\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Edson\bibnamedelima Emerson},
+           giveni={E\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Universidad Católica Los Ángeles de Chimbote}%
+      }
+      \strng{namehash}{f5bb7e6ab663e705eca5b39607ccdea4}
+      \strng{fullhash}{f5bb7e6ab663e705eca5b39607ccdea4}
+      \strng{fullhashraw}{f5bb7e6ab663e705eca5b39607ccdea4}
+      \strng{bibnamehash}{f5bb7e6ab663e705eca5b39607ccdea4}
+      \strng{authorbibnamehash}{f5bb7e6ab663e705eca5b39607ccdea4}
+      \strng{authornamehash}{f5bb7e6ab663e705eca5b39607ccdea4}
+      \strng{authorfullhash}{f5bb7e6ab663e705eca5b39607ccdea4}
+      \strng{authorfullhashraw}{f5bb7e6ab663e705eca5b39607ccdea4}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Implementación de un sistema de control de asistencia con código {QR} para la institución educativa {Ricardo Palma}, {Carhuaz}; 2019}
+      \field{type}{Tesis de licenciatura}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://hdl.handle.net/20.500.13032/14434
+      \endverb
+      \verb{url}
+      \verb https://hdl.handle.net/20.500.13032/14434
+      \endverb
+    \endentry
+    \entry{vargascordero2009aplicada}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5c7e18b887142de4965cd86f88060830}{%
+           family={Vargas-Cordero},
+           familyi={V\bibinithyphendelim C\bibinitperiod},
+           given={Z.\bibnamedelimi R.},
+           giveni={Z\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5c7e18b887142de4965cd86f88060830}
+      \strng{fullhash}{5c7e18b887142de4965cd86f88060830}
+      \strng{fullhashraw}{5c7e18b887142de4965cd86f88060830}
+      \strng{bibnamehash}{5c7e18b887142de4965cd86f88060830}
+      \strng{authorbibnamehash}{5c7e18b887142de4965cd86f88060830}
+      \strng{authornamehash}{5c7e18b887142de4965cd86f88060830}
+      \strng{authorfullhash}{5c7e18b887142de4965cd86f88060830}
+      \strng{authorfullhashraw}{5c7e18b887142de4965cd86f88060830}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0379-7082}
+      \field{journaltitle}{Educación}
+      \field{number}{1}
+      \field{title}{La investigación aplicada: Una forma de conocer las realidades con evidencia científica}
+      \field{volume}{33}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{pages}{155\bibrangedash 165}
+      \range{pages}{11}
+      \verb{urlraw}
+      \verb https://revistas.ucr.ac.cr/index.php/educacion/article/view/538
+      \endverb
+      \verb{url}
+      \verb https://revistas.ucr.ac.cr/index.php/educacion/article/view/538
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

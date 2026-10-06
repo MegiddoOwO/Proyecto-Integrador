@@ -1,0 +1,136 @@
+\section{¿Cómo Debemos Investigarlo?}
+De acuerdo con los criterios revisados en clase, el tipo de investigación se
+elige a partir del problema y de la pregunta planteados en las secciones
+anteriores. Cada decisión se declara y se justifica enseguida.
+
+\subsection{Finalidad}
+La investigación es \textbf{aplicada}. Se entiende por aplicada la
+investigación dirigida primordialmente a un fin práctico específico, en
+contraste con la investigación pura o básica, cuyo propósito es adquirir
+conocimiento sin un objetivo de aplicación predeterminado
+\parencite{oecd2015frascati}; su valor está en producir evidencia para
+resolver problemas concretos de la práctica \parencite{vargascordero2009aplicada}.
+Este proyecto se ubica en el primer caso: no se pretende generar conocimiento
+teórico nuevo sobre los códigos QR ni sobre la teoría de colas, temas que ya
+cuentan con literatura consolidada, sino emplear ese conocimiento existente
+para resolver un problema situado, el control de acceso de un plantel
+determinado. El propósito del estudio es producir una decisión práctica —si
+conviene o no adoptar el sistema en el resto de los accesos— y un producto
+utilizable, el prototipo del Apéndice~D. Sus resultados valen para el caso
+estudiado y no se presentan como una generalización.
+
+\subsection{Enfoque}
+El enfoque es \textbf{mixto, con predominancia cuantitativa}
+\parencite{hernandezsampieri2014metodologia}, porque el problema exige dos
+clases distintas de información. Los indicadores de tiempo
+de validación, longitud de fila e incidencias de identidad (encuesta del
+Apéndice~A y hoja de observación del Apéndice~C) son magnitudes medibles y se
+analizan de forma cuantitativa, pues la pregunta de investigación pide saber
+\emph{en qué medida} cambian. La entrevista del Apéndice~B aporta información
+cualitativa que ninguna medición recoge: las razones, los criterios y las
+dificultades que el personal de vigilancia y de Control Escolar expresa con
+sus propias palabras.
+
+\subsection{Alcance}
+El alcance es \textbf{descriptivo y explicativo}. Es descriptivo en su primera
+etapa, de carácter diagnóstico, porque el nivel de conocimiento disponible
+sobre el acceso del TESCHA es nulo y hace falta documentar la situación actual
+—cuánto se espera, cuántos entran, con qué frecuencia falla la
+identificación— para establecer una línea base. Es explicativo en su segunda
+etapa, porque una vez instalado el prototipo se busca establecer si el cambio
+de mecanismo de validación explica la reducción observada en el tiempo de
+ingreso y en las incidencias de identidad, y no solo constatar que ocurrió.
+
+\subsection{Obtención de Información}
+La obtención de información es \textbf{mixta}, documental y de campo. Es
+documental en la fundamentación: la elección del código QR frente a NFC y al
+reconocimiento facial, el esquema de firma HMAC y el diseño cuasiexperimental
+se sustentan en fuentes ya publicadas, revisadas en las secciones anteriores.
+Es de campo en la parte central del estudio, porque los datos que dan
+respuesta a la pregunta de investigación no existen en ninguna fuente
+documental: no hay registro alguno del flujo de acceso del TESCHA, de modo
+que deben levantarse en el sitio, en el acceso piloto y en el horario en que
+el problema se presenta.
+
+\subsection{Técnica e Instrumento de Recolección de Datos}
+Se emplean tres pares de técnica e instrumento, cada uno elegido por el tipo
+de información que se necesita obtener:
+\begin{itemize}
+	\item \textbf{Encuesta}, con un \textbf{cuestionario} de preguntas cerradas
+	      y escala de Likert (Apéndice~A). Se elige porque la percepción de espera, la
+	      frecuencia de olvido de credencial, la disposición a usar el sistema y la
+	      viabilidad tecnológica del estudiante son datos que solo el propio
+	      estudiante puede reportar, y se requieren de una población numerosa en poco
+	      tiempo, con respuestas comparables entre sí y de forma anónima.
+	\item \textbf{Entrevista semiestructurada}, con una \textbf{guía de
+		      entrevista} (Apéndice~B). Se elige porque el personal de vigilancia y de
+	      Control Escolar son informantes clave, pocos en número, que poseen
+	      información que ningún cuestionario anticipa: el procedimiento real de
+	      revisión, los casos excepcionales y las condiciones institucionales para
+	      tratar datos de los estudiantes. El formato semiestructurado permite
+	      repreguntar sobre lo que aparezca.
+	\item \textbf{Observación estructurada no participante}, con una \textbf{hoja
+		      de registro} (Apéndice~C). Se elige porque el tiempo de revisión y la
+	      longitud de la fila son hechos observables que deben medirse
+	      directamente con cronómetro y conteo; preguntarlos produciría estimaciones
+	      subjetivas, no mediciones. Es además el único instrumento que se aplica dos
+	      veces con el mismo formato, lo que hace comparables la línea base y el
+	      piloto.
+\end{itemize}
+
+\subsection{Control de Variables}
+En cuanto al control de variables, la investigación es \textbf{experimental},
+aunque no en sentido estricto, sino \textbf{cuasiexperimental}. Sí hay
+manipulación deliberada de la variable independiente —el mecanismo de
+validación de identidad, que pasa de la revisión visual de credenciales al
+escaneo del QR dinámico— y se observa su efecto sobre las variables
+dependientes: el tiempo promedio de validación por estudiante, la longitud
+máxima de la fila y el número de incidencias de identidad. Lo que no es
+posible es el control propio de un experimento puro: no hay asignación
+aleatoria de los estudiantes ni grupo de control, porque el acceso piloto
+atiende a quien llega. Se mantienen constantes las condiciones que sí están al
+alcance del equipo —el mismo acceso, el mismo turno, la misma franja horaria,
+los mismos observadores y el mismo instrumento en ambas mediciones— y se
+registra el número de puntos de revisión activos ($c$) para no atribuir al
+prototipo una mejora que provenga de haber abierto más filas.
+
+\subsection{Temporalidad}
+Según el criterio temporal, que distingue entre recolectar datos en un solo
+momento y recolectarlos en varios puntos en el tiempo para hacer inferencias
+sobre el cambio \parencite{hernandezsampieri2014metodologia}, esta
+investigación es \textbf{longitudinal}, con mediciones repetidas. El fenómeno
+no se mide una sola vez, sino en dos series separadas por la intervención:
+cinco días hábiles consecutivos de observación antes del piloto y una segunda
+serie equivalente durante él, sobre el mismo acceso y con la misma hoja de
+registro. Esta temporalidad la exige la pregunta de investigación, que pide
+comparar un antes y un después; un estudio transversal, de una sola medición,
+permitiría describir la situación actual pero no atribuir ningún cambio al
+prototipo.
+
+Conviene precisar el uso del término, porque el eje
+transversal/longitudinal suele desarrollarse para los diseños no
+experimentales, en los que el investigador observa sin administrar ningún
+estímulo, y sus subtipos —como el diseño de panel— se definen en ese marco
+\parencite{hernandezsampieri2014metodologia}. Aquí sí hay un estímulo
+administrado por el equipo, el prototipo, de modo que el diseño pertenece a la
+familia cuasiexperimental descrita más adelante. Por eso «longitudinal» se
+emplea en este trabajo en su sentido temporal —varias mediciones a lo largo
+del tiempo sobre las mismas unidades de observación— y no como la etiqueta de
+un diseño no experimental de panel.
+
+\subsection{Diseño}
+En consecuencia, el diseño es de campo y cuasiexperimental, del tipo
+preprueba/posprueba con un solo grupo —el acceso piloto— y sin grupo de
+control \parencite{campbellstanley1963, hernandezsampieri2014metodologia},
+dado que no es posible operar dos accesos idénticos en paralelo bajo las
+mismas condiciones. Un diseño equivalente se ha empleado recientemente para
+evaluar, también sin grupo de control, un piloto de intervención basado en
+código QR dentro de una institución \parencite{ortiz2026qrpilot}. Entre las
+amenazas a la validez interna de este diseño destacan la historia y la
+maduración \parencite{cranmer2017pretestposttest} —por ejemplo, un cambio de
+horario escolar o la simple costumbre de los estudiantes podrían alterar los
+tiempos sin que el prototipo tenga parte en ello—, por lo que los resultados
+se interpretarán como evidencia orientativa y no concluyente. Los tres
+instrumentos se aplican antes del piloto para obtener la línea base y de
+nuevo durante él para comparar los resultados, como se detalla en el Plan de
+Acción Preliminar (Apéndice~D).

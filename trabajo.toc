@@ -1,0 +1,36 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{Escanea y Entra: Prototipo de Acceso QR para el TESCHA}{4}{section*.2}%
+\contentsline {section}{Tema}{5}{section*.3}%
+\contentsline {section}{Delimitación}{5}{section*.4}%
+\contentsline {section}{Problema de Investigación}{6}{section*.6}%
+\contentsline {subsection}{La Situación}{6}{section*.7}%
+\contentsline {subsection}{La Importancia}{7}{section*.8}%
+\contentsline {subsection}{Lo que Desconocemos}{8}{section*.9}%
+\contentsline {subsubsection}{Situación Actual del Acceso en el TESCHA}{8}{section*.10}%
+\contentsline {subsubsection}{Arquitectura de Hardware y Tiempos de Respuesta}{8}{section*.11}%
+\contentsline {subsubsection}{Seguridad y Protección de Datos Personales}{9}{section*.12}%
+\contentsline {subsubsection}{Modelado de Datos e Indicadores}{9}{section*.13}%
+\contentsline {subsubsection}{Aceptación y Experiencia de Usuario}{9}{section*.14}%
+\contentsline {subsection}{La Viabilidad}{10}{section*.15}%
+\contentsline {section}{Pregunta de Investigación}{11}{section*.17}%
+\contentsline {section}{¿Cómo Debemos Investigarlo?}{11}{section*.18}%
+\contentsline {subsection}{Finalidad}{11}{section*.19}%
+\contentsline {subsection}{Enfoque}{12}{section*.20}%
+\contentsline {subsection}{Alcance}{12}{section*.21}%
+\contentsline {subsection}{Obtención de Información}{12}{section*.22}%
+\contentsline {subsection}{Técnica e Instrumento de Recolección de Datos}{12}{section*.23}%
+\contentsline {subsection}{Control de Variables}{13}{section*.24}%
+\contentsline {subsection}{Temporalidad}{14}{section*.25}%
+\contentsline {subsection}{Diseño}{14}{section*.26}%
+\contentsline {section}{Referencias}{15}{section*.27}%
+\contentsline {section}{Ap\'{e}ndice~A: Encuesta a Estudiantes sobre el Acceso al Plantel}{18}{appendix.1}%
+\contentsline {subsection}{Aplicación}{18}{section*.28}%
+\contentsline {subsection}{Instrumento}{18}{section*.29}%
+\contentsline {section}{Ap\'{e}ndice~B: Guía de Entrevista al Personal de Vigilancia y de Control Escolar}{21}{appendix.2}%
+\contentsline {subsection}{Personal de Vigilancia}{21}{section*.30}%
+\contentsline {subsection}{Departamento de Control Escolar}{21}{section*.31}%
+\contentsline {section}{Ap\'{e}ndice~C: Hoja de Observación del Flujo en el Acceso}{22}{appendix.3}%
+\contentsline {subsection}{Procedimiento}{22}{section*.32}%
+\contentsline {subsection}{Formato}{22}{section*.33}%
+\contentsline {subsection}{Análisis}{22}{section*.34}%
+\contentsline {section}{Ap\'{e}ndice~D: Plan de Acción Preliminar}{24}{appendix.4}%

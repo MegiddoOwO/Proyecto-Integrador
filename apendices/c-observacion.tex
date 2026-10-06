@@ -1,0 +1,50 @@
+\section{Hoja de Observación del Flujo en el Acceso}
+\apendiceindice{C}{Hoja de Observación del Flujo en el Acceso}
+
+\subsection{Procedimiento}
+La observación se realiza en el acceso piloto durante cinco días hábiles
+consecutivos, desde 30 minutos antes hasta 10 minutos después del inicio de la
+primera clase del turno vespertino, en intervalos de cinco minutos. Participan
+dos observadores: el primero cuenta los ingresos y anota la longitud máxima de
+la fila en cada intervalo; el segundo cronometra, para cinco estudiantes
+elegidos al azar por intervalo, el tiempo desde que llegan al punto de revisión
+hasta que lo cruzan. La misma hoja se utilizará durante el piloto para comparar
+los resultados.
+
+\subsection{Formato}
+\noindent Fecha: \linea[3cm] \quad Día: \linea[2.5cm] \quad Acceso:
+\linea[3cm]\\[0.5em]
+Hora de inicio de clases: \linea[2cm] \quad Puntos de revisión activos ($c$):
+\linea[1.5cm] \quad Observadores: \linea[3cm]
+
+\medskip
+\noindent
+{\small
+	\begin{tabular}{|p{2.2cm}|p{1.3cm}|p{1.3cm}|p{4.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|}
+		\hline
+		\textbf{Intervalo (min)}         & \textbf{Ingresos}  & \textbf{Fila máx.} &
+		\textbf{Tiempos de revisión (s)} & \textbf{Sin cred.} & \textbf{Sin
+		revisión}                        & \textbf{Rechaz.}                                    \\
+		\hline
+		$-30$ a $-25$                    &                    &                    &   &  &  & \\[0.8em] \hline
+		$-25$ a $-20$                    &                    &                    &   &  &  & \\[0.8em] \hline
+		$-20$ a $-15$                    &                    &                    &   &  &  & \\[0.8em] \hline
+		$-15$ a $-10$                    &                    &                    &   &  &  & \\[0.8em] \hline
+		$-10$ a $-5$                     &                    &                    &   &  &  & \\[0.8em] \hline
+		$-5$ a $0$                       &                    &                    &   &  &  & \\[0.8em] \hline
+		$0$ a $+5$                       &                    &                    &   &  &  & \\[0.8em] \hline
+		$+5$ a $+10$                     &                    &                    &   &  &  & \\[0.8em] \hline
+	\end{tabular}}
+
+\subsection{Análisis}
+Con los datos de cada intervalo se calculan la tasa de llegadas
+$\lambda = \mathrm{ingresos}/5$ (estudiantes por minuto), el tiempo medio de
+revisión $\bar{t}$ en segundos, la tasa de servicio de un punto de revisión
+$\mu = 60/\bar{t}$ y la utilización del acceso:
+\[
+	\rho = \frac{\lambda}{c\,\mu}
+\]
+Cuando $\rho \geq 1$, llegan más estudiantes de los que el acceso puede atender
+y la fila crece durante ese intervalo. Comparar $\bar{t}$, $\rho$ y la fila
+máxima antes del piloto y durante él permite comprobar si el prototipo reduce
+el tiempo de ingreso.

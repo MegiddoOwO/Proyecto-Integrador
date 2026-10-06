@@ -1,0 +1,17 @@
+[0] Config.pm:329> INFO - This is Biber 2.22
+[0] Config.pm:332> INFO - Logfile is 'trabajo.blg'
+[139] biber:342> INFO - === mié sep 30, 2026, 00:42:34
+[167] Biber.pm:421> INFO - Reading 'trabajo.bcf'
+[320] Biber.pm:1002> INFO - Found 18 citekeys in bib section 0
+[353] Biber.pm:4487> INFO - Processing section 0
+[369] Biber.pm:4680> INFO - Looking for bibtex file 'citas.bib' for section 0
+[371] bibtex.pm:1713> INFO - LaTeX decoding ...
+[399] bibtex.pm:1519> INFO - Found BibTeX data source 'citas.bib'
+[790] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[790] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[790] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[890] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[890] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[890] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[947] bbl.pm:676> INFO - Writing 'trabajo.bbl' with encoding 'UTF-8'
+[991] bbl.pm:779> INFO - Output to trabajo.bbl

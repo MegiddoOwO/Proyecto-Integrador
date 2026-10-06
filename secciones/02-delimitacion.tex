@@ -1,0 +1,64 @@
+\section{Delimitación}
+Dentro de ese tema, el proyecto se delimita a la validación de identidad en
+un acceso peatonal del Tecnológico de Estudios Superiores de Chalco (TESCHA),
+en Chalco, Estado de México. Se elige un solo acceso, en el turno vespertino,
+como punto piloto tanto para la observación inicial como para la prueba del
+prototipo (Apéndices~A, B y~C), y se opta por el código QR dinámico como
+tecnología de identificación, según se justifica en ``La Viabilidad'', más
+adelante.
+
+Concretamente, se diseñará y construirá un prototipo de torniquete
+controlado por un microcontrolador ESP32 con cámara (ESP32-CAM), capaz de
+leer un código QR dinámico asignado a cada estudiante, validarlo contra un
+servidor y registrar cada ingreso en una base de datos consultable desde un
+panel web (Figura~\ref{fig:arquitectura}). El código se regenera cada pocos
+segundos y se firma con una contraseña de un solo uso basada en HMAC, un
+esquema que resiste la interceptación, el reenvío y la modificación del
+mensaje \parencite{subpratatsavee2015hmac}; así, una captura de pantalla
+compartida deja de ser válida al poco tiempo. Esta estrategia de regeneración
+periódica ya se ha probado en el control de asistencia de una universidad del
+Reino Unido, donde un código QR renovado cada 20 segundos impidió que los
+estudiantes reenviaran capturas de pantalla entre sí
+\parencite{nwabuwe2023dynamicqr}; otros trabajos han combinado de forma
+similar el QR con una contraseña de un solo uso para el acceso a laboratorios
+universitarios \parencite{chaabani2023labqr}.
+
+\begin{figure}[tbp]
+	\caption{Arquitectura Propuesta del Sistema de Acceso por Código QR}
+	\label{fig:arquitectura}
+	\centering
+	\begin{tikzpicture}[
+		node distance=1.1cm and 1.6cm,
+		box/.style={draw, rounded corners, align=center, minimum height=1cm,
+				minimum width=2.6cm, font=\small},
+		arr/.style={-{Latex[length=2mm]}, thick}
+		]
+		\node[box] (alumno) {QR dinámico\\(celular del alumno)};
+		\node[box, right=of alumno] (cam) {ESP32-CAM\\(captura y decodifica)};
+		\node[box, right=of cam] (esp) {ESP32\\(controla torniquete)};
+		\node[box, below=of esp] (servidor) {Servidor y BD\\(valida el token)};
+		\node[box, left=of servidor] (panel) {Panel web\\administrativo};
+		\draw[arr] (alumno) -- (cam) node[midway, above, font=\scriptsize]{escaneo};
+		\draw[arr] (cam) -- (esp) node[midway, above, font=\scriptsize]{token};
+		\draw[arr] (esp) -- (servidor) node[midway, right, font=\scriptsize]{Wi-Fi/HTTPS};
+		\draw[arr] (servidor) -- (panel) node[midway, below, font=\scriptsize]{consulta};
+	\end{tikzpicture}
+	\figurenote{Elaboración propia. El servidor responde si el token es válido
+		y el ESP32 libera el torniquete; cada intento, aceptado o rechazado, queda
+		registrado en la base de datos.}
+\end{figure}
+
+La delimitación del proyecto en esta etapa es la siguiente:
+\begin{itemize}
+	\item \textbf{Incluye:} un acceso piloto, el registro de entradas de
+	      estudiantes, la generación y validación de QR dinámicos, la base de datos de
+	      ingresos y un panel web de consulta.
+	\item \textbf{No incluye:} reconocimiento facial, tarjetas NFC, pase de lista
+	      por materia, registro de salidas ni control de visitantes. Los estudiantes
+	      que no puedan mostrar su código seguirán el procedimiento manual actual.
+\end{itemize}
+
+Cabe reconocer una limitación: un QR dinámico impide reutilizar capturas de
+pantalla, pero no que un estudiante preste su celular a otra persona. Por esa
+razón, el proyecto no pretende eliminar la suplantación, sino ayudar a
+aliviar los estragos que genera el sistema actual.

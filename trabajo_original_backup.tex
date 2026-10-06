@@ -1,0 +1,576 @@
+% =====================================================================
+%  Avance 1 — Control de acceso estudiantil por código QR (TESCHA)
+%  Plantilla APA 7.ª edición (clase apa7)
+%  Compilar con:  latexmk -pdf trabajo.tex   (usa biber automáticamente)
+% =====================================================================
+\documentclass[stu,11pt,floatsintext,biblatex]{apa7}
+
+% Fuente sans serif a 11 pt (APA permite sans serif de 11 pt, como Arial)
+\usepackage{tgheros}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[spanish,es-tabla]{babel} % es-tabla: "Tabla" en vez de "Cuadro"
+\usepackage{csquotes}                % requerido por biblatex-apa
+\addbibresource{citas.bib}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+
+% La clase apa7 deja el texto en bandera (raggedright) tras \maketitle;
+% aquí se justifica, como pide el profesor.
+\usepackage{ragged2e}
+
+% Logos arriba de la portada (los pide la escuela, no APA).
+\newcommand{\hrm}{\noindent
+  \includegraphics[height=1.6cm]{img/tescha_logo.png}\hfill
+  \includegraphics[height=1.6cm]{img/logo_sitemas.png}\par}
+
+% Índice después de la portada (lo pide la escuela; APA puro no lo usa).
+\setcounter{tocdepth}{2}
+\makeatletter
+\patchcmd{\maketitle}{\@ifundefined{def@donotrepeattitle}}
+  {\tableofcontents\newpage\@ifundefined{def@donotrepeattitle}}{}{}
+\patchcmd{\maketitle}{\section*{\protect\normalfont\textbf{\@title}}}
+  {\section*{\protect\normalfont\textbf{\@title}}\addcontentsline{toc}{section}{\@title}}{}{}
+\makeatother
+\AtBeginDocument{\defbibheading{bibliography}[\refname]{%
+  \clearpage\section*{\normalfont\textbf{#1}}\addcontentsline{toc}{section}{#1}}}
+\newcommand{\apendiceindice}[2]{\addcontentsline{toc}{section}{\appendixname~#1: #2}}
+
+\fancypagestyle{titlepage}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}}
+
+\renewcommand{\figurenote}[1]{\par\noindent\textit{\notelabel.} #1\par}
+\renewcommand{\tablenote}[1]{\par\smallskip\figurenote{#1}}
+
+\hypersetup{hidelinks}
+\setlength{\headheight}{15.4pt}
+
+\DeclareDelimFormat[parencite]{finalnamedelim}{\addspace\bibstring{and}\space}
+\DeclareDelimFormat[bib,biblist]{finalnamedelim}{%
+  \ifthenelse{\value{listcount}>\maxprtauth}{}{\addspace\bibstring{and}\space}}
+\DefineBibliographyExtras{spanish}{\protected\def\bibrangedash{\textendash}}
+
+\AtBeginDocument{%
+  \renewcommand{\keywordname}{Palabras clave}%
+  \renewcommand{\acksname}{Nota del autor}%
+  \renewcommand{\notelabel}{Nota}%
+}
+
+% ----------------------------- Datos ---------------------------------
+\title{Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
+\shorttitle{ACCESO QR TESCHA}
+
+\authorsnames{Juan Esteban Anzures Campos, Daniel Arellano Palacios, Ian Alexis Flores Martínez, Miguel Ángel Jurado Delgadillo, Juan Fernando Reyes Arguello, Bryan Uriel Villegas Raymundo}
+\authorsaffiliations{{Ingeniería en Sistemas Computacionales, Tecnológico de Estudios Superiores de Chalco}}
+
+% Modo stu
+\course{Investigación (grupo 4751, turno matutino)}
+\professor{Dra. en C. C. Giselle Nayeli Morales Rosales}
+\duedate{17 de septiembre de 2026}
+
+\makeatletter
+\@ifundefined{def@stu}{}{\let\@shorttitle\@undefined \let\@acks\@undefined}
+\makeatother
+
+% =====================================================================
+% Casilla para opciones de la encuesta
+\newcommand{\op}{\framebox[0.8em]{\rule{0pt}{0.55em}}\,}
+\newcommand{\linea}[1][4cm]{\rule{#1}{0.4pt}}
+
+\begin{document}
+\maketitle
+\justifying
+
+Este avance corresponde al proyecto integrador cuyo título provisional es
+\textit{Escanea y Entra: Prototipo de Acceso QR para el TESCHA}. En él se
+identifica y delimita la situación problemática que motiva el proyecto, se
+responden las preguntas que guían esa delimitación y se formula el
+planteamiento del problema. Los instrumentos con los que se levantarán los
+datos del plantel se incluyen en los apéndices.
+
+\clearpage
+\section{Identificación y Delimitación del Problema}
+
+\subsection{¿Qué Situación Problemática Queremos Estudiar?}
+El ingreso de los estudiantes al Tecnológico de Estudios Superiores de Chalco
+(TESCHA) se controla mediante la revisión visual de credenciales físicas por
+parte del personal de vigilancia. Este método es lento en las horas de mayor
+afluencia, no deja un registro digital de quién entra ni a qué hora y no
+permite comprobar que quien presenta la credencial sea su titular. La
+insatisfacción con los registros manuales se ha documentado en otros
+contextos: en una escuela de educación básica de Perú, el 87.5\,\% de los 40
+docentes y administrativos encuestados no se sentía cómodo con el registro
+manual de asistencia \parencite{torres2019qr}. En educación superior se han
+desarrollado sistemas que usan el código QR, combinado con otras tecnologías,
+para reducir el tiempo destinado al registro de asistencia
+\parencite{cano2026sistema}. En el TESCHA, la magnitud de estas limitaciones
+se medirá con los instrumentos de los Apéndices~A, B y~C.
+
+\subsection{¿Cuál Es el Problema que Hemos Identificado?}
+El acceso de los estudiantes al TESCHA carece de un mecanismo de validación
+automatizado. Como consecuencia, se forman filas en los minutos previos al
+inicio de clases, una credencial prestada o ajena puede superar la revisión
+visual y la institución no cuenta con un registro confiable de ingresos que
+sirva para tomar decisiones.
+
+Conviene distinguir este problema del pase de lista dentro del salón (la
+práctica conocida como ``firmar por un compañero''). Ambos comparten la misma
+raíz, una identificación deficiente, pero un registro en la entrada solo
+demuestra que el estudiante ingresó al plantel, no que asistió a una clase
+específica. Por ello, el control de asistencia por materia queda fuera del
+alcance de este proyecto.
+
+\subsection{¿A Quién Afecta Este Problema?}
+\begin{enumerate}
+  \item A los \textbf{estudiantes}, que pierden tiempo en las filas de
+  entrada, se exponen a llegar tarde a su primera clase y conviven en un
+  plantel donde el ingreso de personas ajenas no se controla con rigor.
+  \item Al \textbf{personal de vigilancia}, que debe revisar cientos de
+  credenciales en pocos minutos sin ninguna herramienta que le ayude a
+  detectar una credencial ajena, vencida o apócrifa.
+  \item A los \textbf{directivos y al Departamento de Control Escolar}, que no
+  disponen de datos de ingreso para detectar a estudiantes que dejan de acudir
+  al plantel ni para planear la apertura de accesos y el personal necesario en
+  cada horario.
+\end{enumerate}
+
+\subsection{¿Dónde Se Presenta?}
+En los accesos peatonales del TESCHA, en Chalco, Estado de México, donde el
+personal de vigilancia verifica la identidad de quienes ingresan. El problema
+se agudiza en el turno matutino, durante los 15 a 20 minutos previos al
+inicio de la primera clase, cuando la mayor parte de los estudiantes llega en
+un intervalo corto. Para este proyecto se delimita un solo acceso, que servirá
+como punto piloto tanto para la observación inicial como para la prueba del
+prototipo.
+
+\subsection{¿Qué Consecuencias o Efectos Genera Este Problema?}
+\begin{itemize}
+  \item \textbf{Filas y tiempos muertos} al inicio de la jornada, que
+  provocan retardos en la primera clase. La teoría de colas, que ya se ha
+  propuesto para reducir los tiempos de espera de estudiantes en el área de
+  control escolar de otro plantel del Tecnológico Nacional de México
+  \parencite{talavera2025espera}, permite analizar este efecto a partir de la
+  tasa de llegadas y del tiempo de atención.
+  \item \textbf{Riesgo de seguridad}, porque una credencial prestada, vencida
+  o ajena puede permitir el ingreso de personas que no pertenecen a la
+  comunidad del TESCHA.
+  \item \textbf{Ausencia de datos}: sin un registro digital no es posible
+  saber cuántas personas ingresan ni en qué horarios, ni detectar a tiempo a
+  los estudiantes que dejan de acudir al plantel, una señal temprana de
+  posible deserción.
+  \item \textbf{Carga operativa} para el personal de vigilancia, cuya
+  revisión depende únicamente de la atención de una persona en los momentos
+  de mayor afluencia.
+\end{itemize}
+
+\subsection{¿Qué Parte Específica del Problema Podemos Abordar Mediante Nuestro Proyecto?}
+El proyecto aborda la validación de identidad en un acceso peatonal. Se
+diseñará y construirá un prototipo de torniquete controlado por un
+microcontrolador ESP32 con cámara (ESP32-CAM), capaz de leer un código QR
+dinámico asignado a cada estudiante, validarlo contra un servidor y registrar
+cada ingreso en una base de datos consultable desde un panel web
+(Figura~\ref{fig:arquitectura}). El código se regenera cada pocos segundos y
+se firma con una contraseña de un solo uso basada en HMAC, un esquema que
+resiste la interceptación, el reenvío y la modificación del mensaje
+\parencite{subpratatsavee2015hmac}; así, una captura de pantalla compartida
+deja de ser válida al poco tiempo.
+
+\begin{figure}[tbp]
+  \caption{Arquitectura Propuesta del Sistema de Acceso por Código QR}
+  \label{fig:arquitectura}
+  \centering
+  \begin{tikzpicture}[
+      node distance=1.1cm and 1.6cm,
+      box/.style={draw, rounded corners, align=center, minimum height=1cm,
+        minimum width=2.6cm, font=\small},
+      arr/.style={-{Latex[length=2mm]}, thick}
+    ]
+    \node[box] (alumno) {QR dinámico\\(celular del alumno)};
+    \node[box, right=of alumno] (cam) {ESP32-CAM\\(captura y decodifica)};
+    \node[box, right=of cam] (esp) {ESP32\\(controla torniquete)};
+    \node[box, below=of esp] (servidor) {Servidor y BD\\(valida el token)};
+    \node[box, left=of servidor] (panel) {Panel web\\administrativo};
+    \draw[arr] (alumno) -- (cam) node[midway, above, font=\scriptsize]{escaneo};
+    \draw[arr] (cam) -- (esp) node[midway, above, font=\scriptsize]{token};
+    \draw[arr] (esp) -- (servidor) node[midway, right, font=\scriptsize]{Wi-Fi/HTTPS};
+    \draw[arr] (servidor) -- (panel) node[midway, below, font=\scriptsize]{consulta};
+  \end{tikzpicture}
+  \figurenote{Elaboración propia. El servidor responde si el token es válido
+  y el ESP32 libera el torniquete; cada intento, aceptado o rechazado, queda
+  registrado en la base de datos.}
+\end{figure}
+
+El uso de códigos QR para el control de acceso físico ya se ha propuesto en
+la literatura \parencite{kao2011physical}. La Tabla~\ref{tab:comparativa}
+resume por qué se eligió frente a otras tecnologías. Frente a NFC, una
+comparación en transacciones móviles encontró que el QR se procesa con mayor
+rapidez, aunque no incorpora cifrado propio
+\parencite{harnaningrum2024comparison}; esa carencia se compensa con la firma
+HMAC descrita arriba. Además, el estudiante usa su propio celular, por lo que
+no hace falta emitir tarjetas. Frente al reconocimiento facial, el QR no
+requiere procesamiento pesado ni trata datos biométricos, cuya aceptación entre
+estudiantes universitarios depende en buena medida de la confianza y de la
+seguridad que perciben \parencite{rukhiran2023user}.
+
+\begin{table}[tbp]
+  \caption{Comparación de Tecnologías de Validación de Acceso}
+  \label{tab:comparativa}
+  \begin{tabular}{lccc}
+    \toprule
+    Criterio & Código QR & NFC & Reconocimiento facial \\
+    \midrule
+    Costo de infraestructura & Bajo & Medio & Alto \\
+    Medio que porta el estudiante & Celular & Tarjeta & Ninguno \\
+    Complejidad de cómputo en el lector & Baja & Baja & Alta \\
+    Trata datos biométricos & No & No & Sí \\
+    Riesgo de copia del identificador & Medio\textsuperscript{a} & Bajo & Bajo \\
+    \bottomrule
+  \end{tabular}
+  \tablenote{Elaboración propia con base en
+  \textcite{harnaningrum2024comparison} y \textcite{rukhiran2023user}. El costo
+  y la complejidad son una valoración cualitativa del equipo.
+  \textsuperscript{a}El riesgo corresponde a un QR estático; con un código
+  dinámico firmado con HMAC se reduce considerablemente
+  \parencite{subpratatsavee2015hmac}.}
+\end{table}
+
+La delimitación del proyecto en esta etapa es la siguiente:
+\begin{itemize}
+  \item \textbf{Incluye:} un acceso piloto, el registro de entradas de
+  estudiantes, la generación y validación de QR dinámicos, la base de datos de
+  ingresos y un panel web de consulta.
+  \item \textbf{No incluye:} reconocimiento facial, tarjetas NFC, pase de lista
+  por materia, registro de salidas ni control de visitantes. Los estudiantes
+  que no puedan mostrar su código seguirán el procedimiento manual actual.
+\end{itemize}
+
+Cabe reconocer una limitación: un QR dinámico impide reutilizar capturas de
+pantalla, pero no que un estudiante preste su celular a otra persona. Por esa
+razón, el proyecto no pretende eliminar la suplantación, sino ayudar a aliviar
+los estragos que genera el sistema actual.
+
+\subsection{¿Qué Información Necesitamos Conocer para Comprender Mejor el Problema?}
+Para dimensionar el problema y diseñar una solución viable se requiere
+información en cinco ejes.
+
+\subsubsection{Situación Actual del Acceso en el TESCHA}
+Es la información más importante, porque sin ella no es posible afirmar la
+magnitud del problema. Se necesita conocer la matrícula por turno, el número
+de accesos y de vigilantes, la tasa de llegada de estudiantes por minuto en el
+horario pico, el tiempo que toma revisar a cada estudiante, la frecuencia con
+que se olvidan o se prestan credenciales y la proporción de estudiantes que
+cuenta con un celular propio. Estos datos se obtendrán con la encuesta del
+Apéndice~A, la entrevista del Apéndice~B y la hoja de observación del
+Apéndice~C.
+
+\subsubsection{Arquitectura de Hardware y Tiempos de Respuesta}
+\begin{itemize}
+  \item \textbf{Latencia de lectura:} cuántos milisegundos toma al ESP32-CAM
+  capturar y decodificar el código, y cuántos más consume la consulta al
+  servidor por Wi-Fi. La suma debe ser menor que el tiempo de revisión manual
+  medido en el Apéndice~C para que el sistema tenga sentido. No se encontró
+  literatura arbitrada que reporte este tiempo en un ESP32-CAM, por lo que se
+  medirá de forma experimental con el prototipo.
+  \item \textbf{Condiciones de lectura:} cómo afectan la iluminación, el
+  brillo de la pantalla del celular y la distancia al lector la tasa de
+  lecturas fallidas.
+  \item \textbf{Durabilidad mecánica:} cuántos ciclos diarios deberá soportar
+  el mecanismo del torniquete según el flujo observado.
+\end{itemize}
+
+\subsubsection{Seguridad y Protección de Datos Personales}
+\begin{itemize}
+  \item \textbf{Validez del código:} qué duración del token equilibra la
+  seguridad frente a capturas de pantalla con la tolerancia a desfases de
+  reloj entre el celular y el servidor.
+  \item \textbf{Comunicación segura:} uso de HTTPS entre el lector, el
+  servidor y el panel web para que los registros no puedan interceptarse ni
+  modificarse.
+  \item \textbf{Marco legal:} como organismo público del Estado de México, el
+  TESCHA es sujeto obligado de la Ley de Protección de Datos Personales en
+  Posesión de Sujetos Obligados del Estado de México y Municipios
+  \parencite{edomex2017datos}, además de la Ley General de la materia
+  expedida en 2025 \parencite{lgpdppso2025}. Hay que identificar las
+  obligaciones que ambas imponen al sistema, como el aviso de privacidad y el
+  periodo de conservación de los registros de ingreso.
+\end{itemize}
+
+\subsubsection{Modelado de Datos e Indicadores}
+\begin{itemize}
+  \item \textbf{Estructura relacional:} diseño normalizado de las tablas de
+  estudiantes, accesos, dispositivos lectores y registros de ingreso en MySQL
+  o PostgreSQL.
+  \item \textbf{Indicadores útiles:} qué reportes necesitan realmente
+  vigilancia y Control Escolar, por ejemplo, ingresos por franja horaria,
+  intentos rechazados y estudiantes sin ingresos durante varios días
+  consecutivos.
+\end{itemize}
+
+\subsubsection{Aceptación y Experiencia de Usuario}
+\begin{itemize}
+  \item \textbf{Disposición a usar el sistema:} si los estudiantes estarían
+  dispuestos a mostrar un QR en su celular y qué preocupaciones tienen sobre
+  el registro de su hora de entrada.
+  \item \textbf{Ergonomía del lector:} altura y ángulo de la cámara para que
+  estudiantes de distintas estaturas lean su código sin detener el paso.
+\end{itemize}
+
+\subsection{¿Qué Queremos Conocer, Analizar, Determinar o Comprobar Mediante Nuestra Investigación?}
+Queremos comprobar si un sistema de acceso con código QR dinámico, leído por
+un ESP32-CAM, reduce el tiempo promedio de ingreso por estudiante respecto a
+la revisión visual actual, y determinar en qué medida disminuye los ingresos
+con credenciales ajenas. Con ello se busca saber si el sistema ayuda a aliviar
+los estragos del control de acceso actual del TESCHA. Para responderlo se
+medirán tres indicadores, antes del piloto y durante él, con la hoja del
+Apéndice~C: el tiempo promedio de validación por estudiante, la longitud
+máxima de la fila en el horario pico y el número de incidencias de identidad
+detectadas.
+
+\clearpage
+\section{Planteamiento del Problema}
+El Tecnológico de Estudios Superiores de Chalco recibe cada mañana a cientos
+de estudiantes que llegan en un intervalo de pocos minutos antes del inicio de
+su primera clase. El control de ese ingreso descansa en la revisión visual de
+credenciales físicas que realiza el personal de vigilancia, un procedimiento
+que no se apoya en ninguna herramienta tecnológica y que no deja registro de
+quién entra ni a qué hora. Esta dependencia de los registros manuales no es
+exclusiva del plantel: en otras instituciones se ha documentado la
+insatisfacción del personal con ellos \parencite{torres2019qr} y se han
+desarrollado sistemas con código QR para agilizar el registro de estudiantes
+de educación superior \parencite{cano2026sistema}.
+
+El problema identificado es que el acceso al TESCHA carece de un mecanismo de
+validación automatizado. Esta carencia provoca que se formen filas en el
+horario de mayor afluencia, que una credencial prestada o ajena pueda superar
+la revisión y que la institución no disponga de datos confiables sobre el
+ingreso de su comunidad.
+
+La situación afecta, en primer lugar, a los estudiantes, que pierden tiempo en
+la entrada y conviven en un plantel cuyo acceso no se controla con rigor. Afecta
+también al personal de vigilancia, que debe verificar la identidad de cientos
+de personas en pocos minutos sin apoyo técnico, y a los directivos y al
+Departamento de Control Escolar, que carecen de información para detectar a
+los estudiantes que dejan de acudir o para planear la operación de los
+accesos.
+
+Entre sus consecuencias destacan los retardos en la primera clase por la
+acumulación de filas, un efecto que puede analizarse con teoría de colas, como
+se ha propuesto para los tiempos de espera en el control escolar de otro
+plantel del Tecnológico Nacional de México \parencite{talavera2025espera}; el riesgo de que ingresen personas ajenas a la
+comunidad; la imposibilidad de identificar a tiempo patrones de inasistencia
+que anticipan la deserción, y una carga operativa que depende únicamente de
+la atención del personal en los momentos más saturados.
+
+Ante este escenario, el proyecto delimita su alcance a la validación de
+identidad en un acceso peatonal piloto del TESCHA. Se desarrollará un prototipo
+de torniquete gobernado por un ESP32-CAM que lea un código QR dinámico,
+firmado con una contraseña de un solo uso basada en HMAC para impedir la
+reutilización de capturas de pantalla \parencite{subpratatsavee2015hmac}, y que
+registre cada ingreso en una base de datos consultable desde un panel web. El
+reconocimiento facial, las tarjetas NFC y el pase de lista por materia quedan
+fuera de esta etapa.
+
+La investigación es necesaria porque hoy no existen datos que midan el
+problema en el TESCHA: se desconoce cuánto tiempo espera un estudiante para
+entrar, con qué frecuencia se usan credenciales ajenas y si la comunidad
+aceptaría un sistema basado en su celular. Levantar esa información y
+contrastarla con el desempeño de un prototipo permitirá saber, con evidencia y
+no con suposiciones, si una solución de bajo costo ayuda a aliviar los estragos
+del sistema actual y si justifica su adopción en el resto de los accesos del
+plantel.
+
+\printbibliography
+
+% ----------------------------- Apéndices -------------------------------
+\appendix
+
+\clearpage
+\section{Encuesta a Estudiantes sobre el Acceso al Plantel}
+\apendiceindice{A}{Encuesta a Estudiantes sobre el Acceso al Plantel}
+
+\subsection{Aplicación}
+La encuesta se dirige a estudiantes de todas las carreras y turnos del TESCHA,
+es anónima y toma alrededor de cinco minutos. Puede aplicarse impresa o
+trasladarse a un formulario en línea. El tamaño de muestra se calcula con la
+fórmula para proporciones en una población finita:
+\[
+  n = \frac{N z^{2} p q}{e^{2}(N-1) + z^{2} p q}
+\]
+donde $N$ es la matrícula total del plantel (dato que proporcionará Control
+Escolar), $z = 1.96$ para un nivel de confianza del 95\,\%, $p = q = 0.5$ y
+$e$ es el margen de error. Para una matrícula grande, $n$ tiende a 384
+estudiantes con $e = 0.05$ y a 196 con $e = 0.07$.
+
+\subsection{Instrumento}
+\noindent\textit{Aviso de privacidad simplificado.} Esta encuesta forma parte de
+un proyecto académico de Ingeniería en Sistemas Computacionales del TESCHA. No
+se solicita tu nombre ni tu matrícula, y las respuestas se usarán únicamente de
+forma agregada con fines académicos. Responder es voluntario.
+
+\medskip
+\noindent\textbf{Sección I. Datos generales}
+\begin{enumerate}
+  \item Carrera: \linea[6cm] \qquad Semestre: \linea[1.5cm]
+  \item Turno: \op Matutino \quad \op Vespertino
+  \item ¿Por cuál acceso entras normalmente? \linea[6cm]
+  \item ¿Con cuánta anticipación sueles llegar a tu primera clase?\\
+  \op Más de 20 min \quad \op De 10 a 20 min \quad \op Menos de 10 min
+  \quad \op Llego después de que inicia
+\end{enumerate}
+
+\noindent\textbf{Sección II. Experiencia con el acceso actual}
+\begin{enumerate}\setcounter{enumi}{4}
+  \item En un día normal, ¿cuánto tiempo esperas en la fila para entrar?\\
+  \op No hay fila \quad \op Menos de 1 min \quad \op De 1 a 3 min
+  \quad \op De 3 a 5 min \quad \op Más de 5 min
+  \item En este semestre, ¿cuántas veces has llegado tarde a clase por la fila
+  de entrada?\\
+  \op Ninguna \quad \op 1 o 2 \quad \op De 3 a 5 \quad \op Más de 5
+  \item En este semestre, ¿cuántas veces has olvidado o perdido tu credencial?\\
+  \op Ninguna \quad \op 1 o 2 \quad \op 3 o más
+  \item Cuando alguien llega sin credencial, ¿qué ocurre normalmente?\\
+  \op Pasa sin revisión \quad \op Se registra de forma manual
+  \quad \op No lo dejan pasar \quad \op No lo sé
+  \item ¿Has visto entrar a alguien con la credencial de otra persona o a
+  alguien que no es estudiante?\\
+  \op Nunca \quad \op Una vez \quad \op Varias veces
+  \quad \op Prefiero no responder
+\end{enumerate}
+
+\noindent\textbf{Sección III. Opinión.} Marca qué tan de acuerdo estás con cada
+afirmación (1 = totalmente en desacuerdo, 5 = totalmente de acuerdo).
+
+\medskip
+\noindent
+\begin{tabular}{p{0.62\textwidth}ccccc}
+  \toprule
+  Afirmación & 1 & 2 & 3 & 4 & 5 \\
+  \midrule
+  10. La revisión actual en la entrada es rápida. & \op & \op & \op & \op & \op \\
+  11. La revisión actual impide que entren personas ajenas al TESCHA. & \op & \op & \op & \op & \op \\
+  12. Me siento con seguridad dentro del plantel. & \op & \op & \op & \op & \op \\
+  13. Usaría un código QR en mi celular para entrar al plantel. & \op & \op & \op & \op & \op \\
+  14. Me incomoda que el sistema registre la hora a la que entro. & \op & \op & \op & \op & \op \\
+  15. Prefiero un código QR antes que un sistema de reconocimiento facial. & \op & \op & \op & \op & \op \\
+  \bottomrule
+\end{tabular}
+
+\medskip
+\noindent\textbf{Sección IV. Viabilidad tecnológica}
+\begin{enumerate}\setcounter{enumi}{15}
+  \item ¿Llevas contigo todos los días un teléfono inteligente propio?\\
+  \op Sí \quad \op Casi siempre \quad \op No
+  \item Al llegar al plantel, ¿tu celular tiene conexión a internet (datos o
+  Wi-Fi)?\\
+  \op Siempre \quad \op A veces \quad \op Nunca
+  \item Al llegar al plantel, ¿tu celular suele tener batería suficiente?\\
+  \op Siempre \quad \op Casi siempre \quad \op A veces \quad \op Casi nunca
+  \item Si un día no pudieras usar tu celular, ¿qué alternativa preferirías?\\
+  \op Registro manual con vigilancia \quad \op Credencial con QR impreso
+  \quad \op Otra: \linea[3cm]
+  \item Comentarios o sugerencias sobre el acceso al plantel:\\[0.4em]
+  \linea[\linewidth]\\[0.8em]\linea[\linewidth]
+\end{enumerate}
+
+\clearpage
+\section{Guía de Entrevista al Personal de Vigilancia y de Control Escolar}
+\apendiceindice{B}{Guía de Entrevista al Personal de Vigilancia y de Control Escolar}
+Entrevista semiestructurada de 10 a 15 minutos, con al menos un integrante del
+personal de vigilancia del acceso piloto y uno del Departamento de Control
+Escolar. Se solicitará consentimiento verbal y no se registrarán nombres.
+
+\subsection{Personal de Vigilancia}
+\begin{enumerate}
+  \item ¿Cómo se revisa hoy la identidad de quien entra? ¿Qué se verifica de
+  la credencial?
+  \item ¿Cuántas personas atienden el acceso en el horario de mayor afluencia y
+  a qué hora ocurre?
+  \item ¿Qué se hace cuando un estudiante llega sin credencial?
+  \item ¿Con qué frecuencia detectan credenciales ajenas, vencidas o personas
+  que no son estudiantes?
+  \item ¿Qué les facilitaría el trabajo en la entrada?
+\end{enumerate}
+
+\subsection{Departamento de Control Escolar}
+\begin{enumerate}
+  \item ¿Cuál es la matrícula actual por turno?
+  \item ¿Existe hoy algún registro de ingresos al plantel? ¿Quién lo consulta?
+  \item ¿Qué información sobre el ingreso de los estudiantes les sería útil
+  para detectar ausentismo o riesgo de deserción?
+  \item ¿Qué condiciones institucionales habría que cumplir para usar datos de
+  los estudiantes en un sistema de acceso (aviso de privacidad, autorización,
+  resguardo)?
+\end{enumerate}
+
+\clearpage
+\section{Hoja de Observación del Flujo en el Acceso}
+\apendiceindice{C}{Hoja de Observación del Flujo en el Acceso}
+
+\subsection{Procedimiento}
+La observación se realiza en el acceso piloto durante cinco días hábiles
+consecutivos, desde 30 minutos antes hasta 10 minutos después del inicio de la
+primera clase del turno matutino, en intervalos de cinco minutos. Participan
+dos observadores: el primero cuenta los ingresos y anota la longitud máxima de
+la fila en cada intervalo; el segundo cronometra, para cinco estudiantes
+elegidos al azar por intervalo, el tiempo desde que llegan al punto de revisión
+hasta que lo cruzan. La misma hoja se utilizará durante el piloto para comparar
+los resultados.
+
+\subsection{Formato}
+\noindent Fecha: \linea[3cm] \quad Día: \linea[2.5cm] \quad Acceso:
+\linea[3cm]\\[0.5em]
+Hora de inicio de clases: \linea[2cm] \quad Puntos de revisión activos ($c$):
+\linea[1.5cm] \quad Observadores: \linea[3cm]
+
+\medskip
+\noindent
+{\small
+\begin{tabular}{|p{2.2cm}|p{1.3cm}|p{1.3cm}|p{4.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|}
+  \hline
+  \textbf{Intervalo (min)} & \textbf{Ingresos} & \textbf{Fila máx.} &
+  \textbf{Tiempos de revisión (s)} & \textbf{Sin cred.} & \textbf{Sin
+  revisión} & \textbf{Rechaz.} \\
+  \hline
+  $-30$ a $-25$ & & & & & & \\[0.8em] \hline
+  $-25$ a $-20$ & & & & & & \\[0.8em] \hline
+  $-20$ a $-15$ & & & & & & \\[0.8em] \hline
+  $-15$ a $-10$ & & & & & & \\[0.8em] \hline
+  $-10$ a $-5$  & & & & & & \\[0.8em] \hline
+  $-5$ a $0$    & & & & & & \\[0.8em] \hline
+  $0$ a $+5$    & & & & & & \\[0.8em] \hline
+  $+5$ a $+10$  & & & & & & \\[0.8em] \hline
+\end{tabular}}
+
+\subsection{Análisis}
+Con los datos de cada intervalo se calculan la tasa de llegadas
+$\lambda = \mathrm{ingresos}/5$ (estudiantes por minuto), el tiempo medio de
+revisión $\bar{t}$ en segundos, la tasa de servicio de un punto de revisión
+$\mu = 60/\bar{t}$ y la utilización del acceso:
+\[
+  \rho = \frac{\lambda}{c\,\mu}
+\]
+Cuando $\rho \geq 1$, llegan más estudiantes de los que el acceso puede atender
+y la fila crece durante ese intervalo. Comparar $\bar{t}$, $\rho$ y la fila
+máxima antes del piloto y durante él permite comprobar si el prototipo reduce
+el tiempo de ingreso.
+
+\clearpage
+\section{Plan de Acción Preliminar}
+\apendiceindice{D}{Plan de Acción Preliminar}
+\begin{enumerate}
+  \item \textbf{Diagnóstico:} aplicar la encuesta, las entrevistas y la
+  observación de los Apéndices A a C para obtener la línea base del acceso
+  piloto.
+  \item \textbf{Diseño de hardware y firmware:} integrar el ESP32-CAM con el
+  mecanismo del torniquete y programar la lectura del código y la consulta al
+  servidor.
+  \item \textbf{Desarrollo del servidor:} implementar la generación y
+  validación de QR dinámicos firmados con HMAC, la base de datos de ingresos y
+  el panel web con los indicadores definidos.
+  \item \textbf{Piloto controlado:} instalar el prototipo en el acceso piloto
+  durante un periodo acotado, sin retirar la revisión manual.
+  \item \textbf{Evaluación:} repetir la observación del Apéndice~C, comparar
+  los resultados con la línea base y documentar los ajustes necesarios.
+\end{enumerate}
+
+\end{document}

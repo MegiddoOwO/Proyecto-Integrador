@@ -1,0 +1,189 @@
+\section{Problema de Investigación}
+Para plantear el problema que motiva este proyecto se describe primero la
+situación actual, después su importancia, en seguida lo que aún desconocemos
+de ella y, por último, la viabilidad de estudiarla e intervenirla.
+
+\subsection{La Situación}
+El ingreso de los estudiantes al Tecnológico de Estudios Superiores de Chalco
+(TESCHA) se controla mediante la revisión visual de credenciales físicas por
+parte del personal de vigilancia. Este método es lento en las horas de mayor
+afluencia, no deja un registro digital de quién entra ni a qué hora y no
+permite comprobar que quien presenta la credencial sea su titular. La
+insatisfacción con los registros manuales se ha documentado en otros
+contextos: en una escuela de educación básica de Perú, el 87.5\,\% de los 40
+docentes y administrativos encuestados no se sentía cómodo con el registro
+manual de asistencia \parencite{torres2019qr}. En el TESCHA, la magnitud de
+estas limitaciones se medirá con los instrumentos de los Apéndices~A, B y~C.
+
+El problema identificado es que el acceso de los estudiantes al TESCHA carece
+de un mecanismo de validación automatizado. Como consecuencia, se forman
+filas en los minutos previos al inicio de clases, una credencial prestada o
+ajena puede superar la revisión visual y la institución no cuenta con un
+registro confiable de ingresos que sirva para tomar decisiones.
+
+Conviene distinguir este problema del pase de lista dentro del salón (la
+práctica conocida como ``firmar por un compañero''). Ambos comparten la misma
+raíz, una identificación deficiente, pero un registro en la entrada solo
+demuestra que el estudiante ingresó al plantel, no que asistió a una clase
+específica. Por ello, el control de asistencia por materia queda fuera del
+alcance de este proyecto.
+
+Esta situación se presenta en los accesos peatonales del TESCHA y se agudiza
+en el turno vespertino, durante los 15 a 20 minutos previos al inicio de la
+primera clase, cuando la mayor parte de los estudiantes llega en un intervalo
+corto.
+
+\subsection{La Importancia}
+La importancia de este problema se aprecia en quiénes lo padecen:
+\begin{enumerate}
+	\item A los \textbf{estudiantes}, que pierden tiempo en las filas de
+	      entrada, se exponen a llegar tarde a su primera clase y conviven en un
+	      plantel donde el ingreso de personas ajenas no se controla con rigor.
+	\item Al \textbf{personal de vigilancia}, que debe revisar cientos de
+	      credenciales en pocos minutos sin ninguna herramienta que le ayude a
+	      detectar una credencial ajena, vencida o apócrifa.
+	\item A los \textbf{directivos y al Departamento de Control Escolar}, que no
+	      disponen de datos de ingreso para detectar a estudiantes que dejan de acudir
+	      al plantel ni para planear la apertura de accesos y el personal necesario en
+	      cada horario.
+\end{enumerate}
+
+Y también en lo que provoca:
+\begin{itemize}
+	\item \textbf{Filas y tiempos muertos} al inicio de la jornada, que
+	      provocan retardos en la primera clase. La teoría de colas, que ya se ha
+	      propuesto para reducir los tiempos de espera de estudiantes en el área de
+	      control escolar de otro plantel del Tecnológico Nacional de México
+	      \parencite{talavera2025espera}, permite analizar este efecto a partir de la
+	      tasa de llegadas y del tiempo de atención.
+	\item \textbf{Riesgo de seguridad}, porque una credencial prestada, vencida
+	      o ajena puede permitir el ingreso de personas que no pertenecen a la
+	      comunidad del TESCHA.
+	\item \textbf{Ausencia de datos}: sin un registro digital no es posible
+	      saber cuántas personas ingresan ni en qué horarios, ni detectar a tiempo a
+	      los estudiantes que dejan de acudir al plantel, una señal temprana de
+	      posible deserción.
+	\item \textbf{Carga operativa} para el personal de vigilancia, cuya
+	      revisión depende únicamente de la atención de una persona en los momentos
+	      de mayor afluencia.
+\end{itemize}
+
+\subsection{Lo que Desconocemos}
+Para comprender mejor el problema se requiere información en cinco ejes.
+
+\subsubsection{Situación Actual del Acceso en el TESCHA}
+Es la información más importante, porque sin ella no es posible afirmar la
+magnitud del problema. Se necesita conocer la matrícula por turno, el número
+de accesos y de vigilantes, la tasa de llegada de estudiantes por minuto en el
+horario pico, el tiempo que toma revisar a cada estudiante, la frecuencia con
+que se olvidan o se prestan credenciales y la proporción de estudiantes que
+cuenta con un celular propio. Estos datos se obtendrán con la encuesta del
+Apéndice~A, la entrevista del Apéndice~B y la hoja de observación del
+Apéndice~C.
+
+\subsubsection{Arquitectura de Hardware y Tiempos de Respuesta}
+\begin{itemize}
+	\item \textbf{Latencia de lectura:} cuántos milisegundos toma al ESP32-CAM
+	      capturar y decodificar el código, y cuántos más consume la consulta al
+	      servidor por Wi-Fi. La suma debe ser menor que el tiempo de revisión manual
+	      medido en el Apéndice~C para que el sistema tenga sentido. No se encontró
+	      literatura arbitrada que reporte este tiempo en un ESP32-CAM, por lo que se
+	      medirá de forma experimental con el prototipo; la referencia más cercana
+	      disponible es un preprint que documenta el desempeño general de transmisión
+	      de video del ESP32-CAM \parencite{nowroz2025esp32cam}, aunque no aborda la
+	      decodificación de códigos QR.
+	\item \textbf{Condiciones de lectura:} cómo afectan la iluminación, el
+	      brillo de la pantalla del celular y la distancia al lector la tasa de
+	      lecturas fallidas.
+	\item \textbf{Durabilidad mecánica:} cuántos ciclos diarios deberá soportar
+	      el mecanismo del torniquete según el flujo observado.
+\end{itemize}
+
+\subsubsection{Seguridad y Protección de Datos Personales}
+\begin{itemize}
+	\item \textbf{Validez del código:} qué duración del token equilibra la
+	      seguridad frente a capturas de pantalla con la tolerancia a desfases de
+	      reloj entre el celular y el servidor.
+	\item \textbf{Comunicación segura:} uso de HTTPS entre el lector, el
+	      servidor y el panel web para que los registros no puedan interceptarse ni
+	      modificarse.
+	\item \textbf{Marco legal:} como organismo público del Estado de México, el
+	      TESCHA es sujeto obligado de la Ley de Protección de Datos Personales en
+	      Posesión de Sujetos Obligados del Estado de México y Municipios
+	      \parencite{edomex2017datos}, además de la Ley General de la materia
+	      expedida en 2025 \parencite{lgpdppso2025}. Hay que identificar las
+	      obligaciones que ambas imponen al sistema, como el aviso de privacidad y el
+	      periodo de conservación de los registros de ingreso.
+\end{itemize}
+
+\subsubsection{Modelado de Datos e Indicadores}
+\begin{itemize}
+	\item \textbf{Estructura relacional:} diseño normalizado de las tablas de
+	      estudiantes, accesos, dispositivos lectores y registros de ingreso en MySQL
+	      o PostgreSQL.
+	\item \textbf{Indicadores útiles:} qué reportes necesitan realmente
+	      vigilancia y Control Escolar, por ejemplo, ingresos por franja horaria,
+	      intentos rechazados y estudiantes sin ingresos durante varios días
+	      consecutivos.
+\end{itemize}
+
+\subsubsection{Aceptación y Experiencia de Usuario}
+\begin{itemize}
+	\item \textbf{Disposición a usar el sistema:} si los estudiantes estarían
+	      dispuestos a mostrar un QR en su celular y qué preocupaciones tienen sobre
+	      el registro de su hora de entrada.
+	\item \textbf{Ergonomía del lector:} altura y ángulo de la cámara para que
+	      estudiantes de distintas estaturas lean su código sin detener el paso.
+\end{itemize}
+
+\subsection{La Viabilidad}
+El uso de códigos QR para el control de acceso físico ya se ha propuesto en
+la literatura \parencite{kao2011physical}, y su bajo costo frente a otras
+tecnologías (Tabla~\ref{tab:comparativa}) hace viable construir y probar un
+prototipo con los recursos del equipo. Frente a NFC, una comparación en
+transacciones móviles encontró que el QR se procesa con mayor rapidez, aunque
+no incorpora cifrado propio \parencite{harnaningrum2024comparison}; esa
+carencia se compensa con la firma HMAC descrita en Delimitación. Además, el
+estudiante usa su propio celular, por lo que no hace falta emitir tarjetas.
+Frente al reconocimiento facial, el QR no requiere procesamiento pesado ni
+trata datos biométricos, cuya aceptación entre estudiantes universitarios
+depende en buena medida de la confianza y de la seguridad que perciben
+\parencite{rukhiran2023user}, y cuyo tratamiento implicaría, además, las
+obligaciones legales adicionales señaladas en ``Seguridad y Protección de
+Datos Personales''.
+
+\begin{table}[tbp]
+	\caption{Comparación de Tecnologías de Validación de Acceso}
+	\label{tab:comparativa}
+	\begin{tabular}{lccc}
+		\toprule
+		Criterio                            & Código QR                & NFC     & Reconocimiento facial \\
+		\midrule
+		Costo de infraestructura            & Bajo                     & Medio   & Alto                  \\
+		Medio que porta el estudiante       & Celular                  & Tarjeta & Ninguno               \\
+		Complejidad de cómputo en el lector & Baja                     & Baja    & Alta                  \\
+		Trata datos biométricos             & No                       & No      & Sí                    \\
+		Riesgo de copia del identificador   & Medio\textsuperscript{a} & Bajo    & Bajo                  \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Elaboración propia con base en
+		\textcite{harnaningrum2024comparison} y \textcite{rukhiran2023user}. El costo
+		y la complejidad son una valoración cualitativa del equipo.
+		\textsuperscript{a}El riesgo corresponde a un QR estático; con un código
+		dinámico firmado con HMAC se reduce considerablemente
+		\parencite{subpratatsavee2015hmac}.}
+\end{table}
+
+Queda por conocer la viabilidad tecnológica desde el lado del estudiante, es
+decir, si cuenta con un celular propio, con conexión a internet y con batería
+suficiente al llegar al plantel; esto se indaga en la Sección~IV del
+Apéndice~A.
+
+La investigación es necesaria porque hoy no existen datos que midan el
+problema en el TESCHA: se desconoce cuánto tiempo espera un estudiante para
+entrar, con qué frecuencia se usan credenciales ajenas y si la comunidad
+aceptaría un sistema basado en su celular. Levantar esa información y
+contrastarla con el desempeño de un prototipo permitirá saber, con evidencia y
+no con suposiciones, si esta solución de bajo costo ayuda a aliviar los
+estragos del sistema actual y si justifica su adopción en el resto de los
+accesos del plantel.
