@@ -18,19 +18,19 @@
 \contentsline {subsection}{Enfoque}{12}{section*.20}%
 \contentsline {subsection}{Alcance}{12}{section*.21}%
 \contentsline {subsection}{Obtención de Información}{12}{section*.22}%
-\contentsline {subsection}{Técnica e Instrumento de Recolección de Datos}{12}{section*.23}%
+\contentsline {subsection}{Técnica e Instrumento de Recolección de Datos}{13}{section*.23}%
 \contentsline {subsection}{Control de Variables}{13}{section*.24}%
 \contentsline {subsection}{Temporalidad}{14}{section*.25}%
 \contentsline {subsection}{Diseño}{14}{section*.26}%
-\contentsline {section}{Referencias}{15}{section*.27}%
-\contentsline {section}{Ap\'{e}ndice~A: Encuesta a Estudiantes sobre el Acceso al Plantel}{18}{appendix.1}%
-\contentsline {subsection}{Aplicación}{18}{section*.28}%
-\contentsline {subsection}{Instrumento}{18}{section*.29}%
-\contentsline {section}{Ap\'{e}ndice~B: Guía de Entrevista al Personal de Vigilancia y de Control Escolar}{21}{appendix.2}%
-\contentsline {subsection}{Personal de Vigilancia}{21}{section*.30}%
-\contentsline {subsection}{Departamento de Control Escolar}{21}{section*.31}%
-\contentsline {section}{Ap\'{e}ndice~C: Hoja de Observación del Flujo en el Acceso}{22}{appendix.3}%
-\contentsline {subsection}{Procedimiento}{22}{section*.32}%
-\contentsline {subsection}{Formato}{22}{section*.33}%
-\contentsline {subsection}{Análisis}{22}{section*.34}%
-\contentsline {section}{Ap\'{e}ndice~D: Plan de Acción Preliminar}{24}{appendix.4}%
+\contentsline {section}{Referencias}{16}{section*.27}%
+\contentsline {section}{Ap\'{e}ndice~A: Encuesta a Estudiantes sobre el Acceso al Plantel}{19}{appendix.1}%
+\contentsline {subsection}{Aplicación}{19}{section*.28}%
+\contentsline {subsection}{Instrumento}{19}{section*.29}%
+\contentsline {section}{Ap\'{e}ndice~B: Guía de Entrevista al Personal de Vigilancia y de Control Escolar}{22}{appendix.2}%
+\contentsline {subsection}{Personal de Vigilancia}{22}{section*.30}%
+\contentsline {subsection}{Departamento de Control Escolar}{22}{section*.31}%
+\contentsline {section}{Ap\'{e}ndice~C: Hoja de Observación del Flujo en el Acceso}{23}{appendix.3}%
+\contentsline {subsection}{Procedimiento}{23}{section*.32}%
+\contentsline {subsection}{Formato}{23}{section*.33}%
+\contentsline {subsection}{Análisis}{23}{section*.34}%
+\contentsline {section}{Ap\'{e}ndice~D: Plan de Acción Preliminar}{25}{appendix.4}%
