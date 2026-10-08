@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "bgpt": {
+      "type": "sse",
+      "url": "https://bgpt.pro/mcp/sse"
+    },
+    "paper-search": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": ["--from", "paper-search-mcp", "--with", "mcp<2", "paper-search-mcp"]
+    }
+  }
+}
