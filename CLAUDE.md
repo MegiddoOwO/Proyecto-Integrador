@@ -7,6 +7,8 @@ Trabajo de investigación escolar escrito en LaTeX con formato APA 7, hecho en e
 - `trabajo.tex`: preámbulo, datos de portada y el orden de las secciones (`\input`). Usa la clase `apa7` en modo estudiante (`stu`) con `biblatex`. El texto **no** va aquí.
 - `secciones/`: un archivo por sección del cuerpo (`00-introduccion.tex`, `01-tema.tex`, …). Para agregar una sección, crea el archivo y agrega su `\input` en `trabajo.tex`.
 - `apendices/`: un archivo por apéndice (`a-encuesta.tex`, …). Cada uno inicia con `\section{}` y `\apendiceindice{letra}{título}`.
+- `objetivos.tex`: envoltorio de dos líneas que compila solo `secciones/06-objetivos.tex` como PDF aparte (`latexmk -pdf objetivos.tex`), con el mismo preámbulo y datos de portada de `trabajo.tex` y solo las referencias que cita. Las condicionales `\ifdefined\soloobjetivos` en `trabajo.tex` lo hacen posible. El hook solo compila `trabajo.tex`; este PDF se compila a mano.
+- `REVISION-OBJETIVOS.md`: hallazgos de la revisión de la sección de Objetivos y pendientes que quedaron en otros archivos (secciones, apéndices, plan de acción). Léelo antes de editar `05-metodologia.tex` o los Apéndices A a D.
 - `citas.bib`: referencias bibliográficas (biblatex-apa). Toda cita nueva se agrega aquí.
 - `img/`: logos e imágenes.
 - `APA-PURO.md`: qué partes de la plantilla pide la escuela y no son APA (logos, índice, texto justificado, etc.).

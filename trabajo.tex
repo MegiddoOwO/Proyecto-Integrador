@@ -19,6 +19,12 @@
 % La clase apa7 deja el texto en bandera (raggedright) tras \maketitle;
 % aquí se justifica, como pide el profesor.
 \usepackage{ragged2e}
+\usepackage{array}
+% Columna de tabla con texto en bandera (para celdas largas).
+\newcolumntype{P}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+
+% Para generar solo la sección de objetivos como PDF aparte se compila
+% objetivos.tex, que define \soloobjetivos y carga este archivo.
 
 % Logos arriba de la portada (los pide la escuela, no APA).
 \newcommand{\hrm}{\noindent
@@ -28,8 +34,10 @@
 % Índice después de la portada (lo pide la escuela; APA puro no lo usa).
 \setcounter{tocdepth}{2}
 \makeatletter
+\ifdefined\soloobjetivos\else
 \patchcmd{\maketitle}{\@ifundefined{def@donotrepeattitle}}
   {\tableofcontents\newpage\@ifundefined{def@donotrepeattitle}}{}{}
+\fi
 \patchcmd{\maketitle}{\section*{\protect\normalfont\textbf{\@title}}}
   {\section*{\protect\normalfont\textbf{\@title}}\addcontentsline{toc}{section}{\@title}}{}{}
 \makeatother
@@ -57,7 +65,11 @@
 }
 
 % ----------------------------- Datos ---------------------------------
+\ifdefined\soloobjetivos
+\title{Objetivos de Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
+\else
 \title{Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
+\fi
 \shorttitle{ACCESO QR TESCHA}
 
 \authorsnames{Juan Esteban Anzures Campos, Daniel Arellano Palacios, Ian Alexis Flores Martínez, Miguel Ángel Jurado Delgadillo, Juan Fernando Reyes Arguello, Bryan Uriel Villegas Raymundo}
@@ -81,6 +93,10 @@
 \maketitle
 \justifying
 
+\ifdefined\soloobjetivos
+\input{secciones/06-objetivos}
+\printbibliography
+\else
 \input{secciones/00-introduccion}
 
 \clearpage
@@ -91,6 +107,8 @@
 \input{secciones/03-problema}
 
 \input{secciones/04-pregunta}
+
+\input{secciones/06-objetivos}
 
 \input{secciones/05-metodologia}
 
@@ -110,5 +128,6 @@
 
 \clearpage
 \input{apendices/d-plan-de-accion}
+\fi
 
 \end{document}
