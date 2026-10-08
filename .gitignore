@@ -1,0 +1,18 @@
+# Archivos auxiliares de LaTeX (se regeneran al compilar)
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.toc
+*.synctex.gz
+
+# PDF compilado (se genera con latexmk)
+trabajo.pdf
+
+# Configuración personal de Claude Code
+.claude/settings.local.json
