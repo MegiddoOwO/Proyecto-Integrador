@@ -19,3 +19,4 @@
 - T1: `avance-niza.tex` + `gestion/00..10` (11 secciones). Conflictos resueltos: turno vespertino, fin del piloto 18 dic, "Bryan", M5 según Plan de Calidad, contingencia 380 MXN tal cual la presentación.
 - T2: `latexmk -pdf avance-niza.tex` exit 0, sin citas indefinidas, un Overfull de 7.6pt (entrada de `citas.bib`). `Avance Niza.pdf`, 36 páginas.
 - T3: commit en `documentacion-niza`. Push pendiente (lo decide el usuario).
+- Fuentes nuevas `entregable1_ficha_inicial.pdf` y `entregable2_plan_calidad.pdf` comparadas palabra por palabra con Entregable_1/2: mismo contenido, solo corrigen "Brayan" → "Bryan" y el formato. El documento ya las cubre; no hubo cambios de texto.
