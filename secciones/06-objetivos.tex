@@ -5,145 +5,90 @@
 \else
 \newcommand{\figarq}{la Figura~\ref{fig:arquitectura}}
 \fi
-Los objetivos expresan lo que una investigación pretende lograr y deben ser
-congruentes con la pregunta que la guía \parencite{hernandezsampieri2014metodologia}.
-La pregunta de este proyecto tiene dos caras: pide conocer el efecto de un
-sistema sobre el control de acceso, y ese sistema todavía no existe, de modo
-que primero debe construirse. Por eso los objetivos se organizan en dos líneas
-de trabajo: el \textbf{desarrollo tecnológico} del prototipo y la
-\textbf{investigación y el análisis de datos} que permiten evaluarlo.
-\ifdefined\soloobjetivos
-Los apéndices y la figura de la arquitectura que se mencionan forman parte del
-documento principal.
-\fi
-
-\subsection{Criterios de Redacción}
-Cada objetivo se redacta con tres criterios:
-\begin{itemize}
-	\item \textbf{Qué, cómo y para qué.} El \emph{qué} es la acción y su
-	      objeto; el \emph{cómo}, el medio, el instrumento o el método con que se
-	      logra; el \emph{para qué}, la utilidad que justifica el esfuerzo.
-	\item \textbf{Taxonomía de Bloom revisada.} Cada objetivo inicia con un
-	      verbo observable que corresponde a uno de los seis niveles cognitivos de
-	      la taxonomía revisada: recordar, comprender, aplicar, analizar, evaluar y
-	      crear \parencite{anderson2001taxonomy}. Por criterio del equipo, se evitan
-	      verbos como «conocer» o «entender», que no dejan evidencia que pueda
-	      comprobarse.
-	\item \textbf{Criterios SMART.} Los criterios SMART tienen su origen en una
-	      propuesta de Doran \parencite{doran1981smart}; aquí se usa la variante
-	      más difundida, según la cual cada objetivo debe ser específico, medible,
-	      alcanzable, relevante y temporal. En este
-	      proyecto, \emph{específico} significa que nombra el producto o el indicador
-	      que se verifica y, cuando aplica, el acceso y el turno; \emph{medible}, que tiene un indicador o una prueba
-	      verificable; \emph{alcanzable}, que cabe en los recursos del equipo (un
-	      acceso piloto, un ESP32-CAM y seis integrantes); \emph{relevante}, que
-	      contribuye a responder la pregunta de investigación; y \emph{temporal},
-	      que está ligado a una fase del Plan de Acción Preliminar
-	      (Apéndice~D).
-\end{itemize}
 
 \subsection{Objetivo General}
-El objetivo general parte de la pregunta de investigación y su verbo es
-\emph{evaluar}, quinto nivel de la taxonomía. Evaluar el sistema exige haberlo
-creado (sexto nivel), por lo que el desarrollo del prototipo es condición del
-objetivo general y no un fin aparte.
-\begin{itemize}
-	\item \textbf{Qué:} evaluar el efecto de un prototipo de control de acceso
-	      con códigos QR dinámicos, diseñado y construido por el equipo, sobre el
-	      tiempo promedio de validación por estudiante, la longitud máxima de la
-	      fila y las incidencias de identidad. El tiempo de validación es el que
-	      transcurre desde que el estudiante llega al punto de revisión hasta que
-	      lo cruza, sea con revisión visual o con lectura del QR.
-	\item \textbf{Cómo:} comparando una línea base de cinco días hábiles con una
-	      serie equivalente durante el piloto, en el mismo acceso peatonal del
-	      TESCHA, en el turno vespertino y en la misma franja horaria, con la hoja
-	      de observación del Apéndice~C; los registros del sistema solo
-	      complementan esa comparación, porque no existen en la línea base.
-	\item \textbf{Para qué:} aportar evidencia orientativa, y no suposiciones,
-	      para decidir si conviene ampliar el piloto a otros accesos del plantel.
-\end{itemize}
-El objetivo pide evaluar el efecto, no demostrar una mejora: si las mediciones
-no muestran diferencia, ese también es un resultado válido y la decisión sería
-no adoptar el sistema.
+\textbf{Evaluar el efecto de un prototipo de control de acceso con códigos QR
+	dinámicos sobre el tiempo de validación, la fila y las incidencias de
+	identidad en el acceso peatonal piloto del TESCHA, para aportar evidencia que
+	permita decidir si conviene ampliarlo a otros accesos.}
+
+Se plantea porque hoy no existen datos que midan el problema en el TESCHA, y
+una decisión sobre el sistema debe apoyarse en evidencia y no en suposiciones.
+El tiempo de validación es el que transcurre desde que el estudiante llega al
+punto de revisión hasta que lo cruza, con revisión visual o con lectura del
+QR. El objetivo pide evaluar el efecto, no demostrar una mejora: si las
+mediciones no muestran diferencia, ese también es un resultado válido.
 
 \subsection{Objetivos Específicos}
-Los ocho objetivos específicos se reparten en las dos líneas de trabajo. Los
-primeros cuatro construyen el sistema que se evalúa
-(Tabla~\ref{tab:obj-tecnologicos}) y los otros cuatro producen y analizan los
-datos con los que se responde la pregunta (Tabla~\ref{tab:obj-datos}).
+Los ocho objetivos específicos se reparten en las dos líneas de trabajo. Cada
+uno indica qué se hará, cómo, para qué y por qué se hace.
 
-\begin{table}[tbp]
-	\caption{Objetivos Específicos de Desarrollo Tecnológico}
-	\label{tab:obj-tecnologicos}
-	\small\linespread{1}\selectfont
-	\begin{tabular}{@{}lP{3.9cm}P{5.7cm}P{4.2cm}@{}}
-		\toprule
-		Clave & Qué                                                                                                                                       & Cómo                                                                                                                                                             & Para qué                                                                         \\
-		\midrule
-		OT1   & Diseñar la arquitectura del sistema: lector ESP32-CAM, ESP32 del torniquete, servidor, base de datos relacional y panel web.              & A partir de \figarq, con un diagrama de componentes y un modelo entidad-relación normalizado de estudiantes, accesos, lectores e ingresos. & Tener una base común para construir, en la que cada intento de ingreso quede registrado. \\[1.2em]
-		OT2   & Implementar la generación y la validación de códigos QR dinámicos firmados con HMAC.                                                      & Con una contraseña de un solo uso de vigencia corta, HTTPS entre lector, servidor y panel, y casos de prueba con tokens vencidos, repetidos y alterados, y con desfases de reloj dentro y fuera de la tolerancia.                         & Impedir que una captura de pantalla o un mensaje modificado permitan el ingreso. \\[1.2em]
-		OT3   & Construir el prototipo funcional que integre lector, torniquete, servidor y panel web con los reportes propuestos en el planteamiento del problema. & Programando la lectura y la consulta al servidor y los reportes de ingresos por franja horaria, intentos rechazados y estudiantes sin ingresos consecutivos (esta última, como demostración funcional), validados con Control Escolar en la entrevista.              & Contar con un producto utilizable en el piloto y con los datos que alimentan el análisis. \\[1.2em]
-		OT4   & Verificar el desempeño técnico del prototipo: latencia de lectura y tasa de lecturas fallidas.                                            & Midiendo el tiempo de captura, decodificación y consulta por Wi-Fi, y variando la iluminación, el brillo del celular y la distancia al lector.                                    & Descartar, antes del piloto, que el lector sea un cuello de botella y comprobar que la lectura es confiable. \\
-		\bottomrule
-	\end{tabular}
-	\tablenote{Elaboración propia. OT = objetivo de desarrollo tecnológico.}
-\end{table}
+\subsubsection{Desarrollo Tecnológico}
+\begin{itemize}
+	\item[\textbf{OT1}] \textbf{Diseñar la arquitectura del sistema} —lector
+	      ESP32-CAM, ESP32 del torniquete, servidor, base de datos relacional y
+	      panel web— a partir de \figarq, con un diagrama de componentes y un
+	      modelo entidad-relación normalizado, para tener una base común en la que
+	      cada intento de ingreso quede registrado. \emph{Porque} el acceso actual
+	      no deja registro digital de quién entra ni a qué hora, y el prototipo
+	      necesita una estructura que lo registre.
+	\item[\textbf{OT2}] \textbf{Implementar la generación y la validación de
+		      códigos QR dinámicos firmados con HMAC}, con una contraseña de un solo
+	      uso de vigencia corta, HTTPS entre lector, servidor y panel, y pruebas con
+	      tokens vencidos, repetidos y alterados y con desfases de reloj, para
+	      impedir que una captura de pantalla o un mensaje modificado permitan el
+	      ingreso. \emph{Porque} un código estático puede copiarse y compartirse,
+	      mientras que la firma con contraseña de un solo uso resiste el reenvío y
+	      la modificación del mensaje \parencite{subpratatsavee2015hmac}.
+	\item[\textbf{OT3}] \textbf{Construir el prototipo funcional} que integre
+	      lector, torniquete, servidor y panel web, programando la lectura, la
+	      consulta al servidor y los reportes de ingresos por franja horaria,
+	      intentos rechazados y estudiantes sin ingresos consecutivos, para contar
+	      con un producto utilizable en el piloto. \emph{Porque} sin un prototipo
+	      no hay sistema que evaluar, y porque directivos y Control Escolar hoy no
+	      disponen de datos de ingreso para tomar decisiones.
+	\item[\textbf{OT4}] \textbf{Verificar el desempeño técnico del prototipo}
+	      midiendo el tiempo de captura, decodificación y consulta por Wi-Fi y la
+	      tasa de lecturas fallidas al variar la iluminación, el brillo del celular
+	      y la distancia al lector, para descartar, antes del piloto, que el lector
+	      sea un cuello de botella. \emph{Porque} no se encontró literatura
+	      arbitrada que reporte el tiempo de lectura de un código QR en un
+	      ESP32-CAM, de modo que debe medirse con el prototipo.
+\end{itemize}
 
-\begin{table}[tbp]
-	\caption{Objetivos Específicos de Investigación y Análisis de Datos}
-	\label{tab:obj-datos}
-	\small\linespread{1}\selectfont
-	\begin{tabular}{@{}lP{3.9cm}P{5.7cm}P{4.2cm}@{}}
-		\toprule
-		Clave & Qué                                                                                                                                  & Cómo                                                                                                                                                                                  & Para qué                                                                          \\
-		\midrule
-		OI1   & Analizar la situación actual del acceso: tasa de llegada, tiempo de validación, utilización del acceso, fila máxima e incidencias de identidad. & Con la observación estructurada de cinco días (Apéndice~C), la encuesta (Apéndice~A) y las entrevistas (Apéndice~B).                                                                  & Establecer la línea base con la que se compara el piloto.                         \\[1.2em]
-		OI2   & Estimar la viabilidad y la aceptación del sistema entre los estudiantes: celular propio, conexión, batería y disposición a mostrar un QR. & Con la encuesta del Apéndice~A, con una muestra calculada por la fórmula para proporciones en población finita.                                                                      & Saber si la población puede y quiere usar la solución antes de proponer su adopción.        \\[1.2em]
-		OI3   & Interpretar las obligaciones de protección de datos personales aplicables al TESCHA y traducirlas en requisitos del sistema.         & Revisando la ley estatal \parencite{edomex2017datos} y la ley general \parencite{lgpdppso2025}, y consultando a Control Escolar en la entrevista del Apéndice~B.                       & Que el prototipo trate los registros de ingreso conforme a la ley.                \\[1.2em]
-		OI4   & Evaluar el efecto del sistema en los tres indicadores contrastando las mediciones de la línea base con las del piloto.               & Con el diseño de preprueba y posprueba de un solo grupo, tomando el intervalo de cinco minutos como unidad de análisis, emparejado por posición y día (40 pares), con estadística descriptiva y una prueba para muestras relacionadas, y considerando las amenazas de historia, maduración e instrumentación. & Responder la pregunta de investigación y recomendar si el piloto se amplía.    \\
-		\bottomrule
-	\end{tabular}
-	\tablenote{Elaboración propia. OI = objetivo de investigación y análisis de
-		datos. La prueba estadística concreta se elegirá según la distribución de
-		las diferencias entre pares.}
-\end{table}
-
-\subsection{Nivel, Indicador y Plazo de Cada Objetivo}
-La Tabla~\ref{tab:obj-smart} completa la formulación: indica el nivel de la
-taxonomía de cada objetivo, el indicador o la meta con que se comprueba y la
-fase del Plan de Acción Preliminar (Apéndice~D) en la que debe cumplirse. Las
-fechas de calendario las fijará el equipo con la profesora.
-
-\begin{table}[tbp]
-	\caption{Nivel de Bloom, Indicador y Plazo de los Objetivos}
-	\label{tab:obj-smart}
-	\small\linespread{1}\selectfont
-	\begin{tabular}{@{}llP{6.6cm}P{3.1cm}P{1.7cm}@{}}
-		\toprule
-		Clave & Nivel     & Indicador o meta (medible)                                                                                                           & Evidencia                    & Plazo (fase)    \\
-		\midrule
-		OT1   & Crear     & Diagrama de componentes y modelo entidad-relación que cubren todos los elementos de \figarq.                 & Diagramas                    & 2               \\[0.6em]
-		OT2   & Aplicar   & 100\,\% de los casos de prueba con token vencido, repetido o alterado son rechazados.                                                & Bitácora de pruebas          & 3               \\[0.6em]
-		OT3   & Crear     & Un ingreso validado y registrado de extremo a extremo, y tres reportes disponibles en el panel.                                      & Demostración y registros     & 2 y 3           \\[0.6em]
-		OT4   & Evaluar   & Tiempo de una lectura completa en banco (captura, decodificación y consulta) menor que el tiempo medio de validación de la línea base (Apéndice~C); 95\,\% o más de lecturas exitosas (meta provisional).      & Hoja de registro de pruebas técnicas (por elaborar)         & 3 (antes del piloto) \\[0.6em]
-		OI1   & Analizar  & Tasa de llegada, tiempo medio de validación, utilización, fila máxima e incidencias calculados en los 40 intervalos de cinco días, e identificación de los intervalos con utilización igual o mayor que 1.     & Hojas de observación         & 1               \\[0.6em]
-		OI2   & Aplicar   & Proporción de estudiantes con celular propio, conexión y batería, y proporción que declara disposición a usar el QR, con la muestra mínima del Apéndice~A (196 a 384 estudiantes según el margen de error).      & Encuestas                    & 1               \\[0.6em]
-		OI3   & Comprender & Lista de requisitos legales, cada uno con la ley de la que proviene, incorporados al diseño, con el aviso de privacidad y el periodo de conservación definidos antes del piloto.                                        & Documento de requisitos      & 1 y 2           \\[0.6em]
-		OI4   & Evaluar   & Diferencia entre línea base y piloto en tiempo medio de validación, fila máxima e incidencias, con su valor de contraste en los 40 pares de intervalos.             & Hojas de observación         & 4 y 5               \\
-		\bottomrule
-	\end{tabular}
-	\tablenote{Elaboración propia con los niveles de \textcite{anderson2001taxonomy}.
-		Fases del Apéndice~D: 1 diagnóstico, 2 diseño de hardware y firmware,
-		3 desarrollo del servidor, 4 piloto controlado, 5 evaluación. Los 40
-		intervalos son 8 de cinco minutos por día durante cinco días. La meta de
-		lecturas exitosas es una propuesta del equipo que se ajustará con las
-		pruebas, y el 100\,\% de OT2 es un criterio de aceptación de las pruebas,
-		no un resultado de investigación. Las incidencias de identidad se
-		expresan como tasa por ingresos: (sin credencial + rechazos) / ingresos;
-		un sistema que detecta mejor puede registrar más incidencias, por lo que
-		se interpretan como capacidad de detección. Los casos «sin revisión» se
-		reportan aparte.}
-\end{table}
+\subsubsection{Investigación y Análisis de Datos}
+\begin{itemize}
+	\item[\textbf{OI1}] \textbf{Analizar la situación actual del acceso} —tasa de
+	      llegada, tiempo de validación, utilización del acceso, fila máxima e
+	      incidencias de identidad— con la observación de cinco días
+	      (Apéndice~C), la encuesta (Apéndice~A) y las entrevistas
+	      (Apéndice~B), para establecer la línea base con la que se compara el
+	      piloto. \emph{Porque} no existe ningún registro del flujo de acceso del
+	      TESCHA y, sin una línea base, no puede atribuirse ningún cambio al
+	      sistema.
+	\item[\textbf{OI2}] \textbf{Estimar la viabilidad y la aceptación del
+		      sistema entre los estudiantes} —celular propio, conexión, batería y
+	      disposición a mostrar un QR— con la encuesta del Apéndice~A, aplicada a
+	      una muestra calculada para proporciones en población finita, para saber
+	      si la población puede y quiere usar la solución. \emph{Porque} el sistema
+	      depende de que el estudiante use su propio celular y se desconoce si la
+	      comunidad lo aceptaría.
+	\item[\textbf{OI3}] \textbf{Interpretar las obligaciones de protección de
+		      datos personales aplicables al TESCHA}, revisando la ley estatal
+	      \parencite{edomex2017datos} y la ley general \parencite{lgpdppso2025} y
+	      consultando a Control Escolar en la entrevista del Apéndice~B, para
+	      traducirlas en requisitos del sistema. \emph{Porque} el TESCHA es sujeto
+	      obligado de ambas leyes y el prototipo registra la hora de ingreso de
+	      cada estudiante.
+	\item[\textbf{OI4}] \textbf{Evaluar el efecto del sistema en los tres
+		      indicadores} contrastando la línea base con el piloto, con un diseño de
+	      preprueba y posprueba de un solo grupo, el intervalo de cinco minutos
+	      como unidad de análisis emparejada por posición y día (40 pares) y una
+	      prueba para muestras relacionadas, para responder la pregunta de
+	      investigación y recomendar si el piloto se amplía. \emph{Porque} la
+	      pregunta pide el efecto del sistema, y eso solo se conoce comparando un
+	      antes y un después.
+\end{itemize}
 
 \subsection{Relación con la Pregunta de Investigación}
 Los objetivos de desarrollo tecnológico producen la variable independiente de
@@ -154,5 +99,3 @@ el diseño necesita para interpretarlas: la línea base, la aceptación de los
 estudiantes y las condiciones legales. Ningún objetivo queda sin función: sin
 los primeros no hay sistema que evaluar y sin los segundos no hay forma de
 saber si el sistema sirvió.
-
-\clearpage

@@ -30,6 +30,17 @@ que decidir o editar otro archivo), **Equipo** (decisión del equipo, no de cód
 | 16 | «Tiempo de validación» y «tiempo de revisión» usados como sinónimos. | Aplicado: se define el tiempo de validación (desde que llega al punto de revisión hasta que lo cruza, con revisión visual o QR) y se usa solo ese término. El Apéndice C aún dice «revisión». |
 | 5 | OI4 usaba entrevistas posteriores al piloto, que no existen como instrumento. | Aplicado: se quitaron de OI4. La contradicción en `05-metodologia` sigue (ver 2.1). |
 
+Actualización posterior: a pedido del equipo se quitó la subsección «Criterios de
+Redacción» y la columna «Nivel» de la Tabla 3. Los criterios (qué/cómo/para qué,
+taxonomía de Bloom revisada y SMART) siguen aplicándose, pero de forma implícita:
+cada objetivo es una oración con verbo, medio y finalidad, y la tabla de
+indicadores aporta lo medible y el plazo. Por eso `anderson2001taxonomy` y
+`doran1981smart` quedan en `citas.bib` **sin citarse** en el texto (no salen en
+la bibliografía). Si la profesora pide mencionar explícitamente Bloom o SMART,
+se pueden citar de nuevo; los niveles que se usaron fueron: OT1 y OT3 Crear,
+OT2 Aplicar, OT4 Evaluar, OI1 Analizar, OI2 Aplicar (estimar), OI3 Comprender
+(interpretar), OI4 Evaluar.
+
 Citas (`verificador-citas`):
 
 - Se corrigió la atribución de SMART: Doran propuso *Specific, Measurable,
@@ -141,3 +152,54 @@ alcance en Delimitación.
 | Reportes del panel (OT3) | Apéndice B | B-CE 3 | Parcial; falta reactivo a vigilancia |
 | Pruebas de OT2 y OT4 | — | — | **Sin instrumento** (ver 2.3) |
 | OT1 (diagramas) | Producto | — | Sin fase explícita en D (ver 2.2) |
+
+## 4. Indicadores retirados de la sección (para recuperarlos)
+
+Por pedido del equipo se quitó, por el momento, la subsección «Indicadores y
+Plazos» y su tabla (Tabla 3). Además, los objetivos específicos pasaron de tabla
+a lista con viñetas, cada uno con su «porque». El contenido de la tabla, listo
+para volver a pegar al final de `secciones/06-objetivos.tex`, antes de
+«Relación con la Pregunta de Investigación» (usa la columna `P` definida en
+`trabajo.tex`):
+
+```latex
+\subsection{Indicadores y Plazos}
+La Tabla~\ref{tab:obj-smart} indica el indicador o la meta con que se comprueba
+cada objetivo y la fase del Plan de Acción Preliminar (Apéndice~D) en la que
+debe cumplirse. Las fechas de calendario las fijará el equipo con la profesora.
+
+\begin{table}[tbp]
+	\caption{Indicador, Evidencia y Plazo de los Objetivos}
+	\label{tab:obj-smart}
+	\small\linespread{1}\selectfont
+	\begin{tabular}{@{}lP{7.6cm}P{3.9cm}P{2.2cm}@{}}
+		\toprule
+		Clave & Indicador o meta & Evidencia & Plazo (fase) \\
+		\midrule
+		OT1 & Diagrama de componentes y modelo entidad-relación que cubren todos los elementos de \figarq. & Diagramas & 2 \\[0.6em]
+		OT2 & 100\,\% de los casos de prueba con token vencido, repetido o alterado son rechazados. & Bitácora de pruebas & 3 \\[0.6em]
+		OT3 & Un ingreso validado y registrado de extremo a extremo, y tres reportes disponibles en el panel. & Demostración y registros & 2 y 3 \\[0.6em]
+		OT4 & Tiempo de una lectura completa en banco (captura, decodificación y consulta) menor que el tiempo medio de validación de la línea base (Apéndice~C); 95\,\% o más de lecturas exitosas (meta provisional). & Hoja de registro de pruebas técnicas (por elaborar) & 3 (antes del piloto) \\[0.6em]
+		OI1 & Tasa de llegada, tiempo medio de validación, utilización, fila máxima e incidencias calculados en los 40 intervalos de cinco días, e identificación de los intervalos con utilización igual o mayor que 1. & Hojas de observación & 1 \\[0.6em]
+		OI2 & Proporción de estudiantes con celular propio, conexión y batería, y proporción que declara disposición a usar el QR, con la muestra mínima del Apéndice~A (196 a 384 estudiantes según el margen de error). & Encuestas & 1 \\[0.6em]
+		OI3 & Lista de requisitos legales, cada uno con la ley de la que proviene, incorporados al diseño, con el aviso de privacidad y el periodo de conservación definidos antes del piloto. & Documento de requisitos & 1 y 2 \\[0.6em]
+		OI4 & Diferencia entre línea base y piloto en tiempo medio de validación, fila máxima e incidencias, con su valor de contraste en los 40 pares de intervalos. & Hojas de observación & 4 y 5 \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Elaboración propia. Fases del Apéndice~D: 1 diagnóstico, 2 diseño
+		de hardware y firmware, 3 desarrollo del servidor, 4 piloto controlado,
+		5 evaluación. Los 40 intervalos son 8 de cinco minutos por día durante
+		cinco días. La meta de lecturas exitosas es una propuesta del equipo que se
+		ajustará con las pruebas, y el 100\,\% de OT2 es un criterio de aceptación
+		de las pruebas, no un resultado de investigación. Las incidencias de
+		identidad se expresan como tasa por ingresos: (sin credencial + rechazos) /
+		ingresos; un sistema que detecta mejor puede registrar más incidencias, por
+		lo que se interpretan como capacidad de detección. Los casos «sin revisión»
+		se reportan aparte.}
+\end{table}
+```
+
+Mientras la tabla esté fuera, los hallazgos 2 (definición de incidencias), 6 y 7
+de la sección 1 quedan sin reflejo en el texto: la definición de incidencias
+(sin credencial + rechazos, sobre ingresos, leída como capacidad de detección)
+y la meta provisional de 95 % de lecturas siguen siendo decisiones pendientes.
