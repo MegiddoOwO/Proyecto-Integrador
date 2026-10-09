@@ -54,3 +54,55 @@ cuentas.
 	\end{tabular}
 	\tablenote{Fuente: Ficha Inicial del Proyecto (Entregable 1). R = realiza; A = rinde cuentas y aprueba; C = consultado; I = informado.}
 \end{table}
+
+La Figura~\ref{fig:gantt} muestra el cronograma de diecisiete semanas, del 5
+de octubre de 2026 al 29 de enero de 2027. Cada barra es una actividad y su
+responsable aparece en la Tabla~\ref{tab:raci}.
+
+\begin{figure}[!htbp]
+	\caption{Diagrama de Gantt del Proyecto}
+	\label{fig:gantt}
+	\centering
+	\begin{tikzpicture}[x=0.52cm, y=-0.6cm, font=\footnotesize]
+		\def\sinfase{none}
+		% Encabezado de meses
+		\foreach \ini/\fin/\mes in {0/4/Oct 2026, 4/9/Nov 2026, 9/13/Dic 2026, 13/17/Ene 2027} {
+				\fill[faseCie, rounded corners=2pt] (\ini+0.05,-2.1) rectangle (\fin-0.05,-1.2);
+				\node[text=white, font=\footnotesize\bfseries] at ({(\ini+\fin)/2},-1.65) {\mes};
+			}
+		% Semanas (lunes)
+		\node[anchor=west, text=gray!75!black] at (-12,-0.5) {Semana del lunes};
+		\foreach \d [count=\i from 0] in {5,12,19,26,2,9,16,23,30,7,14,21,28,4,11,18,25} {
+				\node[text=gray!75!black] at (\i+0.5,-0.5) {\d};
+			}
+		% Actividades: nombre / inicio / duración / color
+		\foreach \act/\ini/\dur/\col [count=\r from 0] in {
+				Planeación y permisos/0/2/fasePlan,
+				Encuesta{,} entrevistas y observación/1/3/faseDiag,
+				Compra de materiales/2/2/faseDiag,
+				Torniquete y lector QR/3/4/faseDes,
+				Servidor{,} base de datos y página web/3/5/faseDes,
+				Unión y pruebas en el salón/7/2/fasePru,
+				Prueba piloto en el acceso/9/2/fasePru,
+				Vacaciones de invierno/11/2/none,
+				Comparación de resultados/13/2/faseCie,
+				Informe final y manual de uso/14/3/faseCie} {
+				\node[anchor=west] at (-12,\r+0.5) {\act};
+				\ifx\col\sinfase
+					\draw[gray!70, dashed, rounded corners=2pt]
+					(\ini,\r+0.18) rectangle (\ini+\dur,\r+0.82);
+				\else
+					\fill[\col, rounded corners=2pt] (\ini,\r+0.18) rectangle (\ini+\dur,\r+0.82);
+				\fi
+			}
+		% Hitos
+		\node[anchor=west, text=gray!75!black, font=\scriptsize] at (-12,11.2)
+		{\textbf{Hitos:} permiso de la dirección (16 oct) $\cdot$ informe de diagnóstico (30 oct) $\cdot$ fin del piloto (18 dic) $\cdot$ entrega final (29 ene 2027)};
+	\end{tikzpicture}
+	\figurenote{Elaboración propia con base en el cronograma de la presentación
+		del avance. La presentación indica el 11 de diciembre como fin del piloto,
+		pero su propia barra y la Ficha Inicial (Entregable 1) lo ubican del 7 al
+		18 de diciembre; aquí se usa el 18 de diciembre.}
+\end{figure}
+
+\FloatBarrier

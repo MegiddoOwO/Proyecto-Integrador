@@ -14,12 +14,19 @@
 \addbibresource{citas.bib}
 
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,patterns}
+% Colores de las fases del diagrama de Gantt (los de la presentación).
+\definecolor{fasePlan}{RGB}{47,93,168}
+\definecolor{faseDiag}{RGB}{23,116,76}
+\definecolor{faseDes}{RGB}{184,102,26}
+\definecolor{fasePru}{RGB}{107,79,179}
+\definecolor{faseCie}{RGB}{19,33,46}
 
 % La clase apa7 deja el texto en bandera (raggedright) tras \maketitle;
 % aquí se justifica, como pide el profesor.
 \usepackage{ragged2e}
 \usepackage{array}
+\usepackage{placeins} % \FloatBarrier: mantiene las figuras en su sección
 % Columna de tabla con texto en bandera (para celdas largas).
 \newcolumntype{P}[1]{>{\RaggedRight\arraybackslash}p{#1}}
 
