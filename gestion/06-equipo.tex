@@ -1,0 +1,56 @@
+\section{Organización del Equipo}
+Cada integrante tiene un rol principal (Tabla~\ref{tab:roles}). Eso no
+significa que trabajen por separado: en el diagnóstico y en el piloto los seis
+aplican encuestas y observan la entrada, porque la hoja de observación pide
+dos observadores por día.
+
+\begin{table}[tbp]
+	\caption{Roles y Responsabilidades del Equipo}
+	\label{tab:roles}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{3.4cm}P{3.2cm}P{8.3cm}}
+		\toprule
+		Integrante & Rol & Responsabilidades \\
+		\midrule
+		Juan Esteban Anzures Campos (JEAC) & Líder del proyecto & Coordinar al equipo y dar seguimiento al cronograma, tratar con la dirección y los profesores, gestionar los permisos, reunir la documentación y los informes, y autorizar los cambios. \\
+		Daniel Arellano Palacios (DAP) & Responsable de hardware & Elegir y comprar los materiales, armar el torniquete, conectar el motor, las luces y la alimentación, e instalar el prototipo en el acceso. \\
+		Ian Alexis Flores Martínez (IAFM) & Responsable del lector & Programar el lector y la placa de control para leer el código, consultarlo con el servidor y abrir el torniquete; medir cuánto tarda cada lectura. \\
+		Miguel Ángel Jurado Delgadillo (MAJD) & Responsable del servidor y la seguridad & Construir el servidor que genera y valida los códigos, proteger la comunicación entre las partes y preparar el aviso de privacidad junto con el líder. \\
+		Juan Fernando Reyes Arguello (JFRA) & Responsable de datos y página web & Diseñar la base de datos de ingresos, la página donde el estudiante ve su código y el panel de consulta con los reportes. \\
+		Bryan Uriel Villegas Raymundo (BUVR) & Responsable de campo y pruebas & Organizar la encuesta, las entrevistas y la observación de la entrada, capturar y analizar los datos, y coordinar las pruebas antes y durante el piloto. \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Ficha Inicial del Proyecto (Entregable 1). Cada función responde por sus entregables y por los riesgos de su frente.}
+\end{table}
+
+La matriz de la Tabla~\ref{tab:raci} indica, para cada actividad, quién la
+realiza (R), quién rinde cuentas y aprueba (A), a quién se consulta (C) y a
+quién se informa (I). Cada actividad tiene un solo responsable de rendir
+cuentas.
+
+\begin{table}[tbp]
+	\caption{Matriz de Responsabilidades (RACI)}
+	\label{tab:raci}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{6.6cm}cccccc}
+		\toprule
+		Actividad & JEAC & DAP & IAFM & MAJD & JFRA & BUVR \\
+		\midrule
+		Planeación, cronograma y seguimiento semanal & A/R & C & C & C & C & C \\
+		Permiso de la dirección & A/R & I & I & I & I & C \\
+		Aviso de privacidad & A & I & I & R & C & I \\
+		Encuesta, entrevistas y observación (diagnóstico) & C & R & R & R & R & A/R \\
+		Informe de diagnóstico & A & I & I & I & C & R \\
+		Compra de materiales & C & A/R & C & I & I & I \\
+		Armado del torniquete & I & A/R & C & I & I & I \\
+		Programación del lector & I & C & A/R & C & I & I \\
+		Servidor y códigos QR dinámicos & I & I & C & A/R & C & I \\
+		Base de datos, página del estudiante y panel web & I & I & I & C & A/R & C \\
+		Integración y pruebas en el salón & I & R & R & R & R & A/R \\
+		Instalación y piloto en el acceso & A & R & R & C & C & R \\
+		Comparación de resultados & C & I & I & I & C & A/R \\
+		Informe final y manual de uso & A/R & C & C & C & R & R \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Ficha Inicial del Proyecto (Entregable 1). R = realiza; A = rinde cuentas y aprueba; C = consultado; I = informado.}
+\end{table}

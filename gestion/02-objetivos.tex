@@ -1,0 +1,59 @@
+\section{Objetivos del Proyecto}
+\subsection{Objetivo General}
+\textbf{Evaluar el efecto de un prototipo de control de acceso con códigos QR
+	dinámicos sobre el tiempo de validación, la fila y las incidencias de
+	identidad en el acceso peatonal piloto del TESCHA, para aportar evidencia que
+	permita decidir si conviene ampliarlo a otros accesos.}
+
+Hoy no existen datos que midan el problema, y una decisión sobre el sistema
+debe apoyarse en evidencia. El objetivo pide evaluar el efecto, no demostrar
+una mejora: si las mediciones no muestran diferencia, ese también es un
+resultado válido.
+
+\subsection{Indicadores}
+El efecto se mide con tres indicadores, primero antes del piloto (línea base)
+y después durante él, en el horario pico del turno vespertino:
+\begin{itemize}
+	\item \textbf{Tiempo de validación:} promedio por estudiante, desde que
+	      llega al punto de revisión hasta que lo cruza.
+	\item \textbf{Fila máxima:} la mayor cantidad de personas esperando en el
+	      horario pico.
+	\item \textbf{Incidencias de identidad:} credenciales ajenas detectadas.
+\end{itemize}
+La pregunta que guía el trabajo es: ¿cuál es el efecto de implementar un
+sistema automatizado de validación mediante códigos QR dinámicos en la
+eficiencia general del control de acceso peatonal de los estudiantes del
+TESCHA? Por eficiencia se entiende dejar pasar con rapidez a quienes tienen
+derecho a entrar, y solo a ellos.
+
+\subsection{Objetivos Específicos}
+Los ocho objetivos específicos se reparten en dos líneas de trabajo
+(Tabla~\ref{tab:especificos}).
+
+\begin{table}[tbp]
+	\caption{Objetivos Específicos}
+	\label{tab:especificos}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{1.2cm}P{7.3cm}P{6.6cm}}
+		\toprule
+		Clave & Qué se hará & Por qué \\
+		\midrule
+		\multicolumn{3}{l}{\textit{Desarrollo tecnológico}} \\
+		OT1 & Diseñar la arquitectura del sistema: lector, torniquete, servidor, base de datos y panel web. & El acceso actual no deja registro digital y el prototipo necesita una estructura que lo registre. \\
+		OT2 & Implementar la generación y validación de códigos QR que cambian cada pocos segundos y están firmados, con pruebas de códigos vencidos, repetidos y alterados. & Un código fijo puede copiarse y compartirse; la firma resiste el reenvío y la modificación del mensaje \parencite{subpratatsavee2015hmac}. \\
+		OT3 & Construir el prototipo funcional que integre lector, torniquete, servidor y panel web. & Sin prototipo no hay sistema que evaluar. \\
+		OT4 & Verificar el desempeño técnico: tiempo de lectura y de consulta, y lecturas fallidas con distintas luces, brillos de pantalla y distancias. & No se encontró literatura que reporte el tiempo de lectura de un QR en este lector, así que debe medirse con el prototipo. \\
+		\multicolumn{3}{l}{\textit{Investigación y análisis de datos}} \\
+		OI1 & Analizar la situación actual del acceso con observación de cinco días, encuesta y entrevistas, para fijar la línea base. & No existe ningún registro del flujo de acceso; sin línea base no se puede atribuir ningún cambio al sistema. \\
+		OI2 & Estimar la viabilidad y la aceptación entre los estudiantes: celular propio, conexión, batería y disposición a mostrar un QR. & El sistema depende del celular del estudiante y se desconoce si la comunidad lo aceptaría. \\
+		OI3 & Interpretar las obligaciones de protección de datos personales aplicables al TESCHA \parencite{edomex2017datos, lgpdppso2025}. & El TESCHA es sujeto obligado de ambas leyes y el prototipo registra la hora de ingreso de cada estudiante. \\
+		OI4 & Evaluar el efecto del sistema en los tres indicadores, comparando la línea base con el piloto. & La pregunta pide el efecto, y eso solo se conoce comparando un antes y un después. \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Elaboración propia con base en el documento de investigación del equipo. OT es desarrollo tecnológico; OI es investigación y análisis de datos.}
+\end{table}
+
+Los objetivos de desarrollo producen el sistema que se evalúa. Los de
+investigación miden los indicadores y aportan lo necesario para interpretarlos.
+Sin los primeros no hay sistema que evaluar; sin los segundos no se sabe si el
+sistema sirvió.

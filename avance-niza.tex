@@ -1,0 +1,96 @@
+% =====================================================================
+%  Avance de Gestión de Proyectos — Escanea y Entra (TESCHA)
+%  Plantilla APA 7.ª edición (clase apa7)
+%  Compilar con:  latexmk -pdf avance-niza.tex   (usa biber automáticamente)
+% =====================================================================
+\documentclass[stu,11pt,floatsintext,biblatex]{apa7}
+
+% Fuente sans serif a 11 pt (APA permite sans serif de 11 pt, como Arial)
+\usepackage{tgheros}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[spanish,es-tabla]{babel} % es-tabla: "Tabla" en vez de "Cuadro"
+\usepackage{csquotes}                % requerido por biblatex-apa
+\addbibresource{citas.bib}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+
+% La clase apa7 deja el texto en bandera (raggedright) tras \maketitle;
+% aquí se justifica, como pide el profesor.
+\usepackage{ragged2e}
+\usepackage{array}
+% Columna de tabla con texto en bandera (para celdas largas).
+\newcolumntype{P}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+
+% Logos arriba de la portada (los pide la escuela, no APA).
+\newcommand{\hrm}{\noindent
+  \includegraphics[height=1.6cm]{img/tescha_logo.png}\hfill
+  \includegraphics[height=1.6cm]{img/logo_sitemas.png}\par}
+
+% Índice después de la portada (lo pide la escuela; APA puro no lo usa).
+\setcounter{tocdepth}{2}
+\makeatletter
+\patchcmd{\maketitle}{\@ifundefined{def@donotrepeattitle}}
+  {\tableofcontents\newpage\@ifundefined{def@donotrepeattitle}}{}{}
+\patchcmd{\maketitle}{\section*{\protect\normalfont\textbf{\@title}}}
+  {\section*{\protect\normalfont\textbf{\@title}}\addcontentsline{toc}{section}{\@title}}{}{}
+\makeatother
+\AtBeginDocument{\defbibheading{bibliography}[\refname]{%
+  \clearpage\section*{\normalfont\textbf{#1}}\addcontentsline{toc}{section}{#1}}}
+\newcommand{\apendiceindice}[2]{\addcontentsline{toc}{section}{\appendixname~#1: #2}}
+
+\fancypagestyle{titlepage}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}}
+
+\renewcommand{\figurenote}[1]{\par\noindent\textit{\notelabel.} #1\par}
+\renewcommand{\tablenote}[1]{\par\smallskip\figurenote{#1}}
+
+\hypersetup{hidelinks}
+\setlength{\headheight}{15.4pt}
+
+\DeclareDelimFormat[parencite]{finalnamedelim}{\addspace\bibstring{and}\space}
+\DeclareDelimFormat[bib,biblist]{finalnamedelim}{%
+  \ifthenelse{\value{listcount}>\maxprtauth}{}{\addspace\bibstring{and}\space}}
+\DefineBibliographyExtras{spanish}{\protected\def\bibrangedash{\textendash}}
+
+\AtBeginDocument{%
+  \renewcommand{\keywordname}{Palabras clave}%
+  \renewcommand{\acksname}{Nota del autor}%
+  \renewcommand{\notelabel}{Nota}%
+}
+
+% ----------------------------- Datos ---------------------------------
+\title{Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
+\shorttitle{ACCESO QR TESCHA}
+
+\authorsnames{Juan Esteban Anzures Campos, Daniel Arellano Palacios, Ian Alexis Flores Martínez, Miguel Ángel Jurado Delgadillo, Juan Fernando Reyes Arguello, Bryan Uriel Villegas Raymundo}
+\authorsaffiliations{{Ingeniería en Sistemas Computacionales, Tecnológico de Estudios Superiores de Chalco}}
+
+% Modo stu
+\course{Gestión de Proyectos de Software (grupo 4751, turno vespertino)}
+\professor{Niza Lucero Alpízar Martínez}
+\duedate{9 de octubre de 2026}
+
+\makeatletter
+\@ifundefined{def@stu}{}{\let\@shorttitle\@undefined \let\@acks\@undefined}
+\makeatother
+
+\begin{document}
+\maketitle
+\justifying
+
+\input{gestion/00-introduccion}
+\input{gestion/01-iniciacion}
+\input{gestion/02-objetivos}
+\input{gestion/03-solucion}
+\input{gestion/04-alcance}
+\input{gestion/05-planificacion}
+\input{gestion/06-equipo}
+\input{gestion/07-calidad}
+\input{gestion/08-seguimiento}
+\input{gestion/09-medicion}
+\input{gestion/10-estado}
+
+\printbibliography
+
+\end{document}

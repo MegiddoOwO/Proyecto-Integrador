@@ -1,0 +1,108 @@
+\section{Iniciación del Proyecto}
+La iniciación responde qué se quiere resolver, para quién y con qué límites.
+La Tabla~\ref{tab:ficha} resume la ficha inicial y los datos de autorización.
+
+\begin{table}[tbp]
+	\caption{Ficha Inicial del Proyecto Escanea y Entra}
+	\label{tab:ficha}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{3cm}P{12cm}}
+		\toprule
+		Campo & Contenido \\
+		\midrule
+		Nombre & Escanea y Entra: Prototipo de Acceso QR para el TESCHA. \\
+		Necesidad o problema & El acceso de los estudiantes se controla con la revisión visual de credenciales físicas. Es lento en los minutos previos al inicio de clases, no deja un registro digital de quién entra ni a qué hora y no permite comprobar que quien muestra la credencial sea su titular. \\
+		Propósito & Comprobar si un QR en el celular agiliza la entrada y deja constancia de cada ingreso. \\
+		Patrocinio & Dirección del TESCHA. Docente responsable: Niza Lucero Alpízar Martínez. \\
+		Usuarios & Estudiantes del turno vespertino (muestran su código QR), personal de vigilancia del acceso piloto (opera el acceso) y Departamento de Control Escolar (consulta los registros). \\
+		Producto & Un torniquete a escala con un lector de código QR, un servidor que valida el código y guarda cada intento, una página donde el estudiante ve su código y un panel web de consulta. \\
+		Valor esperado & Ingreso más rápido que con la revisión manual, menos ingresos con credenciales ajenas o capturas compartidas y un registro confiable de entradas para detectar ausentismo y planear el personal por horario. \\
+		Enfoque de trabajo & Híbrido: etapas, hitos y fechas fijas de forma predictiva, y desarrollo del lector, el servidor y el panel en iteraciones semanales. \\
+		Periodo & 17 semanas, del 5 de octubre de 2026 al 29 de enero de 2027, en un solo acceso peatonal del plantel. \\
+		Autorización & Plan del proyecto entregado el 18 de septiembre de 2026. Arranque el 5 de octubre. Primer hito: permiso de la dirección (16 de octubre de 2026). \\
+		Criterio de éxito & Que durante el piloto el tiempo promedio de validación por estudiante y la fila máxima sean menores que en la línea base, sin aceptar códigos vencidos o alterados y sin perder ningún registro. \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Elaboración propia con base en la Ficha Inicial del Proyecto (Entregable 1) y la presentación del avance. TESCHA es el Tecnológico de Estudios Superiores de Chalco.}
+\end{table}
+
+\subsection{El Problema}
+Hoy los vigilantes revisan las credenciales a simple vista. Eso tiene tres
+consecuencias:
+\begin{itemize}
+	\item \textbf{Filas.} Se forman en los 15 a 20 minutos anteriores a la
+	      primera clase del turno vespertino, cuando casi todos llegan en poco tiempo
+	      y la revisión depende de una o dos personas.
+	\item \textbf{Suplantación.} Una credencial prestada, vencida o ajena puede
+	      pasar la revisión visual, porque nada comprueba que quien la muestra sea su
+	      titular.
+	\item \textbf{Falta de datos.} La institución no sabe cuántas personas entran
+	      ni a qué hora, así que no puede detectar a tiempo a quienes dejan de asistir
+	      ni planear cuántos accesos abrir y con cuánto personal.
+\end{itemize}
+Este problema es distinto del pase de lista en el salón. Un registro en la
+entrada solo prueba que la persona entró al plantel, no que asistió a una
+clase. Por eso el control de asistencia por materia queda fuera del proyecto.
+Insatisfacciones parecidas con los registros manuales ya se han documentado en
+otros planteles \parencite{torres2019qr}.
+
+\subsection{Interesados}
+Los usuarios usan el producto de forma directa. Los demás interesados se ven
+afectados por el proyecto o pueden influir en él (Tabla~\ref{tab:interesados}).
+
+\begin{table}[tbp]
+	\caption{Usuarios e Interesados}
+	\label{tab:interesados}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{3.2cm}P{2.3cm}P{4.4cm}P{3.6cm}P{1.5cm}}
+		\toprule
+		Interesado & Tipo & Cómo participa & Qué espera & Influencia \\
+		\midrule
+		Estudiantes del turno vespertino & Usuario directo & Muestran su código QR desde el celular y responden la encuesta del diagnóstico. & Entrar rápido, sin filas, y que sus datos estén protegidos. & Media \\
+		Personal de vigilancia del acceso piloto & Usuario directo & Opera el acceso junto al prototipo, atiende a quien no puede mostrar su código y consulta el panel. & Menos carga en la hora pico y una herramienta que detecte credenciales ajenas. & Media \\
+		Departamento de Control Escolar & Usuario del panel & Proporciona la matrícula y consulta los reportes de ingreso. & Datos para detectar ausentismo y riesgo de deserción. & Alta \\
+		Dirección del TESCHA & Patrocinador & Autoriza el piloto y decide si el sistema se extiende a otros accesos. & Evidencia de que la solución funciona y es de bajo costo. & Alta \\
+		Área responsable de datos personales del TESCHA & Interesado & Revisa el aviso de privacidad y las condiciones para tratar datos de estudiantes. & Que el sistema cumpla la legislación de protección de datos. & Alta \\
+		Docentes asesores & Interesado & Revisan los avances y orientan al equipo. & Entregables a tiempo y bien fundamentados. & Alta \\
+		Equipo del proyecto & Ejecutor & Diseña, construye, prueba y documenta el prototipo. & Terminar el prototipo y aprobar la asignatura. & Alta \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Ficha Inicial del Proyecto (Entregable 1).}
+\end{table}
+
+\subsection{Supuestos y Restricciones}
+El plan se apoya en dos supuestos: en el acceso hay toma de corriente y Wi-Fi,
+y la mayoría de los estudiantes trae celular. Si alguno falla, el proyecto lo
+trata como riesgo (sección~\ref{sec:riesgos}).
+
+Las restricciones son un solo acceso peatonal, el turno vespertino, 17 semanas
+con fechas que no se mueven y el presupuesto del propio equipo. El calendario
+escolar no se mueve y el piloto debe terminar antes de las vacaciones de
+invierno, mientras los estudiantes todavía asisten.
+
+\subsection{Autorización y Criterio de Éxito}
+El proyecto arranca con el plan entregado el 18 de septiembre de 2026 y con el
+permiso de la dirección como primer hito, previsto para el 16 de octubre. Sin
+ese permiso no se puede entrar al acceso. El criterio de éxito general es
+completar el piloto y comparar tres indicadores contra la línea base. Los
+criterios de éxito concretos están en la Tabla~\ref{tab:exito}.
+
+\begin{table}[tbp]
+	\caption{Criterios de Éxito}
+	\label{tab:exito}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{3.3cm}P{4.6cm}P{3.9cm}P{2.6cm}}
+		\toprule
+		Criterio & Meta & Cómo se verifica & Cuándo \\
+		\midrule
+		Tiempo promedio de validación por estudiante & Menor durante el piloto que en la línea base. & Hoja de observación del flujo en el acceso. & Diagnóstico y piloto \\
+		Longitud máxima de la fila en el horario pico & Menor durante el piloto que en la línea base. & Hoja de observación del flujo en el acceso. & Diagnóstico y piloto \\
+		Rechazo de códigos inválidos & Se rechaza el 100\,\% de los códigos vencidos, reenviados o alterados. & Casos de prueba en el salón. & Pruebas en el salón \\
+		Integridad del registro & El 100\,\% de los intentos queda registrado; la diferencia con el conteo manual es de 2\,\% o menos. & Base de datos frente a la hoja de observación. & Piloto \\
+		Aceptación & Al menos 85\,\% de los estudiantes del piloto pasa al primer intento sin ayuda. & Observación y registros del sistema. & Piloto \\
+		Cumplimiento del cronograma & Piloto terminado el 18 de diciembre y entrega final el 29 de enero. & Seguimiento semanal del cronograma. & Todo el proyecto \\
+		Decisión sustentada & Informe final con una recomendación respaldada por datos sobre extender el sistema a otros accesos. & Revisión del informe por los docentes asesores. & Cierre \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Ficha Inicial del Proyecto (Entregable 1). La línea base es la medición del acceso actual, que se levanta en el diagnóstico de octubre porque hoy no existe ninguna.}
+\end{table}
