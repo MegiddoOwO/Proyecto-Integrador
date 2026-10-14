@@ -25,6 +25,9 @@
 
 % Para generar solo la sección de objetivos como PDF aparte se compila
 % objetivos.tex, que define \soloobjetivos y carga este archivo.
+% problema-objetivos.tex define \soloproblemaobjetivos para incluir portada,
+% índice, planteamiento del problema, pregunta de investigación, objetivos y referencias.
+% avances.tex define \soloavances para generar el informe de avances.
 
 % Logos arriba de la portada (los pide la escuela, no APA).
 \newcommand{\hrm}{\noindent
@@ -65,10 +68,14 @@
 }
 
 % ----------------------------- Datos ---------------------------------
+\ifdefined\soloavances
+\title{Informe de Avances de Escanea y Entra: Control de Acceso para el TESCHA}
+\else
 \ifdefined\soloobjetivos
 \title{Objetivos de Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
 \else
 \title{Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
+\fi
 \fi
 \shorttitle{ACCESO QR TESCHA}
 
@@ -77,8 +84,13 @@
 
 % Modo stu
 \course{Investigación (grupo 4751, turno vespertino)}
+\ifdefined\soloavances
+\professor{Docente: OMAR HETZAEL LOPEZ ALMONTE}
+\duedate{13 de octubre de 2026}
+\else
 \professor{Dra. en C. C. Giselle Nayeli Morales Rosales}
 \duedate{30 de septiembre de 2026}
+\fi
 
 \makeatletter
 \@ifundefined{def@stu}{}{\let\@shorttitle\@undefined \let\@acks\@undefined}
@@ -93,8 +105,17 @@
 \maketitle
 \justifying
 
+\ifdefined\soloavances
+\input{secciones/09-avances}
+\else
 \ifdefined\soloobjetivos
 \input{secciones/06-objetivos}
+\else
+\ifdefined\soloproblemaobjetivos
+\input{secciones/03-problema}
+
+\input{secciones/06-objetivos}
+
 \printbibliography
 \else
 \input{secciones/00-introduccion}
@@ -106,9 +127,9 @@
 
 \input{secciones/03-problema}
 
-\input{secciones/04-pregunta}
-
 \input{secciones/06-objetivos}
+
+\input{secciones/08-justificacion}
 
 \input{secciones/05-metodologia}
 
@@ -128,6 +149,8 @@
 
 \clearpage
 \input{apendices/d-plan-de-accion}
+\fi
+\fi
 \fi
 
 \end{document}

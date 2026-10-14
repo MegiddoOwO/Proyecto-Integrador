@@ -1,0 +1,115 @@
+{
+  "archivo": "resultados/pruebas.csv",
+  "intentos": 45,
+  "inicio": "2026-10-13T16:47:56",
+  "fin": "2026-10-13T17:29:09",
+  "sujetos_etiquetados": [
+    "s01"
+  ],
+  "grupos": [
+    {
+      "modo": "ambas",
+      "titulo_modo": "Ambas",
+      "condicion": "calibracion",
+      "titulo_condicion": "Rostro real",
+      "n": 5,
+      "aciertos": 5,
+      "falsos_rechazos": 0,
+      "falsas_aceptaciones": 0,
+      "media_ms": 6008.9,
+      "mediana_ms": 6494.4,
+      "minimo_ms": 4745.7,
+      "maximo_ms": 7044.4,
+      "resultados": {
+        "acepta": 5
+      }
+    },
+    {
+      "modo": "ambas",
+      "titulo_modo": "Ambas",
+      "condicion": "calib_foto_s01",
+      "titulo_condicion": "Fotografía de s01",
+      "n": 10,
+      "aciertos": 10,
+      "falsos_rechazos": 0,
+      "falsas_aceptaciones": 0,
+      "media_ms": 245.94,
+      "mediana_ms": 215.2,
+      "minimo_ms": 205.8,
+      "maximo_ms": 300.7,
+      "resultados": {
+        "rechaza_vida": 10
+      }
+    },
+    {
+      "modo": "ambas",
+      "titulo_modo": "Ambas",
+      "condicion": "calib_otras_personas",
+      "titulo_condicion": "Otras personas",
+      "n": 5,
+      "aciertos": 5,
+      "falsos_rechazos": 0,
+      "falsas_aceptaciones": 0,
+      "media_ms": 234.16,
+      "mediana_ms": 215.4,
+      "minimo_ms": 198.7,
+      "maximo_ms": 301.0,
+      "resultados": {
+        "rechaza": 5
+      }
+    },
+    {
+      "modo": "pasiva",
+      "titulo_modo": "Pasiva",
+      "condicion": "calib_real",
+      "titulo_condicion": "Rostro real",
+      "n": 10,
+      "aciertos": 9,
+      "falsos_rechazos": 1,
+      "falsas_aceptaciones": 0,
+      "media_ms": 216.39,
+      "mediana_ms": 221.75,
+      "minimo_ms": 149.8,
+      "maximo_ms": 275.5,
+      "resultados": {
+        "rechaza_vida": 1,
+        "acepta": 9
+      }
+    },
+    {
+      "modo": "pasiva",
+      "titulo_modo": "Pasiva",
+      "condicion": "calib_foto_celular",
+      "titulo_condicion": "Foto en celular",
+      "n": 10,
+      "aciertos": 10,
+      "falsos_rechazos": 0,
+      "falsas_aceptaciones": 0,
+      "media_ms": 207.1,
+      "mediana_ms": 218.95,
+      "minimo_ms": 148.9,
+      "maximo_ms": 243.5,
+      "resultados": {
+        "rechaza_vida": 10
+      }
+    },
+    {
+      "modo": "activa",
+      "titulo_modo": "Activa",
+      "condicion": "calib_real_activa",
+      "titulo_condicion": "Rostro real",
+      "n": 5,
+      "aciertos": 4,
+      "falsos_rechazos": 1,
+      "falsas_aceptaciones": 0,
+      "media_ms": 5520.639999999999,
+      "mediana_ms": 5464.2,
+      "minimo_ms": 3816.4,
+      "maximo_ms": 7231.5,
+      "resultados": {
+        "acepta": 4,
+        "rechaza_vida": 1
+      }
+    }
+  ]
+}

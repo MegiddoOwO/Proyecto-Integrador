@@ -1,0 +1,30 @@
+{
+  "inicio": "2026-10-13T19:04:08-06:00",
+  "tipo": "Prueba adicional de deteccion y parpadeo con camara en vivo",
+  "modulo": "vida.Pose del prototipo de reconocimiento facial",
+  "identificacion": "No se comparan identidades ni se almacenan vectores nuevos",
+  "csv_historico": "Sin cambios; estas capturas no son nuevos intentos del CSV",
+  "capturas": [
+    {
+      "archivo": "01-deteccion.png",
+      "fecha_hora": "2026-10-13T19:04:14-06:00",
+      "evento": "rostro_localizado",
+      "parpadeo": 0.01026246976107359,
+      "giro_grados": -7.408938064406853,
+      "inferencia_cuadro_ms": 17.52,
+      "ancho_cuadro": 640,
+      "alto_cuadro": 480
+    },
+    {
+      "archivo": "02-parpadeo.png",
+      "fecha_hora": "2026-10-13T19:04:16-06:00",
+      "evento": "parpadeo_detectado",
+      "parpadeo": 0.6289945244789124,
+      "giro_grados": -7.126969996604749,
+      "inferencia_cuadro_ms": 21.31,
+      "ancho_cuadro": 640,
+      "alto_cuadro": 480
+    }
+  ],
+  "fin": "2026-10-13T19:04:21-06:00"
+}

@@ -1,0 +1,41 @@
+<!doctype html><html lang="es"><meta charset="utf-8">
+<title>Análisis de los intentos registrados</title><style>
+*{box-sizing:border-box} body{margin:0;background:#fff;color:#14272e;
+font-family:Arial,sans-serif;padding:36px 40px;width:1000px}
+.eyebrow{font-size:16px;font-weight:700;letter-spacing:1.5px;color:#28556b}
+h1{font-size:30px;line-height:1.18;margin:12px 0 9px}
+p{font-size:18px;margin:0 0 23px;line-height:1.4;color:#526269}
+.terminal{background:#15252d;color:#edf2f4;padding:24px;border-radius:5px}
+.command{font:19px/1.4 'DejaVu Sans Mono',monospace;color:#9ed3c7;
+margin-bottom:15px;white-space:pre-wrap;overflow-wrap:anywhere}
+pre{margin:0;font:21px/1.43 'DejaVu Sans Mono',monospace;white-space:pre-wrap;
+overflow-wrap:anywhere} .source{border-top:2px solid #28556b;background:#f3f6f7;
+padding:18px 16px} .line{display:flex;min-height:29px}
+.num{color:#627a84;min-width:45px;font:18px/1.5 monospace;user-select:none}
+.line code{font:19px/1.5 'DejaVu Sans Mono',monospace;white-space:pre-wrap;
+overflow-wrap:anywhere;min-width:0} .gap{color:#627a84;font:18px/1.6 monospace}
+footer{margin-top:20px;font-size:16px;line-height:1.4;color:#526269;
+border-top:1px solid #ccd5d9;padding-top:13px}
+</style><body><div class="eyebrow">ESCANEA Y ENTRA · EVIDENCIA DOCUMENTAL</div>
+<h1>Análisis de los intentos registrados</h1><p>Salida obtenida al procesar la copia del archivo de resultados.</p><div class="terminal"><div class="command">$ python3 scripts/preparar_capturas_avances.py --texto</div><pre>ARCHIVO: resultados/pruebas.csv
+CORTE: 13/10/2026 | MOTOR: buffalo_l | INTENTOS: 45
+
+MODO     CONDICION          n    OK FR FA MEDIA ms
+------------------------------------------------------
+activa   rostro real        5  4/5   1  0   5520.6
+ambas    fotografia s01    10 10/10  0  0    245.9
+ambas    otras personas     5  5/5   0  0    234.2
+ambas    rostro real        5  5/5   0  0   6008.9
+pasiva   foto en celular   10 10/10  0  0    207.1
+pasiva   rostro real       10  9/10  1  0    216.4
+
+TOTAL: 43 aciertos / 45 intentos
+FR: falso rechazo | FA: falsa aceptacion
+
+INTENTOS QUE REQUIEREN REVISION
+17:24:02 | 275.5 ms | pasiva_rostro_cortado
+17:29:09 | 6066.2 ms | no_cumplio_parpadea
+
+Lectura de registros existentes; sin nueva captura de camara.
+</pre></div>
+<footer>La vista documenta el análisis del CSV de calibración. Los tiempos incluyen el reto en los modos activa y ambas.</footer></body></html>

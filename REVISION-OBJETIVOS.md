@@ -13,6 +13,27 @@ son de esos archivos tal como estaban ese día y pueden haberse movido.
 Estados: **Aplicado** (ya corregido en `06-objetivos.tex`), **Pendiente** (hay
 que decidir o editar otro archivo), **Equipo** (decisión del equipo, no de código).
 
+Actualización del 13 de octubre de 2026: el objetivo general se simplificó a
+evaluar el efecto del prototipo en el control de acceso peatonal. Por decisión
+del equipo, el tiempo de validación y la longitud de la fila quedan como
+indicadores principales; las incidencias de identidad se conservan como
+información secundaria sobre seguridad, con análisis descriptivo. Esta
+jerarquía se reflejó en la pregunta, los objetivos, la metodología y el
+Apéndice C. Las propuestas y la tabla histórica de este registro deben leerse
+con ese ajuste si se recuperan.
+
+Actualización de estructura: los objetivos específicos se presentan ahora
+en una sola lista cronológica, sin claves, negritas ni citas. La pregunta
+forma parte del planteamiento y la importancia y la viabilidad se reúnen
+en la justificación del documento completo. Estas decisiones sustituyen las
+propuestas históricas de organización y presentación de este registro.
+
+Actualización del planteamiento: se redacta ahora de lo general a lo
+particular, en texto corrido, sin subtítulos ni listas. La pregunta cierra
+el apartado sin encabezado. Los detalles de arquitectura, requisitos,
+pruebas y evaluación se trasladaron a la metodología; las referencias
+históricas a «Lo que Desconocemos» ya no corresponden a la estructura actual.
+
 ## 1. Cambios ya aplicados en `06-objetivos.tex`
 
 | # | Hallazgo | Estado |

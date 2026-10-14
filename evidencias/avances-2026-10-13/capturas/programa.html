@@ -1,0 +1,21 @@
+<!doctype html><html lang="es"><meta charset="utf-8">
+<title>Cómo se inicia y registra un intento</title><style>
+*{box-sizing:border-box} body{margin:0;background:#fff;color:#14272e;
+font-family:Arial,sans-serif;padding:36px 40px;width:1000px}
+.eyebrow{font-size:16px;font-weight:700;letter-spacing:1.5px;color:#28556b}
+h1{font-size:30px;line-height:1.18;margin:12px 0 9px}
+p{font-size:18px;margin:0 0 23px;line-height:1.4;color:#526269}
+.terminal{background:#15252d;color:#edf2f4;padding:24px;border-radius:5px}
+.command{font:19px/1.4 'DejaVu Sans Mono',monospace;color:#9ed3c7;
+margin-bottom:15px;white-space:pre-wrap;overflow-wrap:anywhere}
+pre{margin:0;font:21px/1.43 'DejaVu Sans Mono',monospace;white-space:pre-wrap;
+overflow-wrap:anywhere} .source{border-top:2px solid #28556b;background:#f3f6f7;
+padding:18px 16px} .line{display:flex;min-height:29px}
+.num{color:#627a84;min-width:45px;font:18px/1.5 monospace;user-select:none}
+.line code{font:19px/1.5 'DejaVu Sans Mono',monospace;white-space:pre-wrap;
+overflow-wrap:anywhere;min-width:0} .gap{color:#627a84;font:18px/1.6 monospace}
+footer{margin-top:20px;font-size:16px;line-height:1.4;color:#526269;
+border-top:1px solid #ccd5d9;padding-top:13px}
+</style><body><div class="eyebrow">ESCANEA Y ENTRA · EVIDENCIA DOCUMENTAL</div>
+<h1>Cómo se inicia y registra un intento</h1><p>Fragmentos de reconocer.py conservados en la copia de evidencias.</p><div class="source"><div class="line"><span class="num">107</span><code>if tecla != ord(&quot; &quot;):</code></div><div class="line"><span class="num">108</span><code>    continue</code></div><div class="line"><span class="num">109</span><code></code></div><div class="gap">…</div><div class="line"><span class="num">119</span><code>if resultado == &quot;acepta&quot; and pasiva:</code></div><div class="line"><span class="num">120</span><code>    vivo, motivo = pasiva.evaluar(cuadro, caras[0].puntos)</code></div><div class="line"><span class="num">121</span><code>    motivos.append(motivo)</code></div><div class="line"><span class="num">122</span><code>    if not vivo:</code></div><div class="line"><span class="num">123</span><code>        resultado = &quot;rechaza_vida&quot;</code></div><div class="gap">…</div><div class="line"><span class="num">139</span><code>escritor.writerow([</code></div><div class="line"><span class="num">140</span><code>    datetime.now().isoformat(timespec=&quot;seconds&quot;), tecnologia, args.sujeto,</code></div><div class="line"><span class="num">141</span><code>    args.condicion, args.esperado, resultado, identidad,</code></div><div class="line"><span class="num">142</span><code>    f&quot;{sim:.4f}&quot;, f&quot;{ms:.1f}&quot;, int(correcto), &quot; &quot;.join(motivos),</code></div><div class="line"><span class="num">143</span><code>])</code></div><div class="line"><span class="num">144</span><code>f.flush()</code></div></div>
+<footer>La tecla ESPACIO inicia el intento; el programa evalúa la vida pasiva cuando corresponde y guarda la decisión y el tiempo en CSV. Los puntos suspensivos indican código omitido.</footer></body></html>

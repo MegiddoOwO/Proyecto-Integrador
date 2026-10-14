@@ -1,0 +1,57 @@
+{
+  "origen": "/home/d4n/Documentos/local/reconocimiento_facial",
+  "fecha_copia_utc": "2026-10-14T00:44:12.089792+00:00",
+  "archivos": [
+    {
+      "archivo": "README.md",
+      "bytes": 9350,
+      "sha256": "2d3d48c86befd05cbd8633524ebdc126908f277da761ecf547e4e0c693a8e813"
+    },
+    {
+      "archivo": "pyproject.toml",
+      "bytes": 235,
+      "sha256": "ef5b379745f88560d3bd0d92447f98c53ece12d15cf557fe62d102be3cb977f5"
+    },
+    {
+      "archivo": "registrar.py",
+      "bytes": 3939,
+      "sha256": "05794d44626bd57bae64357b20ea59fa98dce4c17da2dbead25dd8d5ac092e58"
+    },
+    {
+      "archivo": "reconocer.py",
+      "bytes": 6859,
+      "sha256": "c9ba2d91077b02a67e0c5c51f51f3584c87c459f1d76306b20a98ea242138019"
+    },
+    {
+      "archivo": "vida.py",
+      "bytes": 7778,
+      "sha256": "2e38e9942599b1fc1b477ae2c6bf2c8e49b52cd99537981aaeb85e04d84a87ff"
+    },
+    {
+      "archivo": "comun.py",
+      "bytes": 6369,
+      "sha256": "53363c915c487357cfd8969c0b116e055e7d0ba2800db38ea1b839eb3282b6f1"
+    },
+    {
+      "archivo": "analizar.py",
+      "bytes": 2083,
+      "sha256": "fcd65dbcc12fa0b9fb6c84083c81864f3782f3e80adc8f19c9338e657fdb15e5"
+    },
+    {
+      "archivo": "sesion.py",
+      "bytes": 3357,
+      "sha256": "94480fba292cd8d4fc4a2657cdcbc8346bf7834c139deb18f9c5c6dc5a6215c6"
+    },
+    {
+      "archivo": "resultados/pruebas.csv",
+      "bytes": 5258,
+      "sha256": "f91e4970bc3f10764f9c556410b03d7d66309e2a459eaacfc8c56f301e25e96c"
+    },
+    {
+      "archivo": "resultados/pruebas.respaldo.csv",
+      "bytes": 2142,
+      "sha256": "6b55318ea838d97f676896ec07ddd3dceea164b27e819efea76c6f940b30b53b"
+    }
+  ],
+  "nota": "El CSV vigente es la base del análisis. El respaldo contiene intentos coincidentes y se conserva sin agregarlos al total."
+}

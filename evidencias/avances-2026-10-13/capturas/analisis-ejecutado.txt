@@ -1,0 +1,20 @@
+ARCHIVO: resultados/pruebas.csv
+CORTE: 13/10/2026 | MOTOR: buffalo_l | INTENTOS: 45
+
+MODO     CONDICION          n    OK FR FA MEDIA ms
+------------------------------------------------------
+activa   rostro real        5  4/5   1  0   5520.6
+ambas    fotografia s01    10 10/10  0  0    245.9
+ambas    otras personas     5  5/5   0  0    234.2
+ambas    rostro real        5  5/5   0  0   6008.9
+pasiva   foto en celular   10 10/10  0  0    207.1
+pasiva   rostro real       10  9/10  1  0    216.4
+
+TOTAL: 43 aciertos / 45 intentos
+FR: falso rechazo | FA: falsa aceptacion
+
+INTENTOS QUE REQUIEREN REVISION
+17:24:02 | 275.5 ms | pasiva_rostro_cortado
+17:29:09 | 6066.2 ms | no_cumplio_parpadea
+
+Lectura de registros existentes; sin nueva captura de camara.
