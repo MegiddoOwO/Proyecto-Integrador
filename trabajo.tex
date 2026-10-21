@@ -26,8 +26,11 @@
 % Para generar solo la sección de objetivos como PDF aparte se compila
 % objetivos.tex, que define \soloobjetivos y carga este archivo.
 % problema-objetivos.tex define \soloproblemaobjetivos para incluir portada,
-% índice, planteamiento del problema, pregunta de investigación, objetivos y referencias.
+% índice, planteamiento del problema, pregunta de investigación, objetivos,
+% justificación y referencias.
 % avances.tex define \soloavances para generar el informe de avances.
+% justificacion.tex define \solojustificacion para generar la justificación
+% como entregable aparte (introducción, impacto, viabilidad y conclusión).
 
 % Logos arriba de la portada (los pide la escuela, no APA).
 \newcommand{\hrm}{\noindent
@@ -37,10 +40,12 @@
 % Índice después de la portada (lo pide la escuela; APA puro no lo usa).
 \setcounter{tocdepth}{2}
 \makeatletter
-\ifdefined\soloobjetivos\else
 \patchcmd{\maketitle}{\@ifundefined{def@donotrepeattitle}}
   {\tableofcontents\newpage\@ifundefined{def@donotrepeattitle}}{}{}
-\fi
+% En objetivos.tex y problema-objetivos.tex no se repite el título del
+% trabajo arriba del texto (equivale a la opción donotrepeattitle de apa7).
+\ifdefined\soloobjetivos\def\def@donotrepeattitle{}\fi
+\ifdefined\soloproblemaobjetivos\def\def@donotrepeattitle{}\fi
 \patchcmd{\maketitle}{\section*{\protect\normalfont\textbf{\@title}}}
   {\section*{\protect\normalfont\textbf{\@title}}\addcontentsline{toc}{section}{\@title}}{}{}
 \makeatother
@@ -71,10 +76,14 @@
 \ifdefined\soloavances
 \title{Informe de Avances de Escanea y Entra: Control de Acceso para el TESCHA}
 \else
+\ifdefined\solojustificacion
+\title{Justificación de Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
+\else
 \ifdefined\soloobjetivos
 \title{Objetivos de Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
 \else
 \title{Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
+\fi
 \fi
 \fi
 \shorttitle{ACCESO QR TESCHA}
@@ -89,7 +98,11 @@
 \duedate{13 de octubre de 2026}
 \else
 \professor{Dra. en C. C. Giselle Nayeli Morales Rosales}
+\ifdefined\solojustificacion
+\duedate{15 de octubre de 2026}
+\else
 \duedate{30 de septiembre de 2026}
+\fi
 \fi
 
 \makeatletter
@@ -97,6 +110,16 @@
 \makeatother
 
 % =====================================================================
+% Nombre del plantel: la primera vez que aparece en el cuerpo de cualquier
+% documento se escribe completo con su sigla; después, solo TESCHA.
+% Usar siempre \tescha{} en las secciones y apéndices.
+\makeatletter
+\newif\iftescha@definido
+\newcommand{\tescha}{\iftescha@definido TESCHA\else
+  Tecnológico de Estudios Superiores de Chalco (TESCHA)%
+  \global\tescha@definidotrue\fi}
+\makeatother
+
 % Casilla para opciones de la encuesta
 \newcommand{\op}{\framebox[0.8em]{\rule{0pt}{0.55em}}\,}
 \newcommand{\linea}[1][4cm]{\rule{#1}{0.4pt}}
@@ -106,51 +129,67 @@
 \justifying
 
 \ifdefined\soloavances
-\input{secciones/09-avances}
+	\input{secciones/09-avances}
 \else
-\ifdefined\soloobjetivos
-\input{secciones/06-objetivos}
-\else
-\ifdefined\soloproblemaobjetivos
-\input{secciones/03-problema}
+	\ifdefined\solojustificacion
+		\input{secciones/10-justificacion-entregable}
 
-\input{secciones/06-objetivos}
+		\printbibliography
+	\else
+		\ifdefined\soloobjetivos
+			\input{secciones/03-problema}
 
-\printbibliography
-\else
-\input{secciones/00-introduccion}
+			\input{secciones/06-objetivos}
 
-\clearpage
-\input{secciones/01-tema}
+			\clearpage
+			\input{secciones/10-justificacion-entregable}
 
-\input{secciones/02-delimitacion}
+			\printbibliography
+		\else
+			\ifdefined\soloproblemaobjetivos
+				\input{secciones/03-problema}
 
-\input{secciones/03-problema}
+				\input{secciones/06-objetivos}
 
-\input{secciones/06-objetivos}
+				\clearpage
+				\input{secciones/10-justificacion-entregable}
 
-\input{secciones/08-justificacion}
+				\printbibliography
+			\else
+				\input{secciones/00-introduccion}
 
-\input{secciones/05-metodologia}
+				\clearpage
+				\input{secciones/01-tema}
 
-\printbibliography
+				\input{secciones/02-delimitacion}
 
-% ----------------------------- Apéndices -------------------------------
-\appendix
+				\input{secciones/03-problema}
 
-\clearpage
-\input{apendices/a-encuesta}
+				\input{secciones/06-objetivos}
 
-\clearpage
-\input{apendices/b-entrevista}
+				\input{secciones/08-justificacion}
 
-\clearpage
-\input{apendices/c-observacion}
+				\input{secciones/05-metodologia}
 
-\clearpage
-\input{apendices/d-plan-de-accion}
-\fi
-\fi
+				\printbibliography
+
+				% ----------------------------- Apéndices -------------------------------
+				\appendix
+
+				\clearpage
+				\input{apendices/a-encuesta}
+
+				\clearpage
+				\input{apendices/b-entrevista}
+
+				\clearpage
+				\input{apendices/c-observacion}
+
+				\clearpage
+				\input{apendices/d-plan-de-accion}
+			\fi
+		\fi
+	\fi
 \fi
 
 \end{document}

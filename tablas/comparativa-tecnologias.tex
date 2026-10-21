@@ -1,0 +1,28 @@
+% Tabla retirada de la justificación (secciones/10-justificacion-entregable.tex,
+% sección Viabilidad) el 20 de octubre de 2026, a pedido del equipo.
+% Es la misma tabla que sigue en secciones/07-viabilidad.tex (tab:comparativa),
+% con otra etiqueta para que ambas puedan convivir en un documento.
+% Para recuperarla: \input{tablas/comparativa-tecnologias} y citarla con
+% Tabla~\ref{tab:just-comparativa} (antes se citaba en Impacto Económico:
+% «el código QR requiere menos infraestructura (Tabla~\ref{...})»).
+\begin{table}[tbp]
+	\caption{Comparación de Tecnologías de Validación de Acceso}
+	\label{tab:just-comparativa}
+	\begin{tabular}{lccc}
+		\toprule
+		Criterio                            & Código QR                & NFC     & Reconocimiento facial \\
+		\midrule
+		Costo de infraestructura            & Bajo                     & Medio   & Alto                  \\
+		Medio que porta el estudiante       & Celular                  & Tarjeta & Ninguno               \\
+		Complejidad de cómputo en el lector & Baja                     & Baja    & Alta                  \\
+		Trata datos biométricos             & No                       & No      & Sí                    \\
+		Riesgo de copia del identificador   & Medio\textsuperscript{a} & Bajo    & Bajo                  \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Elaboración propia con base en
+		\textcite{harnaningrum2024comparison} y \textcite{rukhiran2023user}. El costo
+		y la complejidad son una valoración cualitativa del equipo.
+		\textsuperscript{a}El riesgo corresponde a un QR estático; con un código
+		dinámico firmado con HMAC se reduce considerablemente
+		\parencite{subpratatsavee2015hmac}.}
+\end{table}

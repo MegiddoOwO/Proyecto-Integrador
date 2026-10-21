@@ -1,0 +1,44 @@
+% Viabilidad del proyecto. Se retiró de la justificación de
+% problema-objetivos.tex porque irá en el documento de metodología (aún no
+% existe). Por ahora solo la carga justificacion.tex.
+% Redacción en tercera persona.
+\ifdefined\justsec\justsec{Viabilidad}\else\section{Viabilidad}\fi
+El proyecto propone construir un prototipo de torniquete con un lector
+ESP32-CAM que valide un código QR dinámico mostrado en el celular del
+estudiante y registre cada ingreso en una base de datos consultable desde
+un panel web. El prototipo se probará en un acceso peatonal piloto del
+turno vespertino para evaluar su efecto en el tiempo de validación y en la
+longitud de la fila.
+
+La viabilidad técnica se sustenta en que los componentes del prototipo, el
+ESP32-CAM, el controlador del torniquete, el servidor y la base de datos,
+están disponibles comercialmente y corresponden a conocimientos que se han
+adquirido en Ingeniería en Sistemas Computacionales. Ya se ha trabajado con
+captura de imágenes en pruebas de banco durante la exploración de
+alternativas, lo que reduce el riesgo de la etapa de desarrollo. Frente a
+NFC, una comparación en transacciones móviles encontró que el QR se procesa
+con mayor rapidez, aunque no incorpora cifrado propio
+\parencite{harnaningrum2024comparison}; esa carencia se compensa con la firma
+HMAC del código.
+
+En cuanto a los recursos económicos, el bajo costo de los componentes
+permite construir y probar el prototipo con recursos propios, sin depender
+de una inversión institucional. En cuanto al tiempo, el trabajo se organiza
+en cinco fases (diagnóstico, diseño de hardware y firmware, desarrollo del
+servidor, piloto controlado y evaluación), y el estudio se limita a un solo
+acceso peatonal y a la franja de mayor afluencia del turno vespertino, lo
+que lo hace abarcable en el periodo escolar.
+
+El acceso a la información y a los participantes es posible porque el
+proyecto se desarrolla dentro del \tescha{}: se puede observar el acceso
+piloto y aplicar la encuesta a estudiantes y las entrevistas al personal de
+vigilancia y de Control Escolar. La instalación del prototipo en el acceso
+requiere la autorización de las autoridades del plantel, que se solicitará
+antes del piloto.
+
+Queda por confirmar la viabilidad desde el lado del estudiante, es decir, si
+cuenta con un celular propio, con conexión a internet y con batería
+suficiente al llegar al plantel. Esta condición se indagará con la encuesta
+del diagnóstico, y sus resultados indicarán si el sistema puede usarse de
+forma general o si el procedimiento manual debe mantenerse para una parte de
+los estudiantes.
