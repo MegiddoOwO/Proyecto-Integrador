@@ -1,0 +1,70 @@
+% Justificación para objetivos.tex: redacción continua, sin subtítulos de
+% impacto, con introducción breve y cierre sobre la viabilidad.
+% Parte del contenido de secciones/10-justificacion-entregable.tex: si cambia
+% un impacto, revisar ambos archivos.
+\section{Justificación}
+Un sistema de acceso con códigos QR dinámicos no solo cambia la forma en que
+se entra al plantel; también tiene efectos en las personas que lo usan, en la
+tecnología que se adopta, en los costos de operación y en el manejo de los
+datos personales. Por ello, a continuación se describe el impacto del
+proyecto en las dimensiones social, tecnológica, económica y ética.
+
+En el ámbito social, la investigación puede beneficiar, en primer lugar, a
+los estudiantes, que pierden tiempo en las filas de entrada y se exponen a
+llegar tarde a su primera clase. Medir el tiempo de validación y la longitud
+de la fila antes y durante el piloto permitirá saber si un cambio en el
+mecanismo de acceso alivia esa situación o si la espera se debe a otras
+causas. También puede beneficiar al personal de vigilancia, que revisa
+cientos de credenciales en pocos minutos y cuya revisión depende solo de su
+atención en los momentos de mayor afluencia. Por último, el Departamento de
+Control Escolar y los directivos contarían con datos de ingreso por franja
+horaria que hoy no existen, útiles para planear la apertura de accesos y el
+personal necesario en cada horario. Como información complementaria, el
+registro de intentos rechazados aportaría una primera medida de la
+presentación de credenciales ajenas o vencidas, una preocupación de
+seguridad cuya magnitud tampoco se conoce.
+
+En cuanto al impacto tecnológico, el proyecto integra componentes de
+hardware y software en un mismo sistema: un microcontrolador con cámara que
+captura y decodifica el código, un controlador que libera el torniquete, un
+servidor que valida el código y una base de datos con un panel web para
+consultar los registros. La evidencia disponible sobre el ESP32-CAM aborda la
+transmisión de video y no la decodificación de códigos QR
+\parencite{nowroz2025esp32cam}, por lo que las pruebas del prototipo bajo
+distintas condiciones de iluminación, brillo de pantalla y distancia
+permitirán conocer su tiempo de lectura y su tasa de lecturas fallidas.
+Estos resultados, junto con la documentación del diseño, podrán servir como
+precedente para otros proyectos del \tescha{} que busquen automatizar
+procesos con componentes de bajo costo.
+
+Desde el punto de vista económico, el sistema se apoya en el dispositivo móvil que ya
+posee el estudiante, por lo que no es necesario emitir tarjetas ni
+credenciales adicionales, y el lector se construye con componentes de bajo
+costo. Frente a otras tecnologías de validación, como NFC o el
+reconocimiento facial, el código QR requiere menos infraestructura. Sin
+embargo, cualquier ahorro en tiempo de trabajo del personal o en costos de
+operación tendría que comprobarse en evaluaciones posteriores; esta
+investigación solo aportará la información del piloto para valorarlo.
+
+Respecto al impacto ético, el sistema trata datos personales de los
+estudiantes, como su identidad y la hora de ingreso. Por ello, antes del
+piloto se identificarán los requisitos de la legislación estatal
+\parencite{edomex2017datos} y general \parencite{lgpdppso2025}, y se
+definirán con Control Escolar el aviso de privacidad y el resguardo de los
+registros. A diferencia del reconocimiento facial, el código QR no trata
+datos biométricos, y quien no pueda mostrar su código seguirá el
+procedimiento manual actual.
+
+Además de estos impactos, el proyecto es viable de realizar. El prototipo se
+construye con componentes de bajo costo y aprovecha el dispositivo móvil que los
+estudiantes ya utilizan, de modo que no exige emitir nuevas credenciales ni
+instalar una infraestructura compleja. A ello se suma que el piloto se
+llevará a cabo en el propio acceso del \tescha{}, donde podrán medirse el
+tiempo de espera y la longitud de las filas en las condiciones reales de
+ingreso.
+
+En conjunto, los resultados podrán aportar evidencia del propio plantel para
+valorar si un sistema de acceso con códigos QR dinámicos ayuda a aliviar
+las esperas del sistema actual y si conviene ampliar el piloto a otros
+accesos. No obstante, esa posible ampliación y sus beneficios económicos
+tendrían que confirmarse mediante evaluaciones posteriores.
