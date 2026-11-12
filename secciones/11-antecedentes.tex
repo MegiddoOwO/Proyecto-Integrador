@@ -2,40 +2,136 @@
 % Redacción continua a partir de la matriz de análisis (autores y año,
 % objetivo, metodología, resultados y conclusiones). Por ahora solo lo carga
 % objetivos.tex.
+% El profesor pidió antecedentes recientes (de este año o del anterior). La
+% introducción no enlista los artículos y no hay conclusión general al final: cada
+% antecedente se describe directamente y cierra con su propia conclusión
+% respecto al proyecto. Los de 2023 y 2024 que se retiraron quedan comentados
+% al final de este archivo.
 \section{Antecedentes}
-Existen proyectos similares que han empleado códigos QR para controlar el
-ingreso a espacios universitarios y evitar que una credencial se comparta.
-\textcite{nwabuwe2023dynamicqr} se propusieron construir un sistema de
-asistencia resistente al fraude en una universidad del Reino Unido, con el
-fin de impedir que un estudiante registre la asistencia de otro. Para ello
-desarrollaron una aplicación móvil y una aplicación web que combinan un código
-QR dinámico, que se renueva cada 20 segundos, con geocercas y con la
-vinculación de la cuenta a un solo teléfono. El sistema se probó con dos
-usuarios en tres escenarios de fraude: en todos se rechazó el intento, por
-ejemplo, cuando se envió la fotografía de un código QR a otra persona, el
-sistema lo marcó como vencido. Los autores concluyen que la combinación de
-estas técnicas reduce el fraude en la asistencia, aunque sus resultados son
-cualitativos y no informan tiempos de registro ni tasas de error.
+Los antecedentes más recientes sobre el uso de códigos QR y de credenciales
+para el ingreso a espacios universitarios se publicaron en 2026. En el primer
+caso, \textcite{cano2026sistema} diseñaron y desarrollaron un sistema digital
+de toma de asistencia
+estudiantil basado en códigos QR para la educación superior, con el propósito
+de mejorar el control académico y reducir los errores de los métodos
+tradicionales. Siguieron un enfoque de desarrollo tecnológico aplicado:
+analizaron los requisitos, modelaron el sistema con UML, diseñaron su
+arquitectura e implementaron un prototipo funcional, y después aplicaron
+instrumentos a posibles usuarios para valorar la facilidad de uso, la
+confiabilidad y la utilidad percibidas. Reportan una gestión de asistencia
+eficiente y precisa, menos tiempo dedicado al registro, mayor transparencia de
+los registros y una aceptación favorable de los usuarios, por lo que
+concluyen que la solución es viable como apoyo a los procesos educativos
+mediados por tecnología. No obstante, el resumen del artículo no informa
+cifras de tiempo, precisión o satisfacción, de modo que sus resultados son
+cualitativos. En conclusión, este antecedente respalda que el código QR es
+viable y bien aceptado en la educación superior, pero se limita a la
+asistencia en el aula y no mide el tiempo de registro, que es uno de los
+indicadores del presente proyecto.
 
-En una línea parecida, \textcite{chaabani2023labqr} plantearon controlar el
-acceso a los laboratorios de una universidad de Arabia Saudita fuera del
-horario de clases mediante un código QR cifrado con AES y una contraseña de
-un solo uso basada en tiempo (TOTP), enviada al correo institucional del
-estudiante. Su trabajo se basa en una revisión de la literatura y en una
-comparación de las técnicas de cifrado y de contraseñas de un solo uso, a
-partir de la cual proponen el diseño del sistema. Justifican el uso del QR
-frente a la huella dactilar porque el registro biométrico es lento y costoso;
-sin embargo, no presentan una implementación ni una evaluación propia, por
-lo que su aporte es una propuesta de diseño y no evidencia de funcionamiento.
+En una línea parecida, \textcite{amoanu2026rotatingqr} especificaron y
+evaluaron un protocolo de asistencia para una plataforma web de registro de
+personal y de eventos, que combina códigos QR rotativos autenticados,
+comprobaciones de sesión y de horario, y una geocerca que se vuelve más
+estricta cuando aumenta la incertidumbre de la ubicación reportada. Lo
+evaluaron con pruebas controladas de la aplicación y con experimentos
+sintéticos de geocerca bajo tres modelos de error de ubicación, repetidos con
+30 semillas. Las comprobaciones del código rechazaron las credenciales
+inválidas que se probaron; en cambio, con una precisión reportada de 15 m, la
+regla de radio fijo produjo 4.15\,\% de aceptaciones falsas y 3.70\,\% de
+rechazos falsos, y al endurecerla las aceptaciones falsas bajaron a 0.00\,\%
+mientras los rechazos falsos subieron a 20.30\,\%. Además, un código vigente
+reenviado junto con coordenadas inventadas dentro de la geocerca fue aceptado.
+Los autores concluyen que existe un compromiso entre seguridad y facilidad de
+uso y que la ubicación reportada por el navegador tiene límites. Para el
+presente proyecto, este estudio muestra que renovar el código en intervalos
+cortos permite rechazar credenciales inválidas, aunque no impide por sí solo
+que un código vigente se reenvíe, y que su evaluación se hizo en condiciones
+controladas y no en un acceso con usuarios reales.
 
-Ambos estudios coinciden en que un código QR acompañado de un factor con
-vigencia limitada en el tiempo ayuda a evitar que una credencial se preste,
-y en que esta opción es más accesible que las tarjetas o la biometría. Se
-diferencian en el alcance: el primero construyó y probó un prototipo, aunque
-para registrar la asistencia en el aula y no para controlar una puerta; el
-segundo sí se ocupa del acceso físico, pero se queda en el diseño. Por lo
-tanto, se sabe que el QR dinámico es técnicamente viable para impedir el
-préstamo de credenciales, pero falta conocer cómo funciona en el acceso
-principal de un plantel con muchos usuarios al mismo tiempo, cuánto tarda
-cada registro y si reduce la fila de entrada, que es lo que este proyecto
-busca medir en el \tescha{}.
+Por su parte, \textcite{henriana2026gate} diseñaron e implementaron una
+barrera automática para el acceso vehicular al campus de la Universidad Sultan
+Ageng Tirtayasa, en Indonesia, que valida un código QR y la placa del vehículo
+mediante reconocimiento óptico de caracteres. El sistema se controla con un
+microcontrolador ESP32 conectado a un servidor web y se desarrolló con el
+modelo en cascada. En las pruebas con 54 registros de vehículos, el 70\,\% de
+las validaciones del código y de la placa fue exitoso y el 30\,\% falló por
+iluminación insuficiente y por una posición inadecuada de la cámara. Los
+autores concluyen que el sistema mejora la seguridad y la organización del
+estacionamiento universitario. Este antecedente es el más cercano al lector
+del prototipo, porque controla un acceso físico con un ESP32 y un código QR;
+sin embargo, atiende vehículos y no peatones, y sus fallas por iluminación y
+por la cámara indican que la tasa de lecturas fallidas debe medirse en el
+propio acceso.
+
+En México, \textcite{tinajero2026acceso} desarrollaron un sistema automatizado
+de control de acceso para registrar las entradas y salidas de los estudiantes
+de la Universidad Autónoma del Estado de Hidalgo, ante las limitaciones de la
+verificación manual: registros duplicados, errores humanos, tiempos de espera
+largos y poca trazabilidad. El sistema lee un código de barras con el número
+de cuenta del estudiante y lo valida contra la base de datos institucional;
+se construyó con Python, una base de datos MySQL en un servidor local y
+lectores conectados por puerto serial, de modo que no depende de internet.
+Durante su implementación procesó un flujo aproximado de 4,500 estudiantes
+diarios con tiempos de respuesta menores a un segundo. Los autores concluyen
+que una arquitectura de bajo costo puede igualar el desempeño de soluciones
+comerciales y plantean como integraciones futuras el código QR, las tarjetas
+RFID, los torniquetes y el reconocimiento facial. Así, el estudio demuestra
+que un lector de bajo costo puede atender el flujo de un plantel, pero usa un
+código de barras estático, que puede copiarse, y no compara la fila ni el
+tiempo de validación con los de la revisión manual.
+
+La revisión sistemática más reciente es la de \textcite{alsawi2026qracs},
+quienes analizaron estudios publicados entre 2015 y 2023 sobre los sistemas de
+control de acceso con código QR, en particular su arquitectura, sus mecanismos
+de seguridad y sus modelos de amenazas. Señalan que las llaves, las tarjetas
+magnéticas y la biometría presentan pérdida, duplicación, costos altos de
+instalación y complejidad de mantenimiento, y que el QR surgió como una
+alternativa flexible y de bajo costo gracias a la difusión de los teléfonos
+inteligentes. Concluyen que estos sistemas pueden mejorar la eficiencia
+operativa y ofrecer beneficios prácticos de seguridad, sobre todo cuando se
+combinan con otras tecnologías, aunque persisten problemas de seguridad,
+robustez y limitaciones de despliegue. De esta revisión se desprende que el
+código QR es una base adecuada para el control de acceso, pero que su
+seguridad y su funcionamiento deben comprobarse en cada caso, como se propone
+hacer en el acceso peatonal del \tescha{}.
+
+% ---------------------------------------------------------------------
+% Antecedentes retirados el 2026-11-12 por no ser de 2025 o 2026.
+% Nwabuwe et al. (2023) y Chaabani et al. (2023) siguen citados en
+% secciones/14-marco-teorico.tex.
+% ---------------------------------------------------------------------
+% En el primer caso, \textcite{nwabuwe2023dynamicqr} se propusieron construir
+% un sistema de asistencia resistente al fraude en una universidad del Reino
+% Unido, con el fin de impedir que un estudiante registre la asistencia de
+% otro. Para ello desarrollaron una aplicación móvil y una aplicación web que
+% combinan un código QR dinámico, que se renueva cada 20 segundos, con
+% geocercas y con la vinculación de la cuenta a un solo teléfono. El sistema
+% se probó con dos usuarios en tres escenarios de fraude: en todos se rechazó
+% el intento, por ejemplo, cuando se envió la fotografía de un código QR a
+% otra persona, el sistema lo marcó como vencido. Los autores concluyen que la
+% combinación de estas técnicas reduce el fraude en la asistencia, aunque sus
+% resultados son cualitativos y no informan tiempos de registro ni tasas de
+% error.
+%
+% En una línea parecida, \textcite{chaabani2023labqr} plantearon controlar el
+% acceso a los laboratorios de una universidad de Arabia Saudita fuera del
+% horario de clases mediante un código QR cifrado con AES y una contraseña de
+% un solo uso basada en tiempo (TOTP), enviada al correo institucional del
+% estudiante. Su trabajo se basa en una revisión de la literatura y en una
+% comparación de las técnicas de cifrado y de contraseñas de un solo uso, a
+% partir de la cual proponen el diseño del sistema. Justifican el uso del QR
+% frente a la huella dactilar porque el registro biométrico es lento y
+% costoso; sin embargo, no presentan una implementación ni una evaluación
+% propia, por lo que su aporte es una propuesta de diseño y no evidencia de
+% funcionamiento.
+%
+% En 2024, \textcite{taju2024qrgeolocation} desarrollaron un sistema de
+% asistencia estudiantil para la Universidad Klabat que combina el código QR,
+% usado para registrar y verificar la asistencia, con la geolocalización,
+% usada para comprobar que el estudiante se encuentra en el salón correcto.
+% Siguieron un modelo de prototipos, con ciclos de desarrollo y refinamiento,
+% y construyeron una aplicación web y una móvil con PHP, MySQL, Bootstrap 5 y
+% Apache sobre un servidor Ubuntu 22.04. El resumen del artículo presenta los
+% resultados como una contribución esperada para la universidad y no informa
+% pruebas con usuarios ni mediciones del sistema.
