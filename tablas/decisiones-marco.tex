@@ -1,0 +1,21 @@
+% Tabla retirada del marco teórico (secciones/14-marco-teorico.tex, apartado
+% «Decisiones del Proyecto y su Fundamento») el 27 de octubre de 2026, a pedido
+% del equipo. Para recuperarla: \input{tablas/decisiones-marco} y citarla con
+% Tabla~\ref{tab:decisiones-marco}.
+\begin{table}[tbp]
+	\caption{Decisiones del Proyecto y su Fundamento Teórico}
+	\label{tab:decisiones-marco}
+	\begin{tabular}{>{\raggedright\arraybackslash}p{3.3cm}>{\raggedright\arraybackslash}p{5.6cm}>{\raggedright\arraybackslash}p{4.4cm}}
+		\toprule
+		Decisión                             & Fundamento                                                                  & Fuentes                                                                          \\
+		\midrule
+		Medir tiempo de validación y fila    & Son las manifestaciones observables del problema y la espera es optimizable & \textcite{torres2019qr}; \textcite{talavera2025espera}                           \\
+		Usar código QR                       & Rapidez frente a NFC; sin datos biométricos; usa el celular del estudiante  & \textcite{kao2011physical}; \textcite{harnaningrum2024comparison}; \textcite{rukhiran2023user} \\
+		Código dinámico firmado con HMAC     & Evita reutilizar capturas y compensa la falta de cifrado del QR             & \textcite{krawczyk1997hmac}; \textcite{mraihi2011totp}; \textcite{nwabuwe2023dynamicqr} \\
+		Lector ESP32-CAM                     & Bajo costo; su desempeño con QR no está documentado y se mide               & \textcite{nowroz2025esp32cam}                                                    \\
+		Piloto frente a línea base           & Permite comparar sin asignación aleatoria                                   & \textcite{cranmer2017pretestposttest}; \textcite{campbellstanley1963}            \\
+		Revisar la normativa de datos        & El registro de ingresos identifica a personas                               & \textcite{lgpdppso2025}; \textcite{edomex2017datos}                              \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Elaboración propia a partir de las fuentes citadas en este marco.}
+\end{table}

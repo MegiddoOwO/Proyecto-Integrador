@@ -39,6 +39,12 @@
 
 % Índice después de la portada (lo pide la escuela; APA puro no lo usa).
 \setcounter{tocdepth}{2}
+% El marco teórico lleva los apartados numerados (1.2, 1.2.3), como pidió el
+% profesor; apa7 no numera los títulos por omisión.
+\ifdefined\solomarcoteorico
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\fi
 \makeatletter
 \patchcmd{\maketitle}{\@ifundefined{def@donotrepeattitle}}
   {\tableofcontents\newpage\@ifundefined{def@donotrepeattitle}}{}{}
@@ -46,6 +52,7 @@
 % trabajo arriba del texto (equivale a la opción donotrepeattitle de apa7).
 \ifdefined\soloobjetivos\def\def@donotrepeattitle{}\fi
 \ifdefined\soloproblemaobjetivos\def\def@donotrepeattitle{}\fi
+\ifdefined\solomarcoteorico\def\def@donotrepeattitle{}\fi
 \patchcmd{\maketitle}{\section*{\protect\normalfont\textbf{\@title}}}
   {\section*{\protect\normalfont\textbf{\@title}}\addcontentsline{toc}{section}{\@title}}{}{}
 \makeatother
@@ -82,7 +89,11 @@
 \ifdefined\soloobjetivos
 \title{Objetivos de Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
 \else
+\ifdefined\solomarcoteorico
+\title{Marco Teórico de Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
+\else
 \title{Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
+\fi
 \fi
 \fi
 \fi
@@ -101,7 +112,11 @@
 \ifdefined\solojustificacion
 \duedate{15 de octubre de 2026}
 \else
+\ifdefined\solomarcoteorico
+\duedate{27 de octubre de 2026}
+\else
 \duedate{30 de septiembre de 2026}
+\fi
 \fi
 \fi
 
@@ -128,6 +143,11 @@
 \maketitle
 \justifying
 
+\ifdefined\solomarcoteorico
+	\input{secciones/14-marco-teorico}
+
+	\printbibliography
+\else
 \ifdefined\soloavances
 	\input{secciones/09-avances}
 \else
@@ -192,6 +212,7 @@
 			\fi
 		\fi
 	\fi
+\fi
 \fi
 
 \end{document}

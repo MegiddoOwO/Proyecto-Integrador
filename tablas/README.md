@@ -8,5 +8,6 @@ encabezado dice de dónde salió y qué ajustar al recuperarla.
 |---|---|---|---|---|
 | `comparativa-tecnologias.tex` | `tab:just-comparativa` | `secciones/10-justificacion-entregable.tex` (Viabilidad), usada en `problema-objetivos.pdf` y `justificacion.pdf` | 2026-10-20 | El equipo pidió la justificación sin tablas. Sigue en `07-viabilidad.tex` del documento completo. |
 | `indicadores-objetivos.tex` | `tab:obj-smart` | `secciones/06-objetivos.tex` (Indicadores y Plazos) | antes del 2026-10-13 | El equipo quitó la subsección; ver `REVISION-OBJETIVOS.md`, sección 4. |
+| `decisiones-marco.tex` | `tab:decisiones-marco` | `secciones/14-marco-teorico.tex` (Decisiones del Proyecto y su Fundamento) | 2026-10-27 | El equipo pidió quitarla del marco teórico y definir los conceptos técnicos. |
 
 Al quitar otra tabla, guardarla aquí y agregar una fila a este registro.
