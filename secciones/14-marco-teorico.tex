@@ -1,0 +1,169 @@
+% Marco teórico: define los conceptos técnicos y describe las ventajas de cada
+% tecnología investigada (no se redacta como justificación de por qué se
+% eligió ni como comparación con otras tecnologías). Estructura pedida por el
+% profesor: descripción breve del marco al inicio, apartados
+% numerados (1.2, 1.2.3; la numeración se activa en trabajo.tex solo para
+% \solomarcoteorico), definiciones en texto corrido sin subtítulos y un
+% apartado propio para la ley de protección de datos.
+% Por ahora solo lo carga marco-teorico.tex (\solomarcoteorico).
+% La tabla de decisiones se retiró a tablas/decisiones-marco.tex.
+\section{Marco Teórico}
+Este marco teórico describe los conceptos y las tecnologías en que se apoya el
+sistema de acceso con códigos QR dinámicos. Primero se definen los términos
+del proyecto, después se exponen las ventajas de cada tecnología y al final
+se presenta la ley de protección de datos personales aplicable.
+
+\subsection{Definiciones}
+El control de acceso es el proceso mediante el cual una institución regula
+quién ingresa a un espacio, sea físico o digital \parencite{alsawi2026qracs}.
+El código QR es un símbolo de código de barras cuya codificación de datos,
+corrección de errores y dimensiones se especifican en la norma ISO/IEC 18004
+\parencite{isoiec180042015}. El HMAC es un mecanismo para autenticar
+mensajes que combina una función hash criptográfica con una clave secreta
+\parencite{krawczyk1997hmac}. Una contraseña de un solo uso es un valor que
+solo sirve para una validación: HOTP la genera a partir de HMAC y de un
+contador \parencite{mraihi2005hotp}, y TOTP es su variante basada en el
+tiempo, en la que cada contraseña deja de ser válida al transcurrir un
+intervalo corto \parencite{mraihi2011totp}. El ESP32 es un sistema en un chip
+(SoC) con microcontrolador y conectividad Wi-Fi y Bluetooth integradas
+\parencite{espressif2025esp32}, y el ESP32-CAM es un módulo de código abierto
+basado en ese chip que incorpora el sensor de imagen OV2640
+\parencite{nowroz2025esp32cam}.
+
+En cuanto a las variables que se miden, el tiempo de validación es el tiempo
+que transcurre desde que el estudiante llega al punto de revisión hasta que lo
+cruza, sea con revisión visual o con lectura del código QR. La longitud de la
+fila es el número de personas que esperan para cruzar ese punto, y su valor
+máximo se registra en la franja horaria del estudio. La tasa de lecturas
+fallidas es la proporción de intentos de lectura del código que el lector no
+logra resolver. Son definiciones operativas del proyecto, es decir, indican
+cómo se mide cada variable, y se registran con el mismo formato antes y
+durante el piloto para que sean comparables. Por último, un diseño
+cuasiexperimental es aquel en el que se evalúa el efecto de una intervención
+sin asignar al azar a los participantes \parencite{campbellstanley1963}, y los
+datos personales son cualquier información concerniente a una persona
+identificada o identificable \parencite[art.~3, frac.~IX]{lgpdppso2025}.
+
+\subsection{Control de Acceso con Código QR}
+\textcite{alsawi2026qracs} señalan que los sistemas de control de acceso
+protegen entornos físicos y digitales, en especial los de colegios, empresas y
+áreas restringidas, y que los métodos tradicionales, como las llaves, las
+tarjetas magnéticas y la biometría, presentan pérdida, duplicación, costos
+altos de instalación y complejidad de mantenimiento. Cuando la validación
+consiste en revisar visualmente una credencial, depende de la atención del
+personal de vigilancia, y esa dependencia ya se ha documentado como fuente de
+insatisfacción en otros planteles \parencite{torres2019qr}. Además, el tiempo
+de espera de los estudiantes y la concentración de sus llegadas se han
+estudiado como un aspecto que se puede optimizar en los servicios escolares
+\parencite{talavera2025espera}. El tiempo de validación y la longitud de la
+fila son las dos manifestaciones de ese problema que pueden observarse en el
+sitio.
+
+\subsubsection{Ventajas del Código QR}
+Según \textcite{densowave2025qr}, las características principales del código
+QR son una alta capacidad de codificación de datos, un tamaño de impresión
+reducido, la resistencia a la suciedad y al daño, y la posibilidad de leerse
+desde cualquier dirección; además, puede corregirse a sí mismo y recuperar los
+datos originales aunque esté parcialmente manchado o dañado, y existen 40
+versiones del símbolo. Su uso para el control de acceso físico se propuso
+desde hace más de una década \parencite{kao2011physical}.
+
+A estas características se suman otras ventajas para el control de acceso.
+El código QR se procesa con rapidez, como se observó en transacciones móviles
+\parencite{harnaningrum2024comparison}; el estudiante lo muestra desde su
+propio celular, por lo que no hace falta emitir tarjetas ni registrar datos
+biométricos, y la revisión de \textcite{alsawi2026qracs} lo presenta como una
+alternativa flexible y de bajo costo.
+
+\subsubsection{Código QR Dinámico}
+El código QR dinámico renueva su contenido en intervalos cortos. Su ventaja
+es que una captura de pantalla compartida deja de ser válida al poco tiempo,
+mientras que un código estático puede copiarse y reenviarse como imagen. La
+estrategia ya se probó en una universidad con un código renovado cada 20
+segundos, que impidió que los estudiantes reenviaran capturas de pantalla
+\parencite{nwabuwe2023dynamicqr}, y se propuso combinada con una contraseña de
+un solo uso para el acceso a laboratorios universitarios
+\parencite{chaabani2023labqr}. Su límite es que protege contra capturas
+reutilizadas, pero no contra un estudiante que preste su celular.
+
+\subsubsection{Firma HMAC y Contraseñas de un Solo Uso}
+El código QR no incorpora cifrado propio
+\parencite{harnaningrum2024comparison}, por lo que su contenido se protege con
+una firma. La ventaja del HMAC es que quien no conoce la clave secreta no
+puede generar una firma válida ni modificar un mensaje sin que se note
+\parencite{krawczyk1997hmac}. La ventaja de TOTP es que cada valor deja de
+servir al transcurrir un intervalo corto \parencite{mraihi2011totp}, lo que
+impide reutilizar un código vencido. La combinación de una contraseña de un
+solo uso basada en HMAC con el código QR ya se ha propuesto para autenticar
+transacciones \parencite{subpratatsavee2015hmac}. Al validar, el servidor debe
+tolerar un pequeño desfase entre el reloj del lector y el del celular.
+
+\subsection{Lector del Prototipo}
+El lector es el dispositivo que captura la imagen del código QR en el acceso y
+la envía al servidor para su validación. Se construye con componentes de bajo
+costo y conectividad inalámbrica integrada.
+
+\subsubsection{Microcontrolador ESP32}
+El ESP32 puede funcionar como un sistema autónomo o como dispositivo auxiliar
+de otro microcontrolador \parencite{espressif2025esp32}. Su conectividad Wi-Fi
+integrada permite que el lector se comunique con el servidor sin hardware de
+red adicional.
+
+\subsubsection{Módulo ESP32-CAM}
+El ESP32-CAM es muy usado para prototipar aplicaciones de visión embebida y
+destaca por su bajo costo, su versatilidad y su conectividad inalámbrica
+integrada \parencite{nowroz2025esp32cam}. Estas ventajas permiten capturar la
+imagen del código QR y enviarla al servidor con un solo componente. Sin
+embargo, la referencia de desempeño disponible para este módulo aborda la
+transmisión de video y no la decodificación de códigos QR
+\parencite{nowroz2025esp32cam}, por lo que el tiempo de lectura y la tasa de
+lecturas fallidas se miden con el propio prototipo, bajo distintas
+condiciones de iluminación, brillo y distancia.
+
+\subsection{Diseño Cuasiexperimental}
+En la forma de preprueba y posprueba con un solo grupo, la variable de interés
+se mide antes y después de la intervención en el mismo grupo
+\parencite{cranmer2017pretestposttest}. Su ventaja es que permite evaluar una
+intervención cuando no es posible dividir al azar a los participantes, como
+ocurre con los estudiantes que llegan a un mismo acceso: basta comparar la
+línea base con el piloto, como en un estudio piloto que evaluó con este diseño
+un recurso con códigos QR \parencite{ortiz2026qrpilot}. Su limitación es que otros factores, como una variación en la afluencia, pueden
+explicar un cambio, por lo que los resultados valen para el caso estudiado y
+no se generalizan. El tipo y el alcance de la investigación se apoyan, además,
+en \textcite{hernandezsampieri2014metodologia}.
+
+\subsection{Ley de Protección de Datos Personales}
+Aunque el código QR no trata datos biométricos, el sistema registra quién
+ingresa y a qué hora, y esa información identifica a una persona. Por tanto,
+su tratamiento queda sujeto a la legislación de protección de datos personales
+en posesión de sujetos obligados, tanto general como estatal.
+
+\subsubsection{Ley General}
+La Ley General de Protección de Datos Personales en Posesión de Sujetos
+Obligados establece las bases, principios y procedimientos para garantizar el
+derecho de toda persona a la protección de sus datos personales en posesión de
+sujetos obligados, entre los que se encuentran las autoridades, entidades,
+órganos y organismos de las entidades federativas
+\parencite[art.~2, fracs.~I y V]{lgpdppso2025}. Define el tratamiento como
+cualquier operación o conjunto de operaciones, manuales o automatizadas,
+aplicadas a los datos personales, como su obtención, registro, almacenamiento
+o acceso \parencite[art.~3, frac.~XXXI]{lgpdppso2025}. De esta ley se
+desprenden cuatro obligaciones para el sistema. La primera es observar los
+principios de licitud, finalidad, lealtad, consentimiento, calidad,
+proporcionalidad, información y responsabilidad
+\parencite[art.~10]{lgpdppso2025}. La segunda es informar al titular, mediante
+el aviso de privacidad, la existencia y las características principales del
+tratamiento de sus datos \parencite[art.~20]{lgpdppso2025}. La tercera es
+establecer y mantener medidas de seguridad de carácter administrativo, físico
+y técnico que protejan los datos contra daño, pérdida, alteración, destrucción
+o uso, acceso o tratamiento no autorizado \parencite[art.~25]{lgpdppso2025}.
+La cuarta es permitir que el titular solicite el acceso, la rectificación, la
+cancelación o la oposición al tratamiento de sus datos
+\parencite[art.~37]{lgpdppso2025}.
+
+\subsubsection{Ley del Estado de México}
+En el ámbito estatal, el tratamiento se rige por la Ley de Protección de Datos
+Personales en Posesión de Sujetos Obligados del Estado de México y Municipios
+\parencite{edomex2017datos}. De ahí que uno de los objetivos del proyecto sea
+identificar los requisitos que esta normativa impone al sistema, consultando
+además a Control Escolar, antes de diseñarlo.
