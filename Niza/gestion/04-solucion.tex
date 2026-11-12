@@ -1,0 +1,64 @@
+\section{Descripción de la Solución}
+La solución es un torniquete a escala que se abre solo cuando el estudiante
+muestra un código válido desde su celular. El código es un cuadro de puntos
+llamado código QR, como los que se leen con la cámara del teléfono.
+
+\subsection{Cómo Funciona, Paso a Paso}
+\begin{enumerate}
+	\item El estudiante abre una página web desde su celular y ve su código QR.
+	      El código cambia cada pocos segundos.
+	\item Al llegar al torniquete, muestra la pantalla a una cámara pequeña
+	      (el lector ESP32-CAM), que captura la imagen y lee el código.
+	\item Una segunda placa electrónica (el ESP32) recibe el código y lo envía
+	      por Wi-Fi al servidor, que es la computadora central del sistema.
+	\item El servidor revisa si el código es auténtico y sigue vigente, y
+	      responde si el estudiante puede pasar.
+	\item Si la respuesta es afirmativa, el torniquete se abre y una luz verde
+	      lo indica. Si no, una luz y un zumbador avisan que no puede pasar.
+	\item El servidor guarda cada intento, aceptado o rechazado, con fecha y
+	      hora en una base de datos, que es el archivo donde se almacena la
+	      información.
+	\item El personal de vigilancia y Control Escolar consultan esos registros
+	      en un panel web: ingresos por hora, intentos rechazados y estudiantes
+	      que llevan varios días sin entrar.
+\end{enumerate}
+
+\begin{figure}[tbp]
+	\caption{Cómo Funciona el Torniquete}
+	\label{fig:flujo}
+	\centering
+	\begin{tikzpicture}[
+		node distance=0.9cm and 1.0cm,
+		box/.style={draw, rounded corners, align=center, minimum height=1.2cm,
+				minimum width=2.4cm, font=\footnotesize},
+		arr/.style={-{Latex[length=2mm]}, thick}
+		]
+		\node[box] (cel) {Celular\\(muestra el QR)};
+		\node[box, right=of cel] (cam) {ESP32-CAM\\(lee el código)};
+		\node[box, right=of cam] (esp) {ESP32\\(consulta y abre)};
+		\node[box, below=of esp] (srv) {Servidor y\\base de datos\\(validan y guardan)};
+		\node[box, left=of srv] (panel) {Panel web\\(vigilancia y\\Control Escolar)};
+		\draw[arr] (cel) -- (cam);
+		\draw[arr] (cam) -- (esp);
+		\draw[arr] (esp) -- (srv) node[midway, right, font=\scriptsize]{Wi-Fi};
+		\draw[arr] (srv) -- (panel) node[midway, above, font=\scriptsize]{consulta};
+	\end{tikzpicture}
+	\figurenote{Elaboración propia. El servidor responde si el código es válido y el ESP32 libera el torniquete; cada intento queda registrado en la base de datos.}
+\end{figure}
+
+\subsection{Por Qué el Código Cambia}
+Cada código lleva una firma digital llamada HMAC, una contraseña de un solo
+uso que solo el servidor sabe calcular. Si alguien cambia el código, la firma
+deja de coincidir y se rechaza. Como además el código se renueva cada pocos
+segundos, una captura de pantalla compartida deja de servir al poco tiempo.
+Este tipo de firma resiste el reenvío y la modificación del mensaje
+\parencite{subpratatsavee2015hmac}, y la renovación periódica ya se probó en
+una universidad del Reino Unido, donde un código renovado cada 20 segundos
+impidió que los estudiantes se reenviaran capturas \parencite{nwabuwe2023dynamicqr}.
+
+\subsection{Límite de la Solución}
+El código que cambia impide reutilizar capturas, pero no impide que un
+estudiante preste su celular a otra persona. Por eso el proyecto busca reducir
+la suplantación, no eliminarla. Además, como la medición se hace en un solo
+acceso y sin grupo de comparación, los resultados se tomarán como evidencia
+orientativa, no como prueba definitiva.

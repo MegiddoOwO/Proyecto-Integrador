@@ -1,0 +1,315 @@
+\section{Plan de Calidad}
+\label{sec:calidad}
+El plan define qué significa calidad para el prototipo y cómo se comprobará.
+Fija cinco objetivos de calidad y, para cada uno, criterios de aceptación
+medibles, pruebas, responsable y métricas. Las características de calidad se
+toman del modelo de calidad de producto de la norma ISO/IEC 25010. El plan
+cubre las cinco partes del producto (página del estudiante, lector, torniquete,
+servidor con base de datos y panel web) y la medición del acceso antes y durante
+el piloto, de la que depende saber si el prototipo cumplió su propósito.
+
+En la gestión de la calidad el equipo hace tres cosas. Planifica: escribe los
+requisitos funcionales, de calidad y legales antes de construir, cada uno con
+su criterio de aceptación y su responsable. Asegura: revisa el código entre
+compañeros, usa una lista de verificación en el armado, hace un ensayo completo
+en el salón y revisa el aviso de privacidad. Controla: hace pruebas de lectura,
+del panel y del registro, y verifica cada entregable contra su criterio antes
+de darlo por terminado.
+
+\subsection{Objetivos de Calidad}
+\begin{table}[tbp]
+	\caption{Objetivos de Calidad del Prototipo}
+	\label{tab:oc}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{1.1cm}P{7.7cm}P{2.8cm}P{3.3cm}}
+		\toprule
+		Clave & Objetivo & Característica & Responsable \\
+		\midrule
+		OC-1 & \textbf{Rendimiento.} Validar a un estudiante con el prototipo en menos tiempo que con la revisión manual actual. & Eficiencia de desempeño & Ian Alexis Flores Martínez \\
+		OC-2 & \textbf{Lectura confiable.} Reconocer el código al primer intento en las condiciones reales del acceso y mantener el torniquete funcionando toda la jornada. & Fiabilidad & Daniel Arellano Palacios (torniquete) e Ian Alexis Flores Martínez (lectura) \\
+		OC-3 & \textbf{Seguridad y protección de datos.} Que solo un código vigente y auténtico abra el torniquete y que los datos de los estudiantes viajen y se guarden protegidos. & Seguridad & Miguel Ángel Jurado Delgadillo \\
+		OC-4 & \textbf{Registro íntegro y reglas de negocio.} Registrar cada intento de forma completa, aplicar las reglas de acceso y lograr que los reportes del panel coincidan con lo ocurrido en el acceso. & Adecuación funcional & Juan Fernando Reyes Arguello \\
+		OC-5 & \textbf{Facilidad de uso.} Que los estudiantes pasen sin detener el paso y que el personal consulte el panel sin ayuda. & Capacidad de interacción (usabilidad) & Bryan Uriel Villegas Raymundo \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Plan de Calidad (Entregable 2). Bryan Uriel Villegas Raymundo coordina la ejecución de todo el plan y Juan Esteban Anzures Campos, líder del proyecto, aprueba los resultados.}
+\end{table}
+
+\subsection{Criterios de Aceptación}
+Un objetivo se da por cumplido cuando se cumplen todos sus criterios. Los que
+dicen «línea base» se comparan con lo medido en el diagnóstico de octubre
+(Tablas~\ref{tab:ac1} a~\ref{tab:ac2}).
+
+\begin{table}[tbp]
+	\caption{Criterios de Aceptación de OC-1 y OC-2}
+	\label{tab:ac1}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{1.2cm}P{2cm}P{7.6cm}P{4cm}}
+		\toprule
+		Clave & Tema & Criterio de aceptación & Evidencia \\
+		\midrule
+		AC-1.1 & Rendimiento & Desde que el lector detecta el código hasta que libera el torniquete pasan 3 segundos o menos en el 90\,\% de las lecturas válidas. & Registro de medición (marcas de tiempo del lector y del servidor) \\
+		AC-1.2 & Rendimiento & El tiempo promedio de validación por estudiante durante el piloto es menor que el de la línea base. & Hojas de observación del flujo \\
+		AC-1.3 & Rendimiento & La página del estudiante y las pantallas principales del panel cargan en menos de 3 segundos. & Registro de medición \\
+		AC-2.1 & Lectura & Al menos 95\,\% de lecturas exitosas al primer intento en la matriz de condiciones de luz, brillo, distancia y modelo de celular. & Reporte de pruebas de lectura \\
+		AC-2.2 & Lectura & Durante el piloto, los rechazos por error de lectura no superan el 5\,\% de los intentos. & Registros de la base de datos \\
+		AC-2.3 & Lectura & Si se pierde la red, el lector lo indica en 5 segundos o menos, no abre el torniquete y conserva el intento para enviarlo al reconectarse. & Caso de prueba \\
+		AC-2.4 & Lectura & El torniquete completa en banco el doble de los ciclos diarios estimados en el diagnóstico sin fallas mecánicas. & Registro de ciclos \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Plan de Calidad (Entregable 2).}
+\end{table}
+
+\begin{table}[tbp]
+	\caption{Criterios de Aceptación de OC-3}
+	\label{tab:ac1b}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{1.2cm}P{2cm}P{7.6cm}P{4cm}}
+		\toprule
+		Clave & Tema & Criterio de aceptación & Evidencia \\
+		\midrule
+		AC-3.1 & Seguridad & Se rechaza el 100\,\% de los códigos vencidos o de las capturas reenviadas. & Caso de prueba y captura del mensaje \\
+		AC-3.2 & Seguridad & Se rechaza el 100\,\% de los códigos alterados (firma HMAC inválida). & Caso de prueba y captura del mensaje \\
+		AC-3.3 & Seguridad & Toda la comunicación entre el lector, el servidor y el panel usa HTTPS (conexión cifrada). & Revisión técnica (captura de tráfico) \\
+		AC-3.4 & Seguridad & Las contraseñas se guardan cifradas con una función de hash (bcrypt o Argon2) y la clave secreta de la firma no sale del servidor. & Revisión técnica del código y de la base de datos \\
+		AC-3.5 & Seguridad & El aviso de privacidad se muestra antes del primer uso y la base de datos guarda solo los datos necesarios. & Revisión de la propuesta con Control Escolar \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Plan de Calidad (Entregable 2).}
+\end{table}
+
+\begin{table}[tbp]
+	\caption{Criterios de Aceptación de OC-4 y OC-5}
+	\label{tab:ac2}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{1.2cm}P{2cm}P{7.6cm}P{4cm}}
+		\toprule
+		Clave & Tema & Criterio de aceptación & Evidencia \\
+		\midrule
+		AC-4.1 & Reglas de negocio & El 100\,\% de los intentos, aceptados y rechazados, queda registrado con fecha, hora, estudiante, lector y resultado. & Caso de prueba \\
+		AC-4.2 & Reglas de negocio & El torniquete solo se abre con una validación positiva; un estudiante dado de baja es rechazado y un mismo código no se acepta dos veces. & Caso de prueba y captura del mensaje \\
+		AC-4.3 & Reglas de negocio & Durante el piloto, la diferencia entre el conteo manual del observador y los ingresos aceptados en la base de datos es de 2\,\% o menos. & Hoja de observación frente al reporte del panel \\
+		AC-4.4 & Reglas de negocio & Los reportes del panel (ingresos por franja horaria, intentos rechazados y estudiantes sin ingresos) coinciden con consultas directas a la base de datos. & Caso de prueba \\
+		AC-5.1 & Usabilidad & Al menos 85\,\% de los estudiantes del piloto pasa al primer intento sin ayuda del personal. & Hoja de observación y registros \\
+		AC-5.2 & Usabilidad & Después de una explicación de 10 minutos o menos, el personal de vigilancia consulta en el panel los ingresos del día sin ayuda. & Prueba de usabilidad con tareas \\
+		AC-5.3 & Usabilidad & Los estudiantes del piloto califican la facilidad de uso con un promedio de 4 o más en una escala del 1 al 5. & Encuesta breve de salida del piloto \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Plan de Calidad (Entregable 2).}
+\end{table}
+
+\subsection{Pruebas}
+Las pruebas avanzan de lo pequeño a lo completo, siguiendo las etapas del
+cronograma (Tabla~\ref{tab:niveles}). Después de cada corrección se vuelven a
+ejecutar los casos afectados.
+
+\begin{table}[tbp]
+	\caption{Niveles de Prueba}
+	\label{tab:niveles}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{2.4cm}P{5.4cm}P{3.4cm}P{3.7cm}}
+		\toprule
+		Nivel & Qué se prueba & Fechas & Responsable \\
+		\midrule
+		Unitarias & Generación y validación de códigos, servicios del servidor y consultas del panel. & 26 de octubre al 27 de noviembre, en cada iteración & Miguel Ángel Jurado Delgadillo y Juan Fernando Reyes Arguello \\
+		De banco & Lectura y rapidez del lector; ciclos y alimentación del torniquete. & 26 de octubre al 20 de noviembre & Ian Alexis Flores Martínez y Daniel Arellano Palacios \\
+		Integración y sistema & Flujo completo en el salón: código, lector, servidor, torniquete y panel. & 23 de noviembre al 4 de diciembre & Bryan Uriel Villegas Raymundo, con todo el equipo \\
+		Aceptación (piloto) & Funcionamiento en el acceso real con estudiantes del turno vespertino. & 7 al 18 de diciembre & Bryan Uriel Villegas Raymundo y Juan Esteban Anzures Campos \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Plan de Calidad (Entregable 2).}
+\end{table}
+
+Los 16 casos de prueba se resumen en las Tablas~\ref{tab:cp1} a~\ref{tab:cp2}.
+
+\begin{table}[tbp]
+	\caption{Casos de Prueba CP-01 a CP-04}
+	\label{tab:cp1}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{1.2cm}P{2.9cm}P{4.6cm}P{4.3cm}P{1.6cm}}
+		\toprule
+		Clave & Caso & Procedimiento & Resultado esperado & Criterio \\
+		\midrule
+		CP-01 & Ingreso válido & Un estudiante activo muestra un código vigente. & El torniquete se abre, se enciende la luz verde y el ingreso queda registrado como aceptado. & AC-4.1, AC-4.2 \\
+		CP-02 & Tiempo de validación & Se hacen 50 lecturas válidas y se calculan los tiempos con las marcas del lector y del servidor. & El 90\,\% de las lecturas tarda 3 segundos o menos. & AC-1.1 \\
+		CP-03 & Condiciones de lectura & 10 intentos por combinación de 3 niveles de luz, 2 de brillo, 3 distancias (15, 25 y 35 cm) y al menos 4 modelos de celular. & Al menos 95\,\% de lecturas al primer intento. & AC-2.1 \\
+		CP-04 & Captura reenviada & Se toma una captura del código y se presenta cuando ya venció. & Rechazo con el mensaje «Código vencido». & AC-3.1 \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Plan de Calidad (Entregable 2).}
+\end{table}
+
+\begin{table}[tbp]
+	\caption{Casos de Prueba CP-05 a CP-08}
+	\label{tab:cp1b}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{1.2cm}P{2.9cm}P{4.6cm}P{4.3cm}P{1.6cm}}
+		\toprule
+		Clave & Caso & Procedimiento & Resultado esperado & Criterio \\
+		\midrule
+		CP-05 & Código alterado & Se modifica un carácter del contenido del código y se genera un QR nuevo. & Rechazo con el mensaje «Código inválido». & AC-3.2 \\
+		CP-06 & Reutilización & Se presenta dos veces el mismo código dentro de su vigencia. & El segundo intento se rechaza. & AC-4.2 \\
+		CP-07 & Estudiante dado de baja & Un estudiante dado de baja muestra un código generado antes de la baja. & Rechazo; el torniquete no se abre. & AC-4.2 \\
+		CP-08 & Falla de red & Se desconecta el Wi-Fi durante una lectura. & El lector indica la falla en 5 segundos o menos, no abre y envía el intento al reconectarse. & AC-2.3 \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Plan de Calidad (Entregable 2).}
+\end{table}
+
+\begin{table}[tbp]
+	\caption{Casos de Prueba CP-09 a CP-16}
+	\label{tab:cp2}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{1.2cm}P{2.9cm}P{4.6cm}P{4.3cm}P{1.6cm}}
+		\toprule
+		Clave & Caso & Procedimiento & Resultado esperado & Criterio \\
+		\midrule
+		CP-09 & Comunicación cifrada & Se captura el tráfico entre el lector, el servidor y el panel. & Solo hay tráfico HTTPS; no hay datos legibles. & AC-3.3 \\
+		CP-10 & Almacenamiento de contraseñas y clave & Se revisan la tabla de usuarios y el código del lector. & Solo hay hashes; la clave de la firma no aparece fuera del servidor. & AC-3.4 \\
+		CP-11 & Registro completo & Se presentan 100 intentos: 80 válidos y 20 inválidos. & Hay 100 registros con todos sus campos y el resultado correcto. & AC-4.1 \\
+		CP-12 & Reportes del panel & Se cargan datos de prueba conocidos y se comparan los reportes con consultas a la base. & Los valores coinciden. & AC-4.4 \\
+		CP-13 & Carga de pantallas & Se carga 10 veces cada pantalla principal y se mide el tiempo con las herramientas del navegador. & Todas cargan en menos de 3 segundos. & AC-1.3 \\
+		CP-14 & Resistencia del torniquete & Se acciona el torniquete en banco de forma continua. & Completa el doble de los ciclos diarios estimados sin fallas. & AC-2.4 \\
+		CP-15 & Usabilidad del panel & Una persona de vigilancia hace tres tareas: ver los ingresos del día, filtrar por horario y ver los rechazos. & Las completa sin ayuda. & AC-5.2 \\
+		CP-16 & Piloto en el acceso & Durante cinco días hábiles se llena la hoja de observación del flujo y se aplica la encuesta de salida. & Se cumplen los criterios del piloto. & AC-1.2, AC-2.2, AC-4.3, AC-5.1, AC-5.3 \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Plan de Calidad (Entregable 2).}
+\end{table}
+
+\subsection{Criterios de Entrada y Salida de las Pruebas}
+\begin{itemize}
+	\item \textbf{Para iniciar las pruebas en el salón:} el lector, el servidor
+	      y el panel están terminados y sus pruebas unitarias y de banco están
+	      aprobadas.
+	\item \textbf{Para instalar el prototipo en el acceso:} al menos 90\,\% de
+	      los casos ejecutados aprueba, no hay defectos críticos abiertos, los casos
+	      de seguridad (CP-04, CP-05, CP-06 y CP-09) aprueban al 100\,\% y el permiso
+	      de la dirección está vigente.
+	\item \textbf{Para cerrar el piloto:} se completan los cinco días hábiles de
+	      observación y la encuesta de salida.
+\end{itemize}
+
+\subsection{Manejo de Defectos}
+Cada defecto se registra como un aviso (\textit{issue}) en el repositorio, con
+el caso que lo detectó, su severidad, el responsable y su estado
+(Tabla~\ref{tab:severidad}).
+
+\begin{table}[tbp]
+	\caption{Severidad de los Defectos}
+	\label{tab:severidad}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{2cm}P{7.4cm}P{5.4cm}}
+		\toprule
+		Severidad & Ejemplos & Atención \\
+		\midrule
+		Crítica & El torniquete se abre sin validación, se aceptan códigos vencidos, se exponen datos o se pierden registros. & Se detiene el avance y se corrige en 48 horas o menos. \\
+		Mayor & Fallas de lectura frecuentes o reportes incorrectos en el panel. & Se corrige dentro de la misma iteración. \\
+		Menor & Mensajes poco claros o detalles visuales. & Se agrega a la lista de pendientes. \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Plan de Calidad (Entregable 2).}
+\end{table}
+
+\subsection{Responsables de las Actividades de Calidad}
+Para que nadie revise solo su propio trabajo, las revisiones técnicas son
+cruzadas (Tabla~\ref{tab:respcalidad}).
+
+\begin{table}[tbp]
+	\caption{Responsables de las Actividades de Calidad}
+	\label{tab:respcalidad}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{5.4cm}P{3.5cm}P{3cm}P{3cm}}
+		\toprule
+		Actividad & Realiza & Aprueba & Apoya \\
+		\midrule
+		Coordinar el plan, diseñar los casos y elaborar el reporte de pruebas & Bryan Uriel Villegas Raymundo & Juan Esteban Anzures Campos & Todo el equipo \\
+		Pruebas unitarias del servidor y de los códigos QR & Miguel Ángel Jurado Delgadillo & Bryan Uriel Villegas Raymundo & Juan Fernando Reyes Arguello \\
+		Pruebas unitarias de la base de datos y del panel & Juan Fernando Reyes Arguello & Bryan Uriel Villegas Raymundo & Miguel Ángel Jurado Delgadillo \\
+		Pruebas de lectura y de tiempo de validación & Ian Alexis Flores Martínez & Bryan Uriel Villegas Raymundo & Daniel Arellano Palacios \\
+		Pruebas mecánicas y de alimentación del torniquete & Daniel Arellano Palacios & Bryan Uriel Villegas Raymundo & Ian Alexis Flores Martínez \\
+		Revisión técnica de seguridad & Juan Fernando Reyes Arguello (revisión cruzada) & Juan Esteban Anzures Campos & Miguel Ángel Jurado Delgadillo \\
+		Revisión del aviso de privacidad & Miguel Ángel Jurado Delgadillo & Juan Esteban Anzures Campos & Control Escolar \\
+		Pruebas de usabilidad y encuesta de salida & Bryan Uriel Villegas Raymundo & Juan Esteban Anzures Campos & Juan Fernando Reyes Arguello \\
+		Observación del acceso (línea base y piloto) & Todo el equipo, dos observadores por día & Bryan Uriel Villegas Raymundo & Personal de vigilancia \\
+		Revisión de los entregables escritos & Juan Esteban Anzures Campos & Docentes asesores & Todo el equipo \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Plan de Calidad (Entregable 2).}
+\end{table}
+
+\subsection{Métricas}
+Las métricas M2 a M4 usan los datos de la hoja de observación del flujo en el
+acceso. En sus fórmulas, $\lambda$ es la tasa de llegadas (estudiantes por
+minuto), $\bar{t}$ el tiempo medio de revisión en segundos, $\mu = 60/\bar{t}$
+la tasa de servicio de un punto de revisión y $c$ el número de puntos de
+revisión activos (Tablas~\ref{tab:met1} y~\ref{tab:met2}).
+
+\begin{table}[tbp]
+	\caption{Métricas de Calidad M1 a M6}
+	\label{tab:met1}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{0.9cm}P{2.8cm}P{4.4cm}P{3.4cm}P{3.3cm}}
+		\toprule
+		Clave & Métrica & Cálculo & Meta & Frecuencia \\
+		\midrule
+		M1 & Tiempo de validación del prototipo & Percentil 90 de (hora de apertura $-$ hora de detección del código) & 3 s o menos & Cada iteración y cada día del piloto \\
+		M2 & Tiempo medio de revisión & Promedio de los tiempos cronometrados por intervalo & Menor en el piloto que en la línea base & Cada día de observación \\
+		M3 & Utilización del acceso & $\rho = \lambda / (c\mu)$ en el horario pico & Menor en el piloto que en la línea base & Cada día de observación \\
+		M4 & Fila máxima & Máximo de personas en fila por intervalo de 5 minutos & Menor en el piloto que en la línea base & Cada día de observación \\
+		M5 & Lectura al primer intento & Lecturas exitosas al primer intento $\div$ intentos $\times$ 100 & 95\,\% o más en banco; 85\,\% o más en el piloto & Pruebas de lectura y piloto \\
+		M6 & Rechazos por error de lectura & Rechazos por lectura fallida $\div$ intentos $\times$ 100 & 5\,\% o menos & Cada día del piloto \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Plan de Calidad (Entregable 2).}
+\end{table}
+
+\begin{table}[tbp]
+	\caption{Métricas de Calidad M7 a M12}
+	\label{tab:met2}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{0.9cm}P{2.8cm}P{4.4cm}P{3.4cm}P{3.3cm}}
+		\toprule
+		Clave & Métrica & Cálculo & Meta & Frecuencia \\
+		\midrule
+		M7 & Rechazo de códigos inválidos & Códigos inválidos rechazados $\div$ códigos inválidos presentados $\times$ 100 & 100\,\% & Pruebas de seguridad \\
+		M8 & Completitud del registro & Registros guardados $\div$ intentos realizados $\times$ 100 & 100\,\% & Pruebas en el salón y piloto \\
+		M9 & Discrepancia de conteo & $|$conteo manual $-$ ingresos aceptados$|$ $\div$ conteo manual $\times$ 100 & 2\,\% o menos & Cada día del piloto \\
+		M10 & Casos aprobados & Casos aprobados $\div$ casos ejecutados $\times$ 100 & 90\,\% o más & Al cierre de las pruebas en el salón \\
+		M11 & Defectos críticos abiertos & Número de defectos críticos sin corregir & 0 antes del piloto & Revisión semanal \\
+		M12 & Satisfacción de los estudiantes & Promedio de la encuesta de salida (escala del 1 al 5) & 4 o más & Al cierre del piloto \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Plan de Calidad (Entregable 2).}
+\end{table}
+
+\subsection{Calendario y Registros de Calidad}
+Las actividades de calidad siguen el cronograma del proyecto
+(Tabla~\ref{tab:calcalidad}).
+
+\begin{table}[tbp]
+	\caption{Actividades de Calidad en el Cronograma}
+	\label{tab:calcalidad}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{3.4cm}P{7.4cm}P{4cm}}
+		\toprule
+		Fechas & Actividad de calidad & Producto \\
+		\midrule
+		5 al 16 de octubre & Aprobar el plan de calidad y diseñar los casos de prueba. & Plan aprobado \\
+		12 al 30 de octubre & Medir la línea base del acceso (M2, M3 y M4) durante cinco días hábiles. & Informe de diagnóstico \\
+		26 de octubre al 27 de noviembre & Pruebas unitarias y de banco en cada iteración; reporte semanal de M1, M5 y M11. & Reportes semanales \\
+		23 de noviembre al 4 de diciembre & Pruebas de integración y de sistema (CP-01 a CP-15) y revisión técnica de seguridad. & Reporte de pruebas y decisión de instalar \\
+		7 al 18 de diciembre & Piloto en el acceso (CP-16) con medición diaria. & Hojas de observación y registros \\
+		4 al 15 de enero & Comparar la línea base con el piloto y evaluar los criterios de aceptación. & Reporte final de calidad \\
+		11 al 29 de enero & Documentar los resultados y las lecciones aprendidas. & Informe final \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Plan de Calidad (Entregable 2).}
+\end{table}
+
+Como evidencia del plan se conservarán el reporte de pruebas con el resultado
+y la fecha de cada caso; los registros de medición de tiempos de validación y
+de carga de pantallas; las capturas de los mensajes de rechazo y de la
+revisión técnica de seguridad; las hojas de observación de la línea base y del
+piloto; los avisos del repositorio con el historial de cada defecto; y las
+minutas de las revisiones semanales del equipo.

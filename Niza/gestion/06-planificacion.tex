@@ -1,0 +1,177 @@
+\section{Planificación del Proyecto}
+El plan del proyecto se compone de seis planes: alcance, cronograma, costos,
+calidad, riesgos, y recursos y comunicación. El alcance ya se describió; la
+calidad tiene su propia sección (sección~\ref{sec:calidad}). Aquí se
+presentan los demás.
+
+\subsection{Triple Restricción}
+Alcance, tiempo y costo dependen entre sí: si una se mueve, las otras dos lo
+resienten.
+\begin{itemize}
+	\item \textbf{Alcance:} un acceso peatonal, turno vespertino y prototipo a
+	      escala. Lo que queda fuera está escrito desde el inicio.
+	\item \textbf{Tiempo:} 17 semanas fijas, del 5 de octubre de 2026 al 29 de
+	      enero de 2027. El calendario escolar no se mueve.
+	\item \textbf{Costo:} cerca de 4,100 pesos aportados por el propio equipo,
+	      sin financiamiento externo, con una reserva de 10\,\%.
+\end{itemize}
+La regla del equipo es que, si algo se atrasa, se cede alcance antes que fecha
+o calidad.
+
+\subsection{Estrategias Generales}
+Seis decisiones guían el proyecto:
+\begin{itemize}
+	\item \textbf{Empezar pequeño:} un acceso, un turno y un prototipo a escala.
+	      Primero evidencia barata; escalar solo si los números la respaldan.
+	\item \textbf{Trabajar en paralelo:} el hardware y el software avanzan
+	      mientras se levanta el diagnóstico; la integración se deja para el final.
+	\item \textbf{Usar lo barato y lo abierto:} componentes de bajo costo y
+	      herramientas libres, en lugar de biometría o torniquetes industriales.
+	\item \textbf{Medir antes y después:} el mismo instrumento se aplica antes
+	      y durante el piloto, para comparar con números y no con impresiones.
+	\item \textbf{Guardar holgura:} reserva del 10\,\% en costo y una semana
+	      libre antes de vacaciones para absorber atrasos.
+	\item \textbf{No retirar nada:} la revisión manual sigue funcionando todo el
+	      piloto. El sistema se suma, no sustituye a nadie.
+\end{itemize}
+
+\subsection{Enfoque y Cronograma}
+El enfoque es híbrido. Es predictivo en la estructura porque hay fechas que no
+se pueden mover: el permiso de la dirección es requisito para entrar al
+acceso, los materiales tardan en llegar, el piloto debe terminar antes de las
+vacaciones y la entrega final es el 29 de enero de 2027. Es ágil en el
+desarrollo porque aún no se sabe cuánto tarda el lector en leer un código ni
+cómo afectan la luz, el brillo de la pantalla o la distancia. Esa
+incertidumbre exige probar, medir y ajustar. El lector, el servidor y el panel
+se construyen en iteraciones de una semana: cada lunes se eligen tareas de una
+lista priorizada y cada viernes se muestra lo terminado y se revisa el avance
+contra el cronograma. La Tabla~\ref{tab:etapas} muestra las etapas.
+
+\begin{table}[tbp]
+	\caption{Etapas, Forma de Trabajo e Hitos}
+	\label{tab:etapas}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{2.2cm}P{3.3cm}P{6.4cm}P{3cm}}
+		\toprule
+		Etapa & Fechas & Forma de trabajo & Hito \\
+		\midrule
+		Planeación & 5 al 16 de octubre & Predictiva: permisos, aviso de privacidad y lista de materiales. & Permiso de la dirección \\
+		Diagnóstico & 12 al 30 de octubre & Predictiva: encuesta, entrevistas y observación del acceso durante cinco días; compra de materiales. & Informe de diagnóstico \\
+		Desarrollo & 26 de octubre al 27 de noviembre & Ágil: cinco iteraciones semanales en dos frentes paralelos, hardware y lector, y servidor, base de datos y página web. & Prototipo integrado \\
+		Pruebas & 23 de noviembre al 18 de diciembre & Iterativa en el salón (23 de noviembre al 4 de diciembre) y predictiva en el piloto (7 al 18 de diciembre). & Fin del piloto \\
+		Cierre & 4 al 29 de enero & Predictiva: comparación de resultados, informe final y manual de uso. & Entrega final \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Ficha Inicial del Proyecto (Entregable 1). Las semanas del 21 y del 28 de diciembre son vacaciones de invierno y no tienen trabajo programado. Las tareas se registran en un tablero compartido y el código en un repositorio Git.}
+\end{table}
+
+Las actividades corren en cuatro frentes en paralelo y una integración al
+final (Tabla~\ref{tab:frentes}). La integración se hace en el salón y, hasta
+que pasa ahí, el prototipo no se instala en el acceso.
+
+\begin{table}[tbp]
+	\caption{Frentes de Trabajo}
+	\label{tab:frentes}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{5cm}P{2.6cm}P{7cm}}
+		\toprule
+		Frente y responsable & Semanas & Resultado \\
+		\midrule
+		Hardware y torniquete (Daniel) & 3 a 6 & Prototipo a escala con el lector montado. \\
+		Lector y firma del código (Ian y Miguel) & 3 a 7 & Lector con cámara y código que caduca en segundos. \\
+		Servidor, datos y panel (Juan Fernando) & 3 a 8 & Validación, registro y consultas del personal. \\
+		Campo y pruebas (Bryan) & 2 a 5 y 10 a 11 & Diagnóstico, pruebas y piloto. \\
+		Integración en el salón & 8 y 9 & Prototipo completo probado fuera del acceso. \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: presentación del avance. La semana 1 es la del 5 de octubre de 2026.}
+\end{table}
+
+\subsection{Costos}
+El presupuesto es una estimación preliminar del equipo, hecha con precios de
+referencia del mercado mexicano. Se confirma al cotizar (Tabla~\ref{tab:costos}).
+
+\begin{table}[tbp]
+	\caption{Presupuesto Estimado}
+	\label{tab:costos}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{8cm}r}
+		\toprule
+		Categoría & Estimado (MXN) \\
+		\midrule
+		Hardware del prototipo & 1,750 \\
+		Servidor, dominio y hosting (4 meses) & 970 \\
+		Impresiones y material de campo & 600 \\
+		Traslados y compras & 400 \\
+		Reserva de contingencia (10\,\%) & 380 \\
+		\midrule
+		Total estimado & 4,100 \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: presentación del avance. Las cerca de 800 horas de trabajo del equipo no se monetizan. Si la escuela presta el servidor, el total baja 970 pesos.}
+\end{table}
+
+El control de costos sigue cuatro reglas: una línea base aprobada antes de la
+primera compra, cada compra registrada con comprobante y responsable, un umbral
+de variación de $\pm$10\,\% (pasarlo obliga a replantear) y la comparación del
+gasto acumulado contra lo planeado en la junta semanal.
+
+\subsection{Recursos}
+Con lo siguiente cuenta el equipo para ejecutar el proyecto:
+\begin{itemize}
+	\item \textbf{Humanos:} seis integrantes, unas 8 horas por semana cada uno,
+	      cerca de 800 horas en total.
+	\item \textbf{Materiales:} lector con cámara, placa de control, motor, luces
+	      y zumbador, fuente de energía, base de MDF y cableado.
+	\item \textbf{Técnicos:} servidor con base de datos, repositorio de código y
+	      entorno de programación.
+	\item \textbf{Institucionales:} permiso de la dirección, espacio con
+	      corriente y Wi-Fi, y apoyo de vigilancia.
+	\item \textbf{Financieros:} aportación del equipo, cerca de 4,100 pesos.
+	\item \textbf{De información:} padrón de estudiantes de Control Escolar y
+	      resultados del diagnóstico.
+\end{itemize}
+Lo que depende de terceros (permiso, Wi-Fi, padrón) es lo que encabeza el
+registro de riesgos.
+
+\subsection{Comunicación}
+El equipo se comunica con tres mecanismos: una junta semanal de 20 minutos
+para revisar el avance contra el cronograma, un reporte quincenal a la
+docente con lo hecho y lo pendiente, y un tablero de tareas en el repositorio
+con una columna por frente. Todo cambio que toque fecha, costo o alcance lo
+autoriza el líder del proyecto y queda por escrito.
+
+\subsection{Riesgos}
+\label{sec:riesgos}
+El registro tiene siete riesgos. Cada uno tiene un responsable que lo vigila
+y se revisa en la junta semanal. Los dos primeros condicionan la fecha del
+piloto (Tabla~\ref{tab:riesgos}).
+
+\begin{table}[tbp]
+	\caption{Registro de Riesgos}
+	\label{tab:riesgos}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{4.8cm}P{2.3cm}P{1.8cm}P{5.7cm}}
+		\toprule
+		Riesgo & Probabilidad & Impacto & Respuesta \\
+		\midrule
+		La dirección no autoriza el piloto & Media & Alto & Solicitud formal en la semana 1; plan B en el laboratorio. \\
+		Wi-Fi inestable en el acceso & Alta & Alto & Modo fuera de línea con lista local y sincronización. \\
+		Retraso en la entrega de componentes & Media & Medio & Compra con dos semanas de anticipación y repuestos. \\
+		Mala lectura con sol directo & Media & Medio & Visera, ajuste de exposición y pruebas con varias luces. \\
+		Estudiantes sin celular o sin batería & Alta & Bajo & El carril manual sigue abierto durante todo el piloto. \\
+		Manejo indebido de datos personales & Baja & Alto & Aviso de privacidad, datos mínimos, cifrado y borrado. \\
+		Vacaciones y carga de fin de semestre & Alta & Medio & Piloto cerrado antes de las vacaciones; enero para el informe. \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: presentación del avance. Los nombres de los responsables de cada riesgo no aparecen en las fuentes.}
+\end{table}
+
+\subsection{Cierre del Proyecto}
+El 29 de enero de 2027 se hará un cierre en seis pasos: verificar cada
+entregable contra su criterio de aceptación, entregar el informe final con la
+comparación de los tres indicadores, firmar un acta de aceptación por la
+dirección y la docente, transferir el manual y dar una capacitación breve a
+vigilancia y Control Escolar, borrar o resguardar los registros según el aviso
+de privacidad, y documentar las lecciones aprendidas con una recomendación
+sobre llevar el sistema a los demás accesos o detenerlo.
