@@ -1,0 +1,104 @@
+\section{Planteamiento del Problema}
+\label{sec:problema}
+El problema se presenta en cinco partes: la situación actual, a quién afecta y
+por qué importa, lo que todavía no se sabe de él, su enunciado y la viabilidad
+de atenderlo.
+
+\subsection{La Situación Actual}
+En muchas instituciones educativas la entrada de las personas se controla
+revisando credenciales a simple vista o anotando registros a mano. Ambos
+métodos dependen de la atención de quien los aplica y no siempre convencen a
+quienes los usan: en una escuela de Perú, el 87.5\,\% de los 40 docentes y
+administrativos encuestados no se sentía cómodo con el registro manual de
+asistencia \parencite{torres2019qr}.
+
+El TESCHA no es la excepción. Los vigilantes revisan a simple vista la
+credencial física de cada estudiante. La revisión se complica en el turno
+vespertino durante los 15 a 20 minutos previos a la primera clase, cuando la
+mayor parte de los estudiantes llega en poco tiempo y todo depende de una o
+dos personas. En ese momento se forman filas, una credencial prestada, vencida
+o ajena puede pasar sin que nadie lo note y, al final del día, no queda ningún
+registro de quién entró ni a qué hora.
+
+Conviene no confundir este problema con el pase de lista en el salón. Los dos
+nacen de una identificación débil, pero un registro en la entrada solo prueba
+que la persona entró al plantel, no que asistió a una clase. Por eso el
+control de asistencia por materia queda fuera del proyecto.
+
+\subsection{A Quién Afecta y Por Qué Importa}
+El problema afecta a tres grupos:
+\begin{itemize}
+	\item \textbf{Estudiantes.} Pierden tiempo en la fila, pueden llegar tarde a
+	      su primera clase y conviven en un plantel donde la entrada de personas
+	      ajenas no se controla con rigor.
+	\item \textbf{Personal de vigilancia.} Revisa cientos de credenciales en
+	      pocos minutos sin ninguna herramienta que le ayude a detectar una
+	      credencial ajena, vencida o falsa.
+	\item \textbf{Dirección y Departamento de Control Escolar.} No tienen datos
+	      de ingreso para detectar a tiempo a los estudiantes que dejan de venir,
+	      una señal temprana de posible deserción, ni para decidir cuántos accesos
+	      abrir y con cuánto personal en cada horario.
+\end{itemize}
+
+Sus consecuencias son de cuatro tipos. Las \textbf{filas} retrasan el inicio
+de la jornada. La teoría de colas, que ya se propuso para reducir la espera de
+estudiantes en el área de control escolar de otro plantel del Tecnológico
+Nacional de México \parencite{talavera2025espera}, ayuda a entender por qué:
+la fila crece cuando llegan más personas por minuto de las que se alcanzan a
+revisar. La \textbf{suplantación} es un riesgo de seguridad, porque permite la
+entrada de personas que no pertenecen a la comunidad. La \textbf{falta de
+	datos} impide tomar decisiones con evidencia. Por último, la \textbf{carga de
+	trabajo} del vigilante crece justo cuando más atención se necesita.
+
+\subsection{Lo que Todavía No Sabemos}
+Hoy no existe ninguna medición del acceso del TESCHA, así que la magnitud del
+problema todavía no se puede expresar con cifras. Falta conocer:
+\begin{itemize}
+	\item \textbf{Cómo funciona hoy el acceso:} cuántos estudiantes llegan por
+	      minuto en la hora pico, cuánto tarda la revisión de cada uno, qué tan
+	      larga se hace la fila y con qué frecuencia se olvidan o se prestan
+	      credenciales.
+	\item \textbf{Si los estudiantes pueden y quieren usar el sistema:} si tienen
+	      celular propio con conexión y batería al llegar, y si estarían
+	      dispuestos a mostrar un código QR para entrar.
+	\item \textbf{Qué tan rápido responde el lector:} cuánto tarda en leer el
+	      código y consultar al servidor, y cómo influyen la luz, el brillo de la
+	      pantalla y la distancia. No se encontró literatura arbitrada que reporte
+	      ese tiempo en el lector elegido, así que se medirá con el prototipo.
+	\item \textbf{Qué obligaciones legales aplican:} como organismo público del
+	      Estado de México, el TESCHA debe cumplir la ley estatal y la ley general
+	      de protección de datos personales \parencite{edomex2017datos,
+		      lgpdppso2025}, y el sistema guardará la hora de entrada de cada
+	      estudiante.
+\end{itemize}
+Los dos primeros puntos se resuelven en el diagnóstico de octubre con
+observación, encuesta y entrevistas (ver Metodología de Medición); el tercero,
+en las pruebas en el salón, y el cuarto, con la revisión del aviso de
+privacidad.
+
+\subsection{Enunciado del Problema}
+El acceso de los estudiantes al TESCHA carece de un mecanismo de validación
+automatizado. Como consecuencia, en la hora pico del turno vespertino se
+forman filas, una credencial prestada o ajena puede superar la revisión
+visual y la institución no cuenta con un registro confiable de ingresos que
+le sirva para tomar decisiones. De este enunciado surge la pregunta que guía
+el proyecto, presentada junto con los objetivos más adelante.
+
+\subsection{Por Qué Es Viable Atenderlo}
+El uso de códigos QR para controlar el acceso físico ya se ha propuesto antes
+\parencite{kao2011physical}, y su costo es bajo frente a otras opciones.
+Comparado con las tarjetas NFC, el QR se procesa más rápido, aunque no trae
+cifrado propio \parencite{harnaningrum2024comparison}. El proyecto compensa
+esa carencia con un código que cambia cada pocos segundos y va firmado, de
+modo que un código reenviado o alterado se rechaza
+\parencite{subpratatsavee2015hmac}. Además, el estudiante usa su propio
+celular, así que no hay que fabricar tarjetas. Comparado con el
+reconocimiento facial, el QR no necesita equipo costoso ni guarda datos
+biométricos, cuya aceptación entre universitarios depende mucho de la
+confianza y la seguridad que perciben \parencite{rukhiran2023user}.
+
+Atenderlo también es necesario. Sin datos no se sabe cuánto espera un
+estudiante para entrar, qué tan seguido se usan credenciales ajenas ni si la
+comunidad aceptaría el sistema. Medir el acceso actual y compararlo con el
+prototipo permite decidir con evidencia, y no con suposiciones, si conviene
+extender el sistema a los demás accesos del plantel.

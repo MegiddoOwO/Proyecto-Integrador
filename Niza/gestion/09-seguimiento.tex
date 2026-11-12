@@ -1,0 +1,66 @@
+\section{Seguimiento y Control}
+\subsection{Cómo se Vigila el Avance}
+El equipo usa cuatro mecanismos para saber si va bien:
+\begin{itemize}
+	\item Una junta semanal de 20 minutos, para comparar el avance con el
+	      cronograma.
+	\item Un tablero de tareas en el repositorio, con una columna por frente.
+	\item Un reporte quincenal a la docente, con lo hecho y lo pendiente.
+	\item Un control de cambios: todo lo que toque fecha, costo o alcance lo
+	      autoriza el líder del proyecto y queda por escrito.
+\end{itemize}
+Se siguen cuatro indicadores de gestión: el porcentaje de avance de cada frente
+contra lo planeado, los días de desviación respecto al cronograma por hito, la
+variación del gasto acumulado con umbral de $\pm$10\,\% y los riesgos abiertos,
+con cuáles ya se activaron.
+
+\subsection{Tablero de Metas}
+El tablero registra el estado de cada meta de calidad durante las pruebas y el
+piloto. Todavía no hay mediciones, porque el diagnóstico empieza el 12 de
+octubre. Por eso los resultados y el estado quedan pendientes
+(Tabla~\ref{tab:tablero}).
+
+\begin{table}[tbp]
+	\caption{Tablero de Metas}
+	\label{tab:tablero}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{3.8cm}P{4.8cm}P{2.3cm}P{2.2cm}P{1.8cm}}
+		\toprule
+		Métrica & Meta y frecuencia & Resultado medido & Estado & Severidad \\
+		\midrule
+		M1. Tiempo de validación del prototipo & 3 segundos o menos. Cada iteración y diario en el piloto. & Por medir en las pruebas & Pendiente & Mayor \\
+		M2, M3 y M4. Flujo en el acceso (tiempo medio, utilización y fila máxima) & Menores durante el piloto que en la línea base. Diario de observación. & Por medir en el diagnóstico y el piloto & Pendiente & Mayor \\
+		M5 y M6. Lectura y errores (primer intento y rechazos) & Éxito de 85\,\% o más en el piloto; errores de 5\,\% o menos. Pruebas de lectura y diario en el piloto. & Por medir en las pruebas y el piloto & Pendiente & Mayor \\
+		M7. Rechazo de códigos inválidos (seguridad) & 100\,\% de los códigos vencidos o alterados rechazados. Pruebas de seguridad. & Por medir en las pruebas & Pendiente & Crítica \\
+		M8 y M9. Registros y conteo (adecuación funcional) & 100\,\% de registros guardados; diferencia entre el conteo manual y el sistema de 2\,\% o menos. Pruebas en el salón y diario en el piloto. & Por medir en las pruebas y el piloto & Pendiente & Crítica \\
+		M11. Defectos críticos abiertos (calidad general) & 0 defectos antes de iniciar el piloto. Revisión semanal. & Por medir en las revisiones semanales & Pendiente & Crítica \\
+		M12. Satisfacción estudiantil (usabilidad) & Promedio de 4 o más en una escala de 1 a 5. Al cierre del piloto, con la encuesta. & Por medir al cierre del piloto & Pendiente & Menor \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Tablero de Metas, Correctivos y Seguimiento (Entregable 3). En el tablero original las columnas de resultado y estado están en blanco («Cumple / No cumple»). El Entregable 3 escribe la meta de M5 como «mayor de 85\,\%»; aquí se usa «85\,\% o más» del Plan de Calidad. La métrica M10 no aparece en el tablero.}
+\end{table}
+
+\subsection{Severidad y Acciones Correctivas}
+Cuando una meta no se cumple o aparece un defecto, la acción depende de su
+severidad (Tabla~\ref{tab:correctivas}).
+
+\begin{table}[tbp]
+	\caption{Acciones Correctivas según la Severidad}
+	\label{tab:correctivas}
+	\small\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{P{2cm}P{5.2cm}P{4cm}P{3.6cm}}
+		\toprule
+		Severidad & Qué significa & Acción correctiva & Métricas del tablero \\
+		\midrule
+		Crítica & El torniquete se abre sin validación, se aceptan códigos vencidos, se exponen datos o se pierden registros. & Se detiene el avance y se corrige en 48 horas o menos. & M7, M8 y M9, M11 \\
+		Mayor & Fallas de lectura frecuentes o reportes incorrectos en el panel. & Se corrige dentro de la misma iteración. & M1, M2 a M4, M5 y M6 \\
+		Menor & Mensajes poco claros o detalles visuales. & Se agrega a la lista de pendientes. & M12 \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Fuente: Plan de Calidad (Entregable 2) y Tablero de Metas (Entregable 3). Cada defecto se registra en el repositorio con el caso que lo detectó, su severidad, el responsable y su estado.}
+\end{table}
+
+Si un cambio afecta la fecha, el costo o el alcance, se pasa por el control de
+cambios descrito arriba. Si lo que falla es una meta del tablero y no un
+defecto, el equipo lo revisa en la junta semanal y decide el ajuste con el
+líder del proyecto. Las fuentes no definen más pasos que estos.
