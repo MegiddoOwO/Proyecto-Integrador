@@ -18,6 +18,8 @@ Trabajo de investigación escolar escrito en LaTeX con formato APA 7, hecho en e
 - `secciones/11-antecedentes.tex`: módulo con los antecedentes (estudios previos que sustentan el proyecto). Por ahora solo lo carga `objetivos.tex`, después de los objetivos; son cinco antecedentes en redacción continua, todos de 2026 (Cano et al.; Amoanu et al.; Henriana et al.; Tinajero Juárez et al.; Alsawi e Ibrahim). El profesor pidió que sean de este año o del anterior y que los primeros renglones los presenten; los de 2023 y 2024 quedaron comentados al final del archivo.
 - `marco-teorico.tex`: PDF aparte con solo el marco teórico (`latexmk -pdf marco-teorico.tex`). Usa la condicional `\ifdefined\solomarcoteorico`, que además activa la numeración de los títulos (1.2, 1.2.3) solo en este documento, y el contenido de `secciones/14-marco-teorico.tex`. El hook no lo compila.
 - `secciones/14-marco-teorico.tex`: marco teórico con la estructura que pidió el profesor: descripción breve al inicio, «Definiciones» en texto corrido sin subtítulos, apartados numerados por tecnología y un apartado propio para la ley de protección de datos personales. Cada tecnología se describe por sus ventajas, no como justificación de por qué se eligió ni comparándola con otras. La tabla de decisiones está en `tablas/decisiones-marco.tex`.
+- `hipotesis.tex`: PDF aparte con solo la hipótesis (`latexmk -pdf hipotesis.tex`), según el material «Hipótesis o supuestos» de la Dra. Morales Rosales. Usa la condicional `\ifdefined\solohipotesis` y el contenido de `secciones/15-hipotesis.tex`, que en el documento completo va después de los objetivos. El hook no lo compila.
+- `secciones/15-hipotesis.tex`: sigue los pasos del material: elección entre hipótesis, supuesto o ninguno; pregunta y variables; fundamentación; hipótesis de investigación y congruencia. Solo se presenta la hipótesis de investigación; la nula está redactada y comentada para cuando se defina la prueba estadística. Las incidencias de identidad y los objetivos técnicos no llevan hipótesis.
 - `Niza/`: todo lo de la materia Gestión de Proyectos de Software (docente Niza Lucero Alpízar Martínez): `avance-niza.tex`, sus secciones en `Niza/gestion/`, el PDF entregado `Avance Niza.pdf`, el registro de tareas y el material de origen en `Niza/fuentes/`. Se compila desde esa carpeta (`latexmk -pdf avance-niza.tex`) y usa `../citas.bib` y `../img/`. Ver `Niza/README.md`. El hook no lo compila.
 - `evidencias/avances-2026-10-13/`: copia identificable del CSV y el código de reconocimiento facial, con procedencia y resúmenes. Las tablas y la gráfica se generan con `python3 scripts/resumir_avances_facial.py`. No sumar el respaldo al archivo vigente: contiene intentos coincidentes.
 - `evidencias/avances-2026-10-13/camara/`: dos capturas reales de detección de rostro y parpadeo tomadas con autorización del usuario. La sesión adicional tiene su propio registro JSON y se presenta separada de los 45 intentos históricos. La captura usa `scripts/capturar_pruebas_camara.py` con el entorno del prototipo.
@@ -49,6 +51,7 @@ Usa pdfLaTeX y corre biber automáticamente. Un hook (`.claude/hooks/compilar.sh
 ## Comandos del proyecto
 
 - `/compilar`: compila y resume errores y avisos.
+- `/buscar-fuentes <tema>`: busca estudios en OpenAlex con `scripts/buscar_openalex.py` (solo biblioteca estándar; no necesita `uvx`).
 - `/nueva-cita <DOI, URL o título>`: agrega una referencia verificada a `citas.bib`.
 - `/revisar-seccion <archivo | todo>`: pasa una sección por los revisores en paralelo.
 - `/avance <número>`: prepara una entrega (portada, compilación, citas, PDF final).
@@ -71,7 +74,7 @@ De plugins:
 
 ## MCP
 
-- `paper-search`: búsqueda en Crossref, OpenAlex, Semantic Scholar, arXiv, DBLP, DOAJ y otras. Requiere `uv` instalado.
+- `paper-search`: búsqueda en Crossref, OpenAlex, Semantic Scholar, arXiv, DBLP, DOAJ y otras. Requiere `uv` instalado; si no está, usar `/buscar-fuentes`.
 - `bgpt`: datos experimentales estructurados de artículos científicos.
 
 ## Trabajo en equipo

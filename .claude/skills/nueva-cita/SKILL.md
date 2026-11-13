@@ -13,6 +13,7 @@ Entrada: `$ARGUMENTS`
 - **DOI** (`10.xxxx/...` o `https://doi.org/...`): consulta Crossref con `mcp__paper-search__get_crossref_paper_by_doi` o con WebFetch a `https://api.crossref.org/works/<doi>`.
 - **Título**: busca con `mcp__paper-search__search_crossref` o `search_openalex`. Si hay varios candidatos, muéstralos y pregunta cuál es antes de seguir.
 - **URL sin DOI** (tesis, ley, página institucional): abre la página con WebFetch y toma autor, título, año, institución y URL de ahí.
+- **Si el MCP `paper-search` no está disponible** (necesita `uvx`), usa `python3 scripts/buscar_openalex.py doi <DOI>` o `python3 scripts/buscar_openalex.py buscar "<título>"`.
 
 Si no encuentras la fuente, **detente y dilo**. Nunca completes campos con datos supuestos.
 

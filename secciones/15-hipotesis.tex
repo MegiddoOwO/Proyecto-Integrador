@@ -1,0 +1,162 @@
+% Hipótesis de investigación (hipotesis.tex y documento completo).
+% Sigue el material de clase «Hipótesis o supuestos» de Taller de
+% Investigación (Dra. Morales Rosales): primero se decide si corresponde una
+% hipótesis, un supuesto o ninguno, y después se formula con sus cinco pasos
+% (pregunta, variables, antecedentes y marco teórico, respuesta tentativa y
+% congruencia). Redacción en tercera persona.
+% Por indicación del equipo solo se presenta la hipótesis de investigación;
+% la hipótesis nula queda redactada y comentada al final de la subsección
+% «Hipótesis de Investigación» para usarla cuando se defina la prueba
+% estadística.
+% En hipotesis.tex y en trabajo.tex los apartados son subsecciones de
+% «Hipótesis», con los subtítulos alineados a la izquierda (nivel 2 de APA).
+\section{Hipótesis}
+\let\hipsec\subsection
+
+\hipsec{Elección entre Hipótesis y Supuestos}
+La decisión de formular una hipótesis, un supuesto o ninguno depende de la
+pregunta de investigación, los objetivos, el alcance, el enfoque y el diseño
+metodológico. En este proyecto la pregunta interroga por el efecto de un
+sistema de validación con códigos QR dinámicos en el control de acceso
+peatonal, y el objetivo general consiste en evaluar ese efecto. El enfoque es
+mixto con predominancia cuantitativa, el alcance llega a ser explicativo y el
+diseño es cuasiexperimental, con una medición antes del piloto y otra durante
+él en el mismo acceso. Lo que se busca, por lo tanto, es contrastar con datos
+una diferencia esperada entre el prototipo y el método convencional de
+revisión visual de credenciales.
+
+Por estas razones corresponde formular una hipótesis. En los estudios
+cuantitativos se plantean hipótesis cuando el alcance es correlacional o
+explicativo, o cuando se pronostica un dato, mientras que los estudios
+exploratorios no las requieren \parencite{hernandezsampieri2014metodologia}.
+No se trata de un supuesto, porque la investigación no parte de una premisa
+cualitativa que solo oriente la interpretación, sino de una proposición que
+puede medirse con la hoja de observación del Apéndice~C. Tampoco se trata de
+un estudio que no requiera hipótesis, ya que no se limita a construir el
+prototipo y comprobar que funciona. Esa parte del trabajo, que incluye el
+rechazo de códigos vencidos, repetidos o alterados y el tiempo de lectura en
+banco, se verifica con criterios de aceptación y no con una hipótesis de
+investigación.
+
+\hipsec{Pregunta de Investigación y Variables}
+La hipótesis responde a la pregunta planteada al cierre del planteamiento
+del problema:
+\begin{quote}
+	\input{secciones/04-pregunta}
+\end{quote}
+La variable independiente es el mecanismo de validación de identidad, con dos
+condiciones: la revisión visual de la credencial física, vigente en la línea
+base, y la lectura del código QR dinámico del prototipo, vigente durante el
+piloto. Las variables dependientes son las dos manifestaciones de la
+eficiencia del acceso que se observan en el sitio. La primera es el tiempo
+promedio de validación por estudiante, en segundos, contado desde que el
+estudiante llega al punto de revisión hasta que lo cruza. La segunda es la
+longitud máxima de la fila, en número de personas, registrada en cada
+intervalo de cinco minutos.
+
+El contexto es el acceso peatonal piloto del \tescha{} en los minutos previos
+al inicio de clases del turno vespertino. Para no atribuir al prototipo un
+cambio que provenga de otra causa, se mantienen el mismo acceso, la misma
+franja horaria, los mismos observadores y el mismo instrumento, y se registra
+el número de puntos de revisión activos. Las incidencias de identidad no
+forman parte de la hipótesis: se describen como información complementaria
+sobre la seguridad del acceso, porque un aumento de los casos detectados
+puede deberse a una mayor capacidad de detección y no a un peor control.
+
+\hipsec{Fundamentación}
+% Descartada: Tan et al. (2023), DOI 10.1145/3629296.3629331. Estima 30 s
+% por estudiante con registro manual y 20 s con QR, pero trata de asistencia
+% en exámenes, es de 2023 y no se pudo leer el texto completo (ACM bloquea la
+% descarga) para confirmar cómo se obtuvieron esos tiempos.
+La evidencia más directa proviene de \textcite{john2026qrgate}, quienes
+sustituyeron la verificación manual de identidad en la puerta principal del
+Dar es Salaam Maritime Institute, en Tanzania, por un sistema con código QR.
+En una prueba con 50 estudiantes, el tiempo medio de verificación bajó de
+aproximadamente 20 segundos a menos de 5 segundos por estudiante. Los
+antecedentes del proyecto apuntan en el mismo sentido.
+\textcite{cano2026sistema} reportan menos tiempo dedicado al registro de
+asistencia al sustituir el método tradicional por un sistema con código QR en
+la educación superior, aunque sin cifras. \textcite{tinajero2026acceso}
+muestran que un lector de bajo costo conectado a la base de datos
+institucional atendió un flujo aproximado de 4,500 estudiantes diarios con
+tiempos de respuesta menores a un segundo. Por su parte,
+\textcite{alsawi2026qracs} concluyen que los sistemas de control de acceso
+con código QR pueden mejorar la eficiencia operativa. En el marco teórico se
+expone, además, que la revisión visual depende de la atención del personal de
+vigilancia \parencite{torres2019qr} y que el tiempo de espera de los
+estudiantes puede optimizarse en los servicios escolares
+\parencite{talavera2025espera}.
+
+La relación entre las dos variables dependientes se desprende del análisis
+del Apéndice~C. La utilización del acceso es $\rho = \lambda / (c\,\mu)$, donde
+la tasa de servicio $\mu$ es inversa al tiempo medio de validación. Si este
+tiempo disminuye con la misma llegada de estudiantes ($\lambda$) y el mismo
+número de puntos de revisión ($c$), la utilización baja y la fila tiende a
+acortarse. Por eso se espera que ambas variables cambien en el mismo sentido.
+
+Los mismos estudios muestran los límites de esta expectativa. La reducción
+reportada por \textcite{john2026qrgate} se obtuvo en un entorno controlado,
+en una sola puerta y con una muestra pequeña. Los autores advierten que no
+refleja necesariamente el funcionamiento con más carga y que las fallas de
+conexión llegaron a retrasar la verificación. Además, ninguno de los estudios
+midió la longitud de la fila. En el estudio más cercano al lector del
+prototipo, el 30\,\% de las validaciones falló por iluminación insuficiente
+o por la posición de la cámara \parencite{henriana2026gate}. Si abrir el código en el
+teléfono o repetir una lectura fallida toma más tiempo que mostrar la
+credencial, los resultados del piloto no respaldarán la hipótesis, y ese
+resultado también responde a la pregunta de investigación.
+
+\hipsec{Hipótesis de Investigación}
+Con base en lo anterior, se formula la siguiente hipótesis de investigación:
+
+\medskip
+{\setlength{\fboxsep}{8pt}%
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{%
+		\justifying
+		La implementación de un prototipo de validación con códigos QR dinámicos
+		reduce el tiempo promedio de validación por estudiante y la longitud
+		máxima de la fila en el acceso peatonal piloto del \tescha{} durante el
+		turno vespertino, en comparación con la revisión visual de credenciales.}}}
+\medskip
+
+La hipótesis expresa una diferencia entre dos condiciones del mismo acceso y
+no una relación entre variables medidas en una sola ocasión. Se contrastará
+al comparar la línea base con el piloto mediante la hoja de observación del
+Apéndice~C.
+
+% Hipótesis nula, redactada para cuando se defina la prueba estadística.
+% La hipótesis nula niega o refuta la relación que propone la hipótesis de
+% investigación (Hernández-Sampieri et al., 2014, cap. 6). Para activarla,
+% quitar los signos de comentario de las líneas siguientes.
+%
+% Para el contraste estadístico, la hipótesis nula correspondiente es la
+% siguiente:
+%
+% \medskip
+% {\setlength{\fboxsep}{8pt}%
+% \noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{%
+% 		\justifying
+% 		La implementación de un prototipo de validación con códigos QR dinámicos
+% 		no reduce el tiempo promedio de validación por estudiante ni la
+% 		longitud máxima de la fila en el acceso peatonal piloto del \tescha{}
+% 		durante el turno vespertino, en comparación con la revisión visual de
+% 		credenciales.}}}
+% \medskip
+%
+% La hipótesis nula se rechazará solo si la diferencia observada entre la
+% línea base y el piloto es estadísticamente significativa
+% \parencite{hernandezsampieri2014metodologia}.
+
+\hipsec{Congruencia con los Objetivos y la Metodología}
+La hipótesis corresponde a la pregunta, porque responde de forma tentativa
+cuál será el efecto del sistema, y la eficiencia del acceso se expresa en las
+dos variables definidas como indicadores principales. También
+corresponde al objetivo general, que consiste en evaluar ese efecto, y a los
+objetivos específicos primero y último: el primero establece la línea base
+del tiempo de validación y de la fila, y el último compara esa línea base con
+el piloto. Por último, es congruente con el diseño cuasiexperimental de
+preprueba y posprueba con un solo grupo, que permite observar la diferencia
+pero no descarta por completo otras causas, como un cambio en la afluencia.
+Por esa razón, si los datos respaldan la hipótesis, el resultado se
+interpretará como evidencia orientativa para el caso estudiado y no como una
+generalización.

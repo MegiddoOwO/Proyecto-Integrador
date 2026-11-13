@@ -53,6 +53,7 @@
 \ifdefined\soloobjetivos\def\def@donotrepeattitle{}\fi
 \ifdefined\soloproblemaobjetivos\def\def@donotrepeattitle{}\fi
 \ifdefined\solomarcoteorico\def\def@donotrepeattitle{}\fi
+\ifdefined\solohipotesis\def\def@donotrepeattitle{}\fi
 \patchcmd{\maketitle}{\section*{\protect\normalfont\textbf{\@title}}}
   {\section*{\protect\normalfont\textbf{\@title}}\addcontentsline{toc}{section}{\@title}}{}{}
 \makeatother
@@ -92,7 +93,11 @@
 \ifdefined\solomarcoteorico
 \title{Marco Teórico de Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
 \else
+\ifdefined\solohipotesis
+\title{Hipótesis de Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
+\else
 \title{Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
+\fi
 \fi
 \fi
 \fi
@@ -115,7 +120,11 @@
 \ifdefined\solomarcoteorico
 \duedate{27 de octubre de 2026}
 \else
+\ifdefined\solohipotesis
+\duedate{12 de noviembre de 2026}
+\else
 \duedate{30 de septiembre de 2026}
+\fi
 \fi
 \fi
 \fi
@@ -145,6 +154,11 @@
 
 \ifdefined\solomarcoteorico
 	\input{secciones/14-marco-teorico}
+
+	\printbibliography
+\else
+\ifdefined\solohipotesis
+	\input{secciones/15-hipotesis}
 
 	\printbibliography
 \else
@@ -189,6 +203,8 @@
 
 				\input{secciones/06-objetivos}
 
+				\input{secciones/15-hipotesis}
+
 				\input{secciones/08-justificacion}
 
 				\input{secciones/05-metodologia}
@@ -212,6 +228,7 @@
 			\fi
 		\fi
 	\fi
+\fi
 \fi
 \fi
 
