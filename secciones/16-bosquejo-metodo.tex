@@ -28,7 +28,8 @@ para estos dos datos no hay muestreo, sino un conteo completo. El tiempo de
 validación, en cambio, no puede cronometrarse a cada estudiante, por lo que en
 cada intervalo se cronometra a cinco estudiantes elegidos al azar, como indica
 el Apéndice~C. Se trata de un muestreo probabilístico aleatorio simple dentro
-de cada intervalo. Con ocho intervalos por día durante cinco días hábiles, cada
+de cada intervalo, en el que cada estudiante que llega tiene la misma
+probabilidad de ser elegido \parencite{hernandezsampieri2014metodologia}. Con ocho intervalos por día durante cinco días hábiles, cada
 serie de observación reúne 40 intervalos y 200 tiempos de validación.
 
 La segunda población son los estudiantes de todas las carreras y turnos, a
@@ -46,8 +47,15 @@ atribuye un margen de error.
 La tercera población es el personal que interviene en el acceso: los
 vigilantes del acceso piloto y el personal del Departamento de Control
 Escolar. Son pocas personas y se eligen por la información que poseen, por lo
-que el muestreo es no probabilístico intencional. Se entrevistará al menos a
+que el muestreo es no probabilístico intencional, en el que la elección
+depende del criterio del investigador y no de la probabilidad
+\parencite{hernandezsampieri2014metodologia}. Se entrevistará al menos a
 un integrante de cada área (Apéndice~B).
+
+Además de las personas, el estudio somete a prueba el propio prototipo. Las
+pruebas de banco no trabajan con una muestra de estudiantes, sino con un
+número fijo de lecturas en cada condición de iluminación, brillo de pantalla
+y distancia, y con una lista cerrada de casos de validación (Apéndice~E).
 
 \subsection{Determinación del Tipo de Estudio}
 La clasificación del estudio se hace desde varios criterios que no se
@@ -75,10 +83,39 @@ tomada en cada uno y la razón que la sustenta.
 \end{table}
 
 En consecuencia, se trata de una investigación aplicada, de campo y
-cuasiexperimental. Sus resultados se interpretarán como evidencia orientativa
-para el acceso estudiado y no como una generalización, porque el diseño no
-descarta por completo otras causas de cambio, como la historia y la
-maduración \parencite{cranmer2017pretestposttest}.
+cuasiexperimental. Con la notación de \textcite{campbellstanley1963}, el
+diseño se representa como $G\;O_1\;X\;O_2$, donde $G$ es el acceso piloto,
+$O_1$ la primera serie de observación, $X$ la instalación del prototipo y
+$O_2$ la segunda serie. Sus resultados se interpretarán como evidencia
+orientativa para el acceso estudiado y no como una generalización, porque el
+diseño no descarta por completo otras causas de cambio, como la historia y la
+maduración \parencite{cranmer2017pretestposttest}. A ellas se suma la
+reacción de las personas al saberse observadas o ante una novedad, conocida
+como efecto Hawthorne \parencite{mccambridge2014hawthorne}. Para atenuarla,
+los observadores se colocan fuera del paso, se dejan dos días de adaptación
+al prototipo antes de la segunda serie y se registra el número de puntos de
+revisión activos en cada jornada.
+
+Las variables del estudio se definen de forma operacional en la
+Tabla~\ref{tab:variables-metodo}, es decir, por la manera en que se medirán.
+
+\begin{table}[tbp]
+	\caption{Definición Operacional de las Variables}
+	\label{tab:variables-metodo}
+	\small\linespread{1}\selectfont
+	\begin{tabular}{@{}P{3.2cm}P{6.2cm}P{2.6cm}P{3.1cm}@{}}
+		\toprule
+		Variable & Definición operacional & Unidad & Instrumento \\
+		\midrule
+		Mecanismo de validación (independiente) & Revisión visual de la credencial en la línea base; lectura del código QR dinámico durante el piloto. & Dos condiciones & Calendario del estudio \\[0.5em]
+		Tiempo de validación (dependiente) & Tiempo desde que el estudiante llega al punto de revisión hasta que lo cruza; se promedia por intervalo. & Segundos & Apéndice~C \\[0.5em]
+		Longitud máxima de la fila (dependiente) & Mayor número de personas formadas detrás del punto de revisión durante cada intervalo de cinco minutos. & Personas & Apéndice~C \\[0.5em]
+		Incidencias de identidad (complementaria) & Ingresos sin credencial, sin revisión y rechazados, contados por separado en cada intervalo. & Casos & Apéndice~C \\[0.5em]
+		Tasa de llegadas y utilización (de control) & Ingresos por minuto en cada intervalo y utilización $\rho = \lambda/(c\,\mu)$ con los puntos de revisión activos. & Estudiantes por minuto; sin unidad & Apéndice~C \\
+		\bottomrule
+	\end{tabular}
+	\tablenote{Elaboración propia a partir de la hipótesis y del Apéndice~C.}
+\end{table}
 
 \subsection{Selección, Diseño y Prueba del Instrumento}
 Cada técnica se eligió por el tipo de información que se necesita, y cada una
@@ -96,8 +133,8 @@ tiene su instrumento y su medio de aplicación
 		Observación estructurada no participante        & Hoja de registro (Apéndice~C)                   & Hoja impresa y cronómetro del celular                       & Ingresos, longitud máxima de la fila, tiempo de validación e incidencias por intervalo.          \\[0.5em]
 		Encuesta                                        & Cuestionario (Apéndice~A)                       & Google Forms y, si hace falta, copia impresa                & Percepción del acceso, disponibilidad de celular, conexión y batería, y disposición a usar el QR. \\[0.5em]
 		Entrevista semiestructurada                     & Guía de entrevista (Apéndice~B)                 & Presencial, con notas escritas                              & Procedimiento real de revisión, matrícula por turno y condiciones para tratar datos personales.  \\[0.5em]
-		Medición técnica                                & Hoja de registro de pruebas de banco            & Prototipo, cronómetro y registro del servidor               & Tiempo de una lectura completa y proporción de lecturas exitosas antes del piloto.               \\[0.5em]
-		Revisión documental                             & Ficha de requisitos legales                     & Consulta de las leyes de protección de datos                & Requisitos del aviso de privacidad, del resguardo y del periodo de conservación.                 \\
+		Medición técnica                                & Protocolo y hoja de pruebas de banco (Apéndice~E) & Prototipo, cronómetro y registro del servidor               & Tiempo de una lectura completa y proporción de lecturas exitosas antes del piloto.               \\[0.5em]
+		Revisión documental                             & Ficha de requisitos legales (Apéndice~F)        & Consulta de las leyes de protección de datos                & Requisitos del aviso de privacidad, del resguardo y del periodo de conservación.                 \\
 		\bottomrule
 	\end{tabular}
 	\tablenote{Elaboración propia. La revisión documental se basa en la ley
@@ -107,7 +144,10 @@ tiene su instrumento y su medio de aplicación
 
 Antes de aplicarlos, los instrumentos se probarán para corregir lo que no
 funcione. El cuestionario se aplicará a un grupo de diez estudiantes que no
-formarán parte de la muestra, para verificar que las preguntas se entiendan,
+formarán parte de la muestra. Un grupo pequeño basta, porque la prueba
+piloto de un instrumento busca comprobar su claridad y su factibilidad, no
+estimar parámetros de la población \parencite{hertzog2008pilot}. Con esa
+prueba se verificará que las preguntas se entiendan,
 que las opciones de respuesta no se traslapen y que el tiempo de respuesta
 sea de unos cinco minutos. La hoja de observación se ensayará durante un día
 en el acceso piloto, con los dos observadores, para confirmar que es posible
@@ -135,12 +175,13 @@ actividad.
 		Actividad                                                             & Periodo                                   & Instrumento o producto                          \\
 		\midrule
 		Solicitud de autorización a la Dirección y a Control Escolar          & 18 al 20 de noviembre de 2026             & Oficio de solicitud                             \\[0.5em]
+		Revisión de la legislación y ficha de requisitos legales             & 18 al 27 de noviembre de 2026             & Ficha de requisitos (Apéndice~F)                \\[0.5em]
 		Prueba del cuestionario y ensayo de la hoja de observación            & 23 y 24 de noviembre de 2026              & Apéndices A y C corregidos                      \\[0.5em]
 		Entrevistas a vigilancia y a Control Escolar                          & 23 al 27 de noviembre de 2026             & Guía de entrevista (Apéndice~B)                 \\[0.5em]
 		Aplicación de la encuesta                                             & 25 de noviembre al 4 de diciembre de 2026 & Cuestionario (Apéndice~A)                       \\[0.5em]
-		Pruebas de banco del prototipo                                        & 30 de noviembre al 4 de diciembre de 2026 & Hoja de registro de pruebas de banco            \\[0.5em]
+		Pruebas de banco del prototipo                                        & 30 de noviembre al 4 de diciembre de 2026 & Hoja de pruebas de banco (Apéndice~E)          \\[0.5em]
 		Primera serie de observación (línea base)                             & 30 de noviembre al 4 de diciembre de 2026 & Hoja de observación (Apéndice~C)                \\[0.5em]
-		Instalación, alta de estudiantes y adaptación al prototipo            & 7 y 8 de diciembre de 2026                & Aviso de privacidad y padrón del piloto         \\[0.5em]
+		Instalación, alta de estudiantes y adaptación al prototipo            & 7 y 8 de diciembre de 2026                & Aviso de privacidad y consentimiento (Apéndice~G) \\[0.5em]
 		Segunda serie de observación (piloto)                                 & 9 al 15 de diciembre de 2026              & Hoja de observación (Apéndice~C)                \\[0.5em]
 		Procesamiento y análisis de los datos                                 & 16 de diciembre de 2026 al 15 de enero de 2027 & Base de datos y resultados                 \\[0.5em]
 		Presentación de resultados                                            & 18 al 29 de enero de 2027                 & Informe final                                   \\
@@ -165,7 +206,8 @@ El procedimiento de recolección seguirá estos pasos:
 	      al inicio de la entrevista.
 	\item Obtener el consentimiento: la respuesta voluntaria al cuestionario,
 	      el consentimiento verbal de los entrevistados y la autorización escrita
-	      de los estudiantes que se den de alta en el piloto.
+	      de los estudiantes que se den de alta en el piloto, con el formato del
+	      Apéndice~G.
 	\item Aplicar la encuesta y las entrevistas, y levantar la primera serie de
 	      observación durante cinco días hábiles consecutivos.
 	\item Instalar el prototipo, dar de alta a los estudiantes participantes y
@@ -191,8 +233,9 @@ En cuanto a las consideraciones éticas, la encuesta es anónima y voluntaria y
 no pide nombre ni matrícula; la entrevista no registra nombres; la
 observación anota conteos y tiempos, nunca datos que identifiquen a un
 estudiante. Los datos del piloto se tratarán conforme a la legislación de
-protección de datos personales \parencite{edomex2017datos, lgpdppso2025}: los
-estudiantes recibirán el aviso de privacidad antes de darse de alta, solo se
+protección de datos personales \parencite{edomex2017datos, lgpdppso2025},
+según los requisitos reunidos en el Apéndice~F: los estudiantes recibirán el
+aviso de privacidad del Apéndice~G antes de darse de alta, solo se
 registrarán los datos necesarios para validar el acceso, y los registros se
 conservarán durante el periodo que se acuerde con Control Escolar. Quien no
 quiera participar en el piloto seguirá entrando con la revisión manual.
@@ -204,7 +247,11 @@ formulario en línea. Antes del análisis se revisará que no falten datos, se
 eliminarán los cuestionarios duplicados o incompletos, se corregirán las
 inconsistencias con la hoja original y se codificarán las respuestas: las
 opciones de la escala de Likert con valores del 1 al 5 y las demás preguntas
-cerradas como categorías. Los cálculos se harán con scripts de Python, que se
+cerradas como categorías. Las respuestas de la escala son datos ordinales: la
+distancia entre «de acuerdo» y «totalmente de acuerdo» no es necesariamente
+igual a la que hay entre otras dos opciones, por lo que se resumirán con la
+mediana y las frecuencias y no con la media \parencite{jamieson2004likert}.
+Los cálculos se harán con scripts de Python, que se
 conservarán junto con los datos para que el análisis pueda repetirse.
 
 El análisis cuantitativo tiene dos partes. La primera es descriptiva: con los
@@ -214,31 +261,43 @@ Apéndice~C, y se identifican los intervalos con utilización igual o mayor
 que 1. Para cada serie se informan la media, la mediana y la desviación
 estándar del tiempo de validación y de la longitud máxima de la fila. De la
 encuesta se obtienen frecuencias y porcentajes de cada respuesta, y la
-mediana de cada afirmación de la escala.
+mediana de cada afirmación de la escala. La viabilidad tecnológica se
+expresa como la proporción de estudiantes que dicen llevar siempre o casi
+siempre un celular propio, con conexión y con batería al llegar; la
+disposición a usar el sistema, como la proporción que marca 4 o 5 en la
+afirmación 13.
 
 La segunda parte contrasta la hipótesis. Los estudiantes cronometrados antes
 y durante el piloto no son los mismos, de modo que la unidad de análisis es
 el intervalo: cada uno de los 40 intervalos de la línea base se empareja con
 el intervalo que ocupa la misma posición, en el mismo día de la serie, en el
 piloto. Con esos 40 pares se compara el tiempo medio de validación y la
-longitud máxima de la fila. Si las diferencias tienen una distribución
-aproximadamente normal, se usará la prueba \emph{t} para muestras
-relacionadas; si no, la prueba de rangos con signo de Wilcoxon. En ambos
-casos se usará un nivel de significancia de 0.05 y se informará, además, la
-magnitud de la diferencia en segundos y en personas, porque una diferencia
-pequeña puede ser significativa sin tener importancia práctica.
+longitud máxima de la fila. Primero se revisará la normalidad de las
+diferencias con la prueba de Shapiro-Wilk \parencite{shapiro1965normality}.
+Si las diferencias tienen una distribución aproximadamente normal, se usará
+la prueba \emph{t} para muestras relacionadas; si no, la prueba de rangos con
+signo de Wilcoxon \parencite{wilcoxon1945ranking}, que no supone normalidad.
+En ambos casos se usará un nivel de significancia de 0.05 y la hipótesis
+nula de que el prototipo no reduce el tiempo de validación ni la fila. Se
+informará, además, el tamaño del efecto y la magnitud de la diferencia en
+segundos y en personas, porque el valor \emph{p} indica si hay una
+diferencia, pero no qué tan grande es \parencite{sullivan2012effectsize}.
 
 Las incidencias de identidad, es decir, los ingresos sin credencial, sin
 revisión y rechazados, se resumirán por separado con frecuencias por serie,
 sin prueba estadística, como información complementaria sobre la seguridad.
 Las pruebas de banco se resumirán con el tiempo medio de una lectura completa
 y la proporción de lecturas exitosas en cada condición de iluminación,
-brillo y distancia.
+brillo y distancia, y se compararán con los criterios de aceptación del
+Apéndice~E antes de autorizar el piloto.
 
-El análisis cualitativo se aplica a las entrevistas. Las notas se
-transcribirán y se clasificarán en categorías definidas por las preguntas de
-la guía: procedimiento de revisión, casos excepcionales, matrícula y
-afluencia, y condiciones institucionales para tratar datos. Dentro de cada
+El análisis cualitativo se aplica a las entrevistas mediante un análisis
+temático, que identifica y organiza patrones de significado en los datos
+\parencite{braun2006thematic}. Las notas se transcribirán y se codificarán
+con categorías iniciales tomadas de la guía: procedimiento de revisión, casos
+excepcionales, matrícula y afluencia, y condiciones institucionales para
+tratar datos. Si aparecen temas que no caben en ellas, se agregarán como
+categorías nuevas. Dentro de cada
 categoría se compararán las respuestas de vigilancia y de Control Escolar
 para identificar coincidencias y diferencias. Los resultados de la encuesta y
 de las entrevistas sirven para el diagnóstico y los requisitos del sistema; la

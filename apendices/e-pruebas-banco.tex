@@ -1,0 +1,75 @@
+\section{Protocolo y Hoja de Registro de las Pruebas de Banco}
+\apendiceindice{E}{Protocolo y Hoja de Registro de las Pruebas de Banco}
+
+\subsection{Propósito}
+Las pruebas de banco comprueban, antes del piloto, que el lector y el
+servidor validan correctamente los códigos y que una lectura completa no
+tarda más que la revisión manual. Se hacen con el prototipo armado fuera del
+acceso, con estudiantes del equipo como usuarios.
+
+\subsection{Pruebas de Lectura}
+Se mide el tiempo de una lectura completa, desde que la pantalla con el
+código queda frente a la cámara hasta que el servidor responde y el
+controlador libera el torniquete. Se combinan tres condiciones de
+iluminación (luz natural directa, sombra y luz artificial), dos niveles de
+brillo de pantalla (50\,\% y 100\,\%) y dos distancias entre la pantalla y la
+cámara (15 y 30~cm), lo que da 12 condiciones. En cada una se hacen 30
+lecturas, para un total de 360. Cada lectura se registra como exitosa si
+el código se reconoce al primer intento, en no más de cinco segundos.
+
+\subsection{Pruebas de Validación}
+Se comprueba que el servidor acepte solo los códigos válidos. Cada caso de la
+lista se prueba al menos cinco veces:
+\begin{enumerate}
+	\item Código vigente de un estudiante dado de alta (debe aceptarse).
+	\item Código vencido.
+	\item Código ya utilizado (repetido).
+	\item Código alterado en uno o más caracteres.
+	\item Código con firma inválida.
+	\item Código de un estudiante dado de baja.
+	\item Desfase de reloj dentro de la tolerancia (debe aceptarse).
+	\item Desfase de reloj fuera de la tolerancia.
+\end{enumerate}
+
+\subsection{Criterios de Aceptación}
+El prototipo pasa al piloto si cumple tres condiciones: el 100\,\% de los
+casos 2 a 6 y 8 se rechaza y los casos 1 y 7 se aceptan; al menos el
+95\,\% de las lecturas de cada condición resulta exitosa (meta provisional,
+que el equipo puede ajustar con los resultados); y el tiempo medio de una
+lectura completa es menor que el tiempo medio de validación de la línea base
+(Apéndice~C).
+
+\subsection{Hoja de Registro}
+\noindent Fecha: \linea[3cm] \quad Responsable: \linea[5cm]\\[0.5em]
+Versión del firmware: \linea[3cm]
+
+\medskip
+\noindent
+{\small
+	\begin{tabular}{|p{2.4cm}|p{1.4cm}|p{1.6cm}|p{1.1cm}|p{2.2cm}|p{1.8cm}|p{2.1cm}|}
+		\hline
+		\textbf{Iluminación} & \textbf{Brillo} & \textbf{Distancia} & \textbf{Núm.} & \textbf{Tiempo (s)} & \textbf{¿Exitosa?} & \textbf{Notas} \\
+		\hline
+		                     &                 &                    & 1             &                     &                    &                        \\[0.6em] \hline
+		                     &                 &                    & 2             &                     &                    &                        \\[0.6em] \hline
+		                     &                 &                    & 3             &                     &                    &                        \\[0.6em] \hline
+		                     &                 &                    & \dots         &                     &                    &                        \\[0.6em] \hline
+		                     &                 &                    & 30            &                     &                    &                        \\[0.6em] \hline
+	\end{tabular}}
+
+\medskip
+\noindent
+{\small
+	\begin{tabular}{|p{6cm}|p{2cm}|p{2.6cm}|p{3.6cm}|}
+		\hline
+		\textbf{Caso de validación} & \textbf{Intentos} & \textbf{Resultado esperado} & \textbf{Resultado obtenido} \\
+		\hline
+		1. Código vigente           &                   & Aceptado                    &                             \\ \hline
+		2. Código vencido           &                   & Rechazado                   &                             \\ \hline
+		3. Código repetido          &                   & Rechazado                   &                             \\ \hline
+		4. Código alterado          &                   & Rechazado                   &                             \\ \hline
+		5. Firma inválida           &                   & Rechazado                   &                             \\ \hline
+		6. Estudiante dado de baja  &                   & Rechazado                   &                             \\ \hline
+		7. Desfase dentro de la tolerancia & & Aceptado &                             \\ \hline
+		8. Desfase fuera de la tolerancia  & & Rechazado &                            \\ \hline
+	\end{tabular}}
