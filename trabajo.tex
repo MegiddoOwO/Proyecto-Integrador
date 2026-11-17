@@ -54,6 +54,7 @@
 \ifdefined\soloproblemaobjetivos\def\def@donotrepeattitle{}\fi
 \ifdefined\solomarcoteorico\def\def@donotrepeattitle{}\fi
 \ifdefined\solohipotesis\def\def@donotrepeattitle{}\fi
+\ifdefined\solometodo\def\def@donotrepeattitle{}\fi
 \patchcmd{\maketitle}{\section*{\protect\normalfont\textbf{\@title}}}
   {\section*{\protect\normalfont\textbf{\@title}}\addcontentsline{toc}{section}{\@title}}{}{}
 \makeatother
@@ -96,7 +97,11 @@
 \ifdefined\solohipotesis
 \title{Hipótesis de Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
 \else
+\ifdefined\solometodo
+\title{Bosquejo del Método de Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
+\else
 \title{Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
+\fi
 \fi
 \fi
 \fi
@@ -123,7 +128,11 @@
 \ifdefined\solohipotesis
 \duedate{12 de noviembre de 2026}
 \else
+\ifdefined\solometodo
+\duedate{17 de noviembre de 2026}
+\else
 \duedate{30 de septiembre de 2026}
+\fi
 \fi
 \fi
 \fi
@@ -159,6 +168,11 @@
 \else
 \ifdefined\solohipotesis
 	\input{secciones/15-hipotesis}
+
+	\printbibliography
+\else
+\ifdefined\solometodo
+	\input{secciones/16-bosquejo-metodo}
 
 	\printbibliography
 \else
@@ -228,6 +242,7 @@
 			\fi
 		\fi
 	\fi
+\fi
 \fi
 \fi
 \fi
