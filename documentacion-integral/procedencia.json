@@ -1,0 +1,77 @@
+{
+  "fecha_revision": "2026-11-13",
+  "hoja": "https://docs.google.com/spreadsheets/d/1OPwoyW0Szve5_up1tRR9yeShl-_CUFiBBaYvUr-OOFY/edit?gid=1001",
+  "archivos": [
+    {
+      "ruta": "/home/kedap/Documentos/escuela/facial/reconocimiento_facial/README.md",
+      "sha256": "067fba249b46a0ffe3eeec6414d46d736d24c87b1503997d201a5de9a58bd61a",
+      "bytes": 9077
+    },
+    {
+      "ruta": "/home/kedap/Documentos/escuela/facial/reconocimiento_facial/pyproject.toml",
+      "sha256": "ef5b379745f88560d3bd0d92447f98c53ece12d15cf557fe62d102be3cb977f5",
+      "bytes": 235
+    },
+    {
+      "ruta": "/home/kedap/Documentos/escuela/facial/reconocimiento_facial/uv.lock",
+      "sha256": "154dd9b1e76e72835cf19a3f63b00b916479eb8114473c90feb2545705fec4ff",
+      "bytes": 275061
+    },
+    {
+      "ruta": "/home/kedap/Documentos/escuela/facial/reconocimiento_facial/comun.py",
+      "sha256": "17ad700f489e2265bea09b187d33b49816ce6739eeeea9dc617784b83aa2d9c1",
+      "bytes": 6449
+    },
+    {
+      "ruta": "/home/kedap/Documentos/escuela/facial/reconocimiento_facial/registrar.py",
+      "sha256": "05794d44626bd57bae64357b20ea59fa98dce4c17da2dbead25dd8d5ac092e58",
+      "bytes": 3939
+    },
+    {
+      "ruta": "/home/kedap/Documentos/escuela/facial/reconocimiento_facial/reconocer.py",
+      "sha256": "c9ba2d91077b02a67e0c5c51f51f3584c87c459f1d76306b20a98ea242138019",
+      "bytes": 6859
+    },
+    {
+      "ruta": "/home/kedap/Documentos/escuela/facial/reconocimiento_facial/vida.py",
+      "sha256": "2e38e9942599b1fc1b477ae2c6bf2c8e49b52cd99537981aaeb85e04d84a87ff",
+      "bytes": 7778
+    },
+    {
+      "ruta": "/home/kedap/Documentos/escuela/facial/reconocimiento_facial/sesion.py",
+      "sha256": "94480fba292cd8d4fc4a2657cdcbc8346bf7834c139deb18f9c5c6dc5a6215c6",
+      "bytes": 3357
+    },
+    {
+      "ruta": "/home/kedap/Documentos/escuela/facial/reconocimiento_facial/analizar.py",
+      "sha256": "fcd65dbcc12fa0b9fb6c84083c81864f3782f3e80adc8f19c9338e657fdb15e5",
+      "bytes": 2083
+    },
+    {
+      "ruta": "/home/kedap/Documentos/escuela/facial/reconocimiento_facial/borrar_datos.py",
+      "sha256": "90b041248ec3e6356c87057a7d2f194318db55cda2d26bcd97e8e965cbd2eaf2",
+      "bytes": 1315
+    },
+    {
+      "ruta": "/home/kedap/Documentos/escuela/facial/reconocimiento_facial/descargar_modelos.py",
+      "sha256": "77ca1fd238781c86ff6df42e1259a69c7231b47aa1fba64889d8186f466e6551",
+      "bytes": 4852
+    },
+    {
+      "ruta": "/home/kedap/Documentos/escuela/facial/reconocimiento_facial/resultados/pruebas.csv",
+      "sha256": "6294d7a174b17dc1f07396e6c7e453ed55e524e66e771d2b41b7070e79ebcf38",
+      "bytes": 135
+    },
+    {
+      "ruta": "/home/kedap/Documentos/repos/Proyecto-Integrador/evidencias/avances-2026-10-13/resultados/pruebas.csv",
+      "sha256": "f91e4970bc3f10764f9c556410b03d7d66309e2a459eaacfc8c56f301e25e96c",
+      "bytes": 5258
+    },
+    {
+      "ruta": "/home/kedap/Documentos/repos/Proyecto-Integrador/documentacion-integral/pert-hoja-fuente.json",
+      "sha256": "940489fe26dbc51ea5eb76cb8ba3e5bce991abf97eda273d2df4b7f8fa7acc8f",
+      "bytes": 5580
+    }
+  ],
+  "nota_version": "Inventario de la versión inicial 1.0. Para los CSV e imágenes actualizados en la versión 1.1, consultar evidencias-2026-11-13/procedencia.json."
+}

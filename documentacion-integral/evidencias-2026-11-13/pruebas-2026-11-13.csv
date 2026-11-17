@@ -1,0 +1,25 @@
+fecha_hora,tecnologia,sujeto,condicion,resultado_esperado,resultado_obtenido,identidad_detectada,similitud,tiempo_ms,correcto,detalle
+2026-11-13T15:56:25,facial-buffalo_l+vida_ambas,s01,luz_normal,acepta,rechaza_vida,s01,0.8369,7206.3,0,pasiva=1.00 no_cumplio_derecha(max_giro=-5°)
+2026-11-13T15:58:23,facial-buffalo_l+vida_ambas,s01,luz_normal,acepta,rechaza_vida,s01,0.8282,225.3,0,pasiva_rostro_cortado(alejate_o_centrate)
+2026-11-13T15:58:33,facial-buffalo_l+vida_ambas,s01,luz_normal,acepta,acepta,s01,0.8572,7164.1,1,pasiva=1.00 paralaje=0.30/0.26
+2026-11-13T15:58:42,facial-buffalo_l+vida_ambas,s01,luz_normal,acepta,acepta,s01,0.8217,3423.0,1,pasiva=1.00 paralaje=0.26/0.24
+2026-11-13T15:59:31,facial-buffalo_l+vida_ambas,s01,foto_celular,rechaza,rechaza_vida,s01,0.6630,154.0,1,pasiva=0.03
+2026-11-13T15:59:36,facial-buffalo_l+vida_ambas,s01,foto_celular,rechaza,rechaza_vida,s01,0.6777,330.0,1,pasiva=0.01
+2026-11-13T15:59:37,facial-buffalo_l+vida_ambas,s01,foto_celular,rechaza,rechaza_vida,s01,0.6896,212.4,1,pasiva=0.05
+2026-11-13T15:59:38,facial-buffalo_l+vida_ambas,s01,foto_celular,rechaza,rechaza_vida,s01,0.6653,268.9,1,pasiva=0.04
+2026-11-13T15:59:39,facial-buffalo_l+vida_ambas,s01,foto_celular,rechaza,rechaza_vida,s01,0.6897,226.2,1,pasiva=0.01
+2026-11-13T16:00:10,facial-buffalo_l+vida_ambas,s01,foto_celular,rechaza,acepta,s01,0.7808,4100.7,0,pasiva=1.00 paralaje=0.26/0.26
+2026-11-13T16:00:15,facial-buffalo_l+vida_ambas,s01,foto_celular,rechaza,rechaza_vida,s01,0.6241,211.7,1,pasiva=0.27
+2026-11-13T16:00:16,facial-buffalo_l+vida_ambas,s01,foto_celular,rechaza,rechaza_vida,s01,0.6412,219.3,1,pasiva=0.04
+2026-11-13T16:01:21,facial-buffalo_l+vida_ambas,s03,luz_normal,acepta,acepta,s03,0.7618,5915.2,1,pasiva=1.00 paralaje=0.29/0.24
+2026-11-13T16:01:41,facial-buffalo_l+vida_ambas,s03,luz_normal,acepta,rechaza_vida,s04,0.8056,5245.2,0,pasiva=1.00 no_cumplio_izquierda(max_giro=16°)
+2026-11-13T16:02:00,facial-buffalo_l+vida_ambas,s03,luz_normal,acepta,acepta,s04,0.7947,12021.2,0,pasiva=1.00 paralaje=0.20/0.24
+2026-11-13T16:02:57,facial-buffalo_l+vida_ambas,s03,luz_normal,acepta,rechaza,,0.1929,212.4,0,
+2026-11-13T16:02:59,facial-buffalo_l+vida_ambas,s03,luz_normal,acepta,rechaza,,0.1954,204.9,0,
+2026-11-13T16:03:03,facial-buffalo_l+vida_ambas,s03,luz_normal,acepta,rechaza,,0.1693,209.6,0,
+2026-11-13T16:03:09,facial-buffalo_l+vida_ambas,s03,luz_normal,acepta,rechaza,,0.1729,199.8,0,
+2026-11-13T16:03:11,facial-buffalo_l+vida_ambas,s03,luz_normal,acepta,rechaza,,0.1612,207.8,0,
+2026-11-13T16:03:13,facial-buffalo_l+vida_ambas,s03,luz_normal,acepta,rechaza,,0.1524,284.9,0,
+2026-11-13T16:03:14,facial-buffalo_l+vida_ambas,s03,luz_normal,acepta,rechaza,,0.1774,206.3,0,
+2026-11-13T16:03:15,facial-buffalo_l+vida_ambas,s03,luz_normal,acepta,rechaza,,0.2199,212.4,0,
+2026-11-13T16:03:26,facial-buffalo_l+vida_ambas,s03,luz_normal,acepta,acepta,s03,0.7444,5275.3,1,pasiva=1.00 paralaje=0.25/0.25
