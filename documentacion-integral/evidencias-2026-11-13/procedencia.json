@@ -1,0 +1,156 @@
+{
+  "fecha_revision": "2026-11-13",
+  "nota": "Series de octubre y noviembre separadas. Analizar original ejecutado aislando únicamente la constante de ruta de comun.",
+  "archivos": [
+    {
+      "origen": "/home/kedap/Documentos/escuela/facial/reconocimiento_facial/Imagenes/Captura desde 2026-11-13 14-52-08.png",
+      "copia": "evidencias-2026-11-13/imagenes/01.png",
+      "sha256": "bcc216a7c2f836246350ac725186e79b9de29a30babbf9d7ec5b09913af240a6"
+    },
+    {
+      "origen": "/home/kedap/Documentos/escuela/facial/reconocimiento_facial/Imagenes/Captura desde 2026-11-13 15-59-55.png",
+      "copia": "evidencias-2026-11-13/imagenes/02.png",
+      "sha256": "662b1177f8c2449e3cc23e0c562eb9f290eef9cd0bb02619d414e868812f13bc"
+    },
+    {
+      "origen": "/home/kedap/Documentos/escuela/facial/reconocimiento_facial/Imagenes/Captura desde 2026-11-13 16-02-21.png",
+      "copia": "evidencias-2026-11-13/imagenes/03.png",
+      "sha256": "664a66c32b478845c9bf3c7dff584cae5454c84c3000777b44c3c40457dd09e3"
+    },
+    {
+      "origen": "/home/kedap/Documentos/escuela/facial/reconocimiento_facial/Imagenes/Captura desde 2026-11-13 16-02-28.png",
+      "copia": "evidencias-2026-11-13/imagenes/04.png",
+      "sha256": "421ea68d492bedfb69a44f72f2f961beb2ca266f7f9029cf4e6d80806523ef39"
+    },
+    {
+      "copia": "evidencias-2026-11-13/analisis-2026-10-13.csv",
+      "sha256": "546379f5f1de8d91e1e768a9b674aabcc44dd33f8bfda08227b21308dd4a08e7",
+      "filas": 6
+    },
+    {
+      "copia": "evidencias-2026-11-13/analisis-2026-11-13.csv",
+      "sha256": "8f925c10745b480f614594e2f6f28d7467a8d35fce65231fe67ef2a57344a9b2",
+      "filas": 2
+    },
+    {
+      "copia": "evidencias-2026-11-13/pruebas-2026-10-13.csv",
+      "sha256": "f91e4970bc3f10764f9c556410b03d7d66309e2a459eaacfc8c56f301e25e96c",
+      "filas": 45
+    },
+    {
+      "copia": "evidencias-2026-11-13/pruebas-2026-11-13.csv",
+      "sha256": "aa2fce52fba0a7dc2b1551303706da6be43dd92ba3c3f76bd1476cc9fc64a6d9",
+      "filas": 24
+    }
+  ],
+  "resumenes": {
+    "2026-10-13": [
+      {
+        "tecnologia": "facial-buffalo_l+vida_activa",
+        "condicion": "calib_real_activa",
+        "resultado_esperado": "acepta",
+        "intentos": 5,
+        "aciertos": 4,
+        "porcentaje_correcto": 80.0,
+        "falsos_rechazos": 1,
+        "falsas_aceptaciones": 0,
+        "media_ms": 5520.639999999999,
+        "mediana_ms": 5464.2,
+        "maximo_ms": 7231.5
+      },
+      {
+        "tecnologia": "facial-buffalo_l+vida_ambas",
+        "condicion": "calib_foto_s01",
+        "resultado_esperado": "rechaza",
+        "intentos": 10,
+        "aciertos": 10,
+        "porcentaje_correcto": 100.0,
+        "falsos_rechazos": 0,
+        "falsas_aceptaciones": 0,
+        "media_ms": 245.94,
+        "mediana_ms": 215.2,
+        "maximo_ms": 300.7
+      },
+      {
+        "tecnologia": "facial-buffalo_l+vida_ambas",
+        "condicion": "calib_otras_personas",
+        "resultado_esperado": "rechaza",
+        "intentos": 5,
+        "aciertos": 5,
+        "porcentaje_correcto": 100.0,
+        "falsos_rechazos": 0,
+        "falsas_aceptaciones": 0,
+        "media_ms": 234.16,
+        "mediana_ms": 215.4,
+        "maximo_ms": 301.0
+      },
+      {
+        "tecnologia": "facial-buffalo_l+vida_ambas",
+        "condicion": "calibracion",
+        "resultado_esperado": "acepta",
+        "intentos": 5,
+        "aciertos": 5,
+        "porcentaje_correcto": 100.0,
+        "falsos_rechazos": 0,
+        "falsas_aceptaciones": 0,
+        "media_ms": 6008.9,
+        "mediana_ms": 6494.4,
+        "maximo_ms": 7044.4
+      },
+      {
+        "tecnologia": "facial-buffalo_l+vida_pasiva",
+        "condicion": "calib_foto_celular",
+        "resultado_esperado": "rechaza",
+        "intentos": 10,
+        "aciertos": 10,
+        "porcentaje_correcto": 100.0,
+        "falsos_rechazos": 0,
+        "falsas_aceptaciones": 0,
+        "media_ms": 207.1,
+        "mediana_ms": 218.95,
+        "maximo_ms": 243.5
+      },
+      {
+        "tecnologia": "facial-buffalo_l+vida_pasiva",
+        "condicion": "calib_real",
+        "resultado_esperado": "acepta",
+        "intentos": 10,
+        "aciertos": 9,
+        "porcentaje_correcto": 90.0,
+        "falsos_rechazos": 1,
+        "falsas_aceptaciones": 0,
+        "media_ms": 216.39,
+        "mediana_ms": 221.75,
+        "maximo_ms": 275.5
+      }
+    ],
+    "2026-11-13": [
+      {
+        "tecnologia": "facial-buffalo_l+vida_ambas",
+        "condicion": "foto_celular",
+        "resultado_esperado": "rechaza",
+        "intentos": 8,
+        "aciertos": 7,
+        "porcentaje_correcto": 87.5,
+        "falsos_rechazos": 0,
+        "falsas_aceptaciones": 1,
+        "media_ms": 715.4,
+        "mediana_ms": 222.75,
+        "maximo_ms": 4100.7
+      },
+      {
+        "tecnologia": "facial-buffalo_l+vida_ambas",
+        "condicion": "luz_normal",
+        "resultado_esperado": "acepta",
+        "intentos": 16,
+        "aciertos": 4,
+        "porcentaje_correcto": 25.0,
+        "falsos_rechazos": 11,
+        "falsas_aceptaciones": 1,
+        "media_ms": 3013.3562500000003,
+        "mediana_ms": 255.1,
+        "maximo_ms": 12021.2
+      }
+    ]
+  }
+}

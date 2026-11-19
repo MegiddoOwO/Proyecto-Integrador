@@ -1,0 +1,3 @@
+﻿tecnologia,condicion,resultado_esperado,intentos,aciertos,porcentaje_correcto,falsos_rechazos,falsas_aceptaciones,media_ms,mediana_ms,maximo_ms
+facial-buffalo_l+vida_ambas,foto_celular,rechaza,8,7,87.5,0,1,715.4,222.75,4100.7
+facial-buffalo_l+vida_ambas,luz_normal,acepta,16,4,25.0,11,1,3013.3563,255.1,12021.2

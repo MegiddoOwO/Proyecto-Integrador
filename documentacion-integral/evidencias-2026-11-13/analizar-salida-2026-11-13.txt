@@ -1,0 +1,3 @@
+tecnologia                     condicion              esperado    n    %ok f.rech f.acep   media  mediana     max
+facial-buffalo_l+vida_ambas    foto_celular           rechaza     8  87.5%      0      1   715.4    222.8  4100.7
+facial-buffalo_l+vida_ambas    luz_normal             acepta     16  25.0%     11      1  3013.4    255.1 12021.2

@@ -1,0 +1,7 @@
+tecnologia                     condicion              esperado    n    %ok f.rech f.acep   media  mediana     max
+facial-buffalo_l+vida_activa   calib_real_activa      acepta      5  80.0%      1      0  5520.6   5464.2  7231.5
+facial-buffalo_l+vida_ambas    calib_foto_s01         rechaza    10 100.0%      0      0   245.9    215.2   300.7
+facial-buffalo_l+vida_ambas    calib_otras_personas   rechaza     5 100.0%      0      0   234.2    215.4   301.0
+facial-buffalo_l+vida_ambas    calibracion            acepta      5 100.0%      0      0  6008.9   6494.4  7044.4
+facial-buffalo_l+vida_pasiva   calib_foto_celular     rechaza    10 100.0%      0      0   207.1    218.9   243.5
+facial-buffalo_l+vida_pasiva   calib_real             acepta     10  90.0%      1      0   216.4    221.8   275.5

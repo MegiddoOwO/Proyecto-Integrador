@@ -1,0 +1,457 @@
+{
+  "fuente": "PERT Escanea y Entra, gid=1001, A2:J24",
+  "duracion": 57.833333333333336,
+  "actividades_criticas": [
+    "A",
+    "B",
+    "C",
+    "H",
+    "J",
+    "K",
+    "L",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "U",
+    "V",
+    "W"
+  ],
+  "rutas_criticas": [
+    [
+      "A",
+      "B",
+      "C",
+      "H",
+      "J",
+      "K",
+      "O",
+      "Q",
+      "R",
+      "U",
+      "V",
+      "W"
+    ],
+    [
+      "A",
+      "B",
+      "C",
+      "H",
+      "J",
+      "K",
+      "L",
+      "P",
+      "Q",
+      "R",
+      "U",
+      "V",
+      "W"
+    ]
+  ],
+  "varianzas_rutas": [
+    7.194444444444445,
+    6.194444444444445
+  ],
+  "suma_tiempos": 107.83333333333333,
+  "actividades": {
+    "A": {
+      "id": "A",
+      "nombre": "Planteamiento del problema y pregunta de investigación",
+      "predecesoras": [],
+      "a": 3,
+      "m": 5,
+      "b": 8,
+      "te": 5.166666666666667,
+      "varianza": 0.6944444444444444,
+      "ES": 0.0,
+      "EF": 5.166666666666667,
+      "LF": 5.166666666666667,
+      "LS": 0.0,
+      "holgura": 0.0
+    },
+    "B": {
+      "id": "B",
+      "nombre": "Objetivos, justificación y metodología",
+      "predecesoras": [
+        "A"
+      ],
+      "a": 3,
+      "m": 5,
+      "b": 8,
+      "te": 5.166666666666667,
+      "varianza": 0.6944444444444444,
+      "ES": 5.166666666666667,
+      "EF": 10.333333333333334,
+      "LF": 10.333333333333334,
+      "LS": 5.166666666666667,
+      "holgura": 0.0
+    },
+    "C": {
+      "id": "C",
+      "nombre": "Diseño de instrumentos (encuesta, entrevista y hoja de observación)",
+      "predecesoras": [
+        "B"
+      ],
+      "a": 2,
+      "m": 4,
+      "b": 6,
+      "te": 4.0,
+      "varianza": 0.4444444444444444,
+      "ES": 10.333333333333334,
+      "EF": 14.333333333333334,
+      "LF": 14.333333333333334,
+      "LS": 10.333333333333334,
+      "holgura": 0.0
+    },
+    "D": {
+      "id": "D",
+      "nombre": "Prueba de concepto facial (registro, reconocimiento y prueba de vida)",
+      "predecesoras": [
+        "A"
+      ],
+      "a": 2,
+      "m": 4,
+      "b": 7,
+      "te": 4.166666666666667,
+      "varianza": 0.6944444444444444,
+      "ES": 5.166666666666667,
+      "EF": 9.333333333333334,
+      "LF": 26.833333333333332,
+      "LS": 22.666666666666668,
+      "holgura": 17.5
+    },
+    "E": {
+      "id": "E",
+      "nombre": "Firmware del ESP32-CAM como cámara de red",
+      "predecesoras": [
+        "D"
+      ],
+      "a": 1,
+      "m": 2,
+      "b": 5,
+      "te": 2.3333333333333335,
+      "varianza": 0.4444444444444444,
+      "ES": 9.333333333333334,
+      "EF": 11.666666666666666,
+      "LF": 29.166666666666668,
+      "LS": 26.833333333333332,
+      "holgura": 17.5
+    },
+    "F": {
+      "id": "F",
+      "nombre": "Pruebas de banco del reconocimiento facial con voluntarios",
+      "predecesoras": [
+        "D",
+        "E"
+      ],
+      "a": 2,
+      "m": 3,
+      "b": 5,
+      "te": 3.1666666666666665,
+      "varianza": 0.25,
+      "ES": 11.666666666666666,
+      "EF": 14.833333333333334,
+      "LF": 50.166666666666664,
+      "LS": 47.0,
+      "holgura": 35.333333333333336
+    },
+    "G": {
+      "id": "G",
+      "nombre": "Aplicación de la encuesta y las entrevistas",
+      "predecesoras": [
+        "C"
+      ],
+      "a": 3,
+      "m": 5,
+      "b": 8,
+      "te": 5.166666666666667,
+      "varianza": 0.6944444444444444,
+      "ES": 14.333333333333334,
+      "EF": 19.5,
+      "LF": 19.666666666666668,
+      "LS": 14.5,
+      "holgura": 0.16666666666666666
+    },
+    "H": {
+      "id": "H",
+      "nombre": "Observación de la línea base en el acceso piloto",
+      "predecesoras": [
+        "C"
+      ],
+      "a": 5,
+      "m": 5,
+      "b": 7,
+      "te": 5.333333333333333,
+      "varianza": 0.1111111111111111,
+      "ES": 14.333333333333334,
+      "EF": 19.666666666666668,
+      "LF": 19.666666666666668,
+      "LS": 14.333333333333334,
+      "holgura": 0.0
+    },
+    "I": {
+      "id": "I",
+      "nombre": "Requisitos de protección de datos personales",
+      "predecesoras": [
+        "B"
+      ],
+      "a": 2,
+      "m": 3,
+      "b": 6,
+      "te": 3.3333333333333335,
+      "varianza": 0.4444444444444444,
+      "ES": 10.333333333333334,
+      "EF": 13.666666666666666,
+      "LF": 22.833333333333332,
+      "LS": 19.5,
+      "holgura": 9.166666666666666
+    },
+    "J": {
+      "id": "J",
+      "nombre": "Análisis del diagnóstico y requisitos del sistema",
+      "predecesoras": [
+        "G",
+        "H"
+      ],
+      "a": 2,
+      "m": 3,
+      "b": 5,
+      "te": 3.1666666666666665,
+      "varianza": 0.25,
+      "ES": 19.666666666666668,
+      "EF": 22.833333333333332,
+      "LF": 22.833333333333332,
+      "LS": 19.666666666666668,
+      "holgura": 0.0
+    },
+    "K": {
+      "id": "K",
+      "nombre": "Diseño de la arquitectura y de la base de datos",
+      "predecesoras": [
+        "I",
+        "J"
+      ],
+      "a": 3,
+      "m": 5,
+      "b": 8,
+      "te": 5.166666666666667,
+      "varianza": 0.6944444444444444,
+      "ES": 22.833333333333332,
+      "EF": 28.0,
+      "LF": 28.0,
+      "LS": 22.833333333333332,
+      "holgura": 0.0
+    },
+    "L": {
+      "id": "L",
+      "nombre": "Generación y validación de QR dinámicos con HMAC",
+      "predecesoras": [
+        "K"
+      ],
+      "a": 4,
+      "m": 6,
+      "b": 10,
+      "te": 6.333333333333333,
+      "varianza": 1.0,
+      "ES": 28.0,
+      "EF": 34.333333333333336,
+      "LF": 34.333333333333336,
+      "LS": 28.0,
+      "holgura": 0.0
+    },
+    "M": {
+      "id": "M",
+      "nombre": "Base de datos de ingresos y panel web",
+      "predecesoras": [
+        "K"
+      ],
+      "a": 4,
+      "m": 7,
+      "b": 11,
+      "te": 7.166666666666667,
+      "varianza": 1.3611111111111112,
+      "ES": 28.0,
+      "EF": 35.166666666666664,
+      "LF": 36.5,
+      "LS": 29.333333333333332,
+      "holgura": 1.3333333333333333
+    },
+    "N": {
+      "id": "N",
+      "nombre": "Firmware del lector QR en el ESP32-CAM",
+      "predecesoras": [
+        "E",
+        "K"
+      ],
+      "a": 4,
+      "m": 7,
+      "b": 12,
+      "te": 7.333333333333333,
+      "varianza": 1.7777777777777777,
+      "ES": 28.0,
+      "EF": 35.333333333333336,
+      "LF": 36.5,
+      "LS": 29.166666666666668,
+      "holgura": 1.1666666666666667
+    },
+    "O": {
+      "id": "O",
+      "nombre": "Construcción del torniquete y su controlador ESP32",
+      "predecesoras": [
+        "K"
+      ],
+      "a": 5,
+      "m": 8,
+      "b": 14,
+      "te": 8.5,
+      "varianza": 2.25,
+      "ES": 28.0,
+      "EF": 36.5,
+      "LF": 36.5,
+      "LS": 28.0,
+      "holgura": 0.0
+    },
+    "P": {
+      "id": "P",
+      "nombre": "Pruebas de códigos vencidos, repetidos, alterados y desfase de reloj",
+      "predecesoras": [
+        "L"
+      ],
+      "a": 1,
+      "m": 2,
+      "b": 4,
+      "te": 2.1666666666666665,
+      "varianza": 0.25,
+      "ES": 34.333333333333336,
+      "EF": 36.5,
+      "LF": 36.5,
+      "LS": 34.333333333333336,
+      "holgura": 0.0
+    },
+    "Q": {
+      "id": "Q",
+      "nombre": "Integración del prototipo (lector, torniquete, servidor y panel)",
+      "predecesoras": [
+        "M",
+        "N",
+        "O",
+        "P"
+      ],
+      "a": 3,
+      "m": 5,
+      "b": 9,
+      "te": 5.333333333333333,
+      "varianza": 1.0,
+      "ES": 36.5,
+      "EF": 41.833333333333336,
+      "LF": 41.833333333333336,
+      "LS": 36.5,
+      "holgura": 0.0
+    },
+    "R": {
+      "id": "R",
+      "nombre": "Verificación técnica (tiempos y lecturas fallidas por luz, brillo y distancia)",
+      "predecesoras": [
+        "Q"
+      ],
+      "a": 2,
+      "m": 3,
+      "b": 5,
+      "te": 3.1666666666666665,
+      "varianza": 0.25,
+      "ES": 41.833333333333336,
+      "EF": 45.0,
+      "LF": 45.0,
+      "LS": 41.833333333333336,
+      "holgura": 0.0
+    },
+    "S": {
+      "id": "S",
+      "nombre": "Comparación de banco entre facial, QR y NFC",
+      "predecesoras": [
+        "F",
+        "R"
+      ],
+      "a": 2,
+      "m": 3,
+      "b": 6,
+      "te": 3.3333333333333335,
+      "varianza": 0.4444444444444444,
+      "ES": 45.0,
+      "EF": 48.333333333333336,
+      "LF": 53.5,
+      "LS": 50.166666666666664,
+      "holgura": 5.166666666666667
+    },
+    "T": {
+      "id": "T",
+      "nombre": "Autorización del plantel para instalar el prototipo",
+      "predecesoras": [
+        "K"
+      ],
+      "a": 3,
+      "m": 5,
+      "b": 10,
+      "te": 5.5,
+      "varianza": 1.3611111111111112,
+      "ES": 28.0,
+      "EF": 33.5,
+      "LF": 45.0,
+      "LS": 39.5,
+      "holgura": 11.5
+    },
+    "U": {
+      "id": "U",
+      "nombre": "Piloto controlado en el acceso, con observación",
+      "predecesoras": [
+        "R",
+        "T"
+      ],
+      "a": 5,
+      "m": 5,
+      "b": 7,
+      "te": 5.333333333333333,
+      "varianza": 0.1111111111111111,
+      "ES": 45.0,
+      "EF": 50.333333333333336,
+      "LF": 50.333333333333336,
+      "LS": 45.0,
+      "holgura": 0.0
+    },
+    "V": {
+      "id": "V",
+      "nombre": "Evaluación: comparación de la línea base con el piloto",
+      "predecesoras": [
+        "U"
+      ],
+      "a": 2,
+      "m": 3,
+      "b": 5,
+      "te": 3.1666666666666665,
+      "varianza": 0.25,
+      "ES": 50.333333333333336,
+      "EF": 53.5,
+      "LF": 53.5,
+      "LS": 50.333333333333336,
+      "holgura": 0.0
+    },
+    "W": {
+      "id": "W",
+      "nombre": "Informe final y recomendación sobre la integración",
+      "predecesoras": [
+        "S",
+        "V"
+      ],
+      "a": 3,
+      "m": 4,
+      "b": 7,
+      "te": 4.333333333333333,
+      "varianza": 0.4444444444444444,
+      "ES": 53.5,
+      "EF": 57.833333333333336,
+      "LF": 57.833333333333336,
+      "LS": 53.5,
+      "holgura": 0.0
+    }
+  }
+}

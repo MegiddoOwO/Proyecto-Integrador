@@ -1,0 +1,7 @@
+﻿tecnologia,condicion,resultado_esperado,intentos,aciertos,porcentaje_correcto,falsos_rechazos,falsas_aceptaciones,media_ms,mediana_ms,maximo_ms
+facial-buffalo_l+vida_activa,calib_real_activa,acepta,5,4,80.0,1,0,5520.64,5464.2,7231.5
+facial-buffalo_l+vida_ambas,calib_foto_s01,rechaza,10,10,100.0,0,0,245.94,215.2,300.7
+facial-buffalo_l+vida_ambas,calib_otras_personas,rechaza,5,5,100.0,0,0,234.16,215.4,301.0
+facial-buffalo_l+vida_ambas,calibracion,acepta,5,5,100.0,0,0,6008.9,6494.4,7044.4
+facial-buffalo_l+vida_pasiva,calib_foto_celular,rechaza,10,10,100.0,0,0,207.1,218.95,243.5
+facial-buffalo_l+vida_pasiva,calib_real,acepta,10,9,90.0,1,0,216.39,221.75,275.5
