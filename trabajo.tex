@@ -55,6 +55,8 @@
 \ifdefined\solomarcoteorico\def\def@donotrepeattitle{}\fi
 \ifdefined\solohipotesis\def\def@donotrepeattitle{}\fi
 \ifdefined\solometodo\def\def@donotrepeattitle{}\fi
+\ifdefined\soloprotocolo\def\def@donotrepeattitle{}\fi
+\ifdefined\solocronograma\def\def@donotrepeattitle{}\fi
 \patchcmd{\maketitle}{\section*{\protect\normalfont\textbf{\@title}}}
   {\section*{\protect\normalfont\textbf{\@title}}\addcontentsline{toc}{section}{\@title}}{}{}
 \makeatother
@@ -100,7 +102,15 @@
 \ifdefined\solometodo
 \title{Bosquejo del Método de Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
 \else
+\ifdefined\soloprotocolo
+\title{Protocolo de Investigación de Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
+\else
+\ifdefined\solocronograma
+\title{Cronograma y Presupuesto de Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
+\else
 \title{Escanea y Entra: Prototipo de Acceso QR para el TESCHA}
+\fi
+\fi
 \fi
 \fi
 \fi
@@ -131,7 +141,15 @@
 \ifdefined\solometodo
 \duedate{17 de noviembre de 2026}
 \else
+\ifdefined\soloprotocolo
+\duedate{17 de noviembre de 2026}
+\else
+\ifdefined\solocronograma
+\duedate{19 de noviembre de 2026}
+\else
 \duedate{30 de septiembre de 2026}
+\fi
+\fi
 \fi
 \fi
 \fi
@@ -170,6 +188,57 @@
 	\input{secciones/15-hipotesis}
 
 	\printbibliography
+\else
+\ifdefined\solocronograma
+	\input{secciones/17-cronograma-presupuesto}
+\else
+\ifdefined\soloprotocolo
+	\input{secciones/03-problema}
+
+	\input{secciones/06-objetivos}
+
+	\clearpage
+	\input{secciones/11-antecedentes}
+
+	\clearpage
+	\input{secciones/13-justificacion-objetivos}
+
+	\clearpage
+	\input{secciones/14-marco-teorico}
+
+	\clearpage
+	\input{secciones/15-hipotesis}
+
+	\clearpage
+	\input{secciones/16-bosquejo-metodo}
+
+	\clearpage
+	\input{secciones/17-cronograma-presupuesto}
+
+	\printbibliography
+
+	\appendix
+
+	\clearpage
+	\input{apendices/a-encuesta}
+
+	\clearpage
+	\input{apendices/b-entrevista}
+
+	\clearpage
+	\input{apendices/c-observacion}
+
+	\clearpage
+	\input{apendices/d-plan-de-accion}
+
+	\clearpage
+	\input{apendices/e-pruebas-banco}
+
+	\clearpage
+	\input{apendices/f-requisitos-legales}
+
+	\clearpage
+	\input{apendices/g-consentimiento}
 \else
 \ifdefined\solometodo
 	\input{secciones/16-bosquejo-metodo}
@@ -275,6 +344,8 @@
 			\fi
 		\fi
 	\fi
+\fi
+\fi
 \fi
 \fi
 \fi
